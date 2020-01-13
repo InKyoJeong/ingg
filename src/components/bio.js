@@ -8,7 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
-import "./bio.scss"
+import "./bio.css"
 
 import { rhythm } from "../utils/typography"
 
@@ -17,7 +17,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 80, height: 80) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -55,23 +55,29 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by{" "}
-        <Link to={"about"} className="move-name">
-          <span className="move-name-author">#{author}</span>
+        <span className="author-name-prefix">Written by</span>
+        <Link to={"/about"} className="author-name-content">
+          <span>#{author}</span>
         </Link>
         <br />
-        <a href="https://github.com/inkyojeong" style={{ boxShadow: `none` }}>
-          Github
-        </a>{" "}
-        {/* {social.github && (
+        <div className="author-introduce">Front-End Developer</div>
+        <div className="author-sns">
+          <a href="https://github.com/inkyojeong" style={{ boxShadow: `none` }}>
+            Github
+          </a>{" "}
+          {/* {social.github && (
                     <a href={`https://github.com/${social.github}`}>GitHub</a>
                   )} */}
-        <a href="https://facebook.com/e.viapolar" style={{ boxShadow: `none` }}>
-          Facebook
-        </a>{" "}
-        <a href="https://instagram.com/in.gg" style={{ boxShadow: `none` }}>
-          Instagram
-        </a>
+          <a
+            href="https://facebook.com/e.viapolar"
+            style={{ boxShadow: `none` }}
+          >
+            Facebook
+          </a>{" "}
+          <a href="https://instagram.com/in.gg" style={{ boxShadow: `none` }}>
+            Instagram
+          </a>
+        </div>
       </p>
     </div>
   )

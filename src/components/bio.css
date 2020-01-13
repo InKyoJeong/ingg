@@ -1,0 +1,24 @@
+.author-name-content {
+  display: inline-block;
+  font-size: 14px;
+  padding: 2px 6px;
+  font-weight: bolder;
+  border-radius: 8px;
+  border: 2px solid rgba(7, 48, 48, 0.5);
+  margin-left: 5px;
+  color: rgb(2, 129, 119);
+}
+.author-name-prefix {
+  font-size: 14px;
+}
+.author-sns {
+  font-size: 14px;
+}
+.author-sns a {
+  padding-right: 5px;
+}
+.author-introduce {
+  font-size: 14px;
+  padding: 5px 0px;
+  opacity: 0.7;
+}
