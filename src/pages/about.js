@@ -19,6 +19,7 @@ class NotFoundPage extends React.Component {
         <h2>Contact</h2>
         <p>viapolar@likelion.org</p>
         <h2>Project</h2>
+        <p>-</p>
       </Layout>
     )
   }

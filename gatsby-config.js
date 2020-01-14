@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `INGG.io`,
     author: `Inkyo`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Inkyo's Blog`,
+    siteUrl: `https://ingg.io/`,
     social: {
       twitter: `in_g_g`,
       // github: `inkyojeong`,
