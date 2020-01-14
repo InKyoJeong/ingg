@@ -12,8 +12,8 @@
   );
   background: linear-gradient(-45deg, #495e61, #4ecdc4, #556270);
   background-size: 200% 200%;
-  animation: Gradient 4s ease infinite;
-  -webkit-animation: Gradient 4s ease infinite;
+  animation: Gradient 4.5s ease infinite;
+  -webkit-animation: Gradient 4.5s ease infinite;
 }
 @keyframes Gradient {
   0% {

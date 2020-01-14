@@ -1,52 +1,57 @@
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Courgette|Patua+One&display=swap");
+
 .author-name-content {
   display: inline-block;
-  font-family: "Abril Fatface", cursive;
-  letter-spacing: 0.7px;
+  font-family: "Patua One", cursive;
   font-size: 16px;
-  padding: 1px 7px;
   font-weight: bolder;
-  border-radius: 8px;
-  border: 2px solid rgba(7, 48, 48, 0.4);
+  letter-spacing: 0.7px;
+  padding: 1px 7px;
   margin-left: 6px;
+  border-radius: 8px;
+  /* border: 2px solid rgb(2, 71, 66); */
   color: rgb(2, 129, 119);
-  background-image: linear-gradient(
+  box-shadow: none;
+  /* background-image: linear-gradient(
     to right,
     rgb(192, 206, 204) 0%,
-    rgb(212, 228, 228) 51%,
-    rgb(172, 189, 189) 100%
-  );
-  animation: scaleAndRotateSquare infinite;
+    rgb(236, 247, 247) 51%,
+    rgb(187, 212, 212) 100%
+  ); */
+  background-color: rgb(218, 226, 225);
+  animation: scaleAndRotateSquare infinite 3s;
+  -webkit-animation: scaleAndRotateSquare infinite 3s;
 }
 @keyframes scaleAndRotateSquare {
   0% {
-    transform: none; /*트렌스포메이션이 없는상태에서,*/
+    transform: rotateY(0.9turn);
   }
   50% {
-    transform: rotate(1turn) scale(0.7, 0.7); /* (1바퀴, 사이즈)로 */
-    background-color: white;
+    transform: rotateY(1turn);
   }
   100% {
-    transform: none;
+    transform: rotateY(0.9turn);
   }
 }
 
 .author-name-prefix {
   font-size: 14px;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Courgette", cursive;
+  font-weight: bolder;
 }
 .author-sns {
   font-size: 14px;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Courgette", cursive;
+  font-weight: bolder;
 }
 .author-sns a {
   padding-right: 5px;
   color: rgb(2, 129, 119);
 }
 .author-introduce {
-  font-size: 15px;
+  font-size: 14px;
   padding: 5px 0px;
   opacity: 0.7;
-  font-family: "Oleo Script", cursive;
-  font-weight: bold;
+  font-family: "Courgette", cursive;
+  font-weight: bolder;
 }
