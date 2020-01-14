@@ -5,7 +5,7 @@ date: "2020-01-15T18:18:37.121Z"
 
 커밋 메시지 제목은 `docs: Edit README.md to include New Features Use-Cases` 와 같이 작성한다.
 
-제목은 타입 라벨을 맨 앞에 붙어 타입(Type): 제목 형식으로 작성
+제목은 타입 라벨을 맨 앞에 붙어 `타입(Type): 제목` 형식으로 작성
 
 **feat**: 새로운 기능을 추가할 경우<br>
 **fix**: 버그를 고친 경우<br>
