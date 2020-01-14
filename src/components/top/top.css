@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   height: 60px;
-  background: blue;
   background: -webkit-gradient(
     linear,
     left top,
@@ -11,15 +10,36 @@
     color-stop(50%, #4ecdc4),
     to(#556270)
   );
-  background: linear-gradient(to right, #556270 0%, #4ecdc4 50%, #556270 100%);
+  background: linear-gradient(-45deg, #495e61, #4ecdc4, #556270);
+  background-size: 200% 200%;
+  animation: Gradient 4s ease infinite;
+  -webkit-animation: Gradient 4s ease infinite;
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+    background-position-x: 0px;
+    background-position-y: 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+    background-position-x: 100%;
+    background-position-y: 50%;
+  }
+  100% {
+    background-position: 0 50%;
+    background-position-x: 0px;
+    background-position-y: 50%;
+  }
 }
 
 .link {
   display: inline-block;
   font-size: 28px;
   padding-top: 8px;
-  color: black;
+  color: white;
   opacity: 0.7;
   margin-left: 20px;
   font-weight: 800;
+  font-family: Montserrat, sans-serif;
 }
