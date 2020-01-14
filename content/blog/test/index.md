@@ -1,15 +1,15 @@
 ---
-title: This is Test
+title: Test Page
 date: "2020-01-14T18:18:37.121Z"
 ---
 
-This is the Test.
+This is a Test.
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Color Toggle</title>
+    <title>테스트</title>
 
     <style type="text/css">
       .red {
