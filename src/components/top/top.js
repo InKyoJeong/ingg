@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { GitHubIcon } from "../social-share/github-icon"
 import "./top.css"
 
 export const Top = ({ title, location, rootPath }) => {
@@ -12,7 +11,6 @@ export const Top = ({ title, location, rootPath }) => {
           {title}
         </Link>
       )}
-      {/* <GitHubIcon /> */}
     </div>
   )
 }
