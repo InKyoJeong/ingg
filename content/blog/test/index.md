@@ -1,6 +1,6 @@
 ---
 title: "[ES6] let과 const"
-date: "2020-01-14T18:18:37.121Z"
+date: "2020-01-16T18:18:37.121Z"
 description: "javascript : var, let, const 차이점"
 ---
 
