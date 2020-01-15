@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap");
 
 .index-title {
-  font-weight: bold;
+  font-weight: 700;
   box-shadow: none;
   color: rgb(2, 129, 119);
   font-family: "Nanum Gothic", sans-serif;

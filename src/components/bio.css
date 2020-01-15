@@ -18,7 +18,7 @@
     rgb(236, 247, 247) 51%,
     rgb(187, 212, 212) 100%
   ); */
-  background-color: rgb(218, 226, 225);
+  background-color: rgb(225, 228, 227);
   animation: scaleAndRotateSquare infinite 3s;
   -webkit-animation: scaleAndRotateSquare infinite 3s;
 }
