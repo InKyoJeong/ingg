@@ -17,7 +17,7 @@ class NotFoundPage extends React.Component {
         <h1 class="myname">
           <span>정인교 (Jeong InKyo)</span>
         </h1>
-        <p>
+        <div>
           <span role="img" aria-label="study">
             👨🏻‍💻
           </span>
@@ -25,8 +25,8 @@ class NotFoundPage extends React.Component {
           <span role="img" aria-label="study">
             👨🏻‍💻
           </span>
-          / HTML,CSS / Javascript / React / Git
-        </p>
+        </div>
+        <p> HTML,CSS / Javascript / React / Git</p>
         <br />
         <h2>Now</h2>
         <p>LikeLion 7th</p>
