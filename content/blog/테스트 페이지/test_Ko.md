@@ -1,7 +1,7 @@
 ---
 title: 커밋메세지 작성법 (Test Page)
 date: "2020-01-15T18:18:37.121Z"
-description: How to write Commit Message
+description: How to write a Commit Message
 ---
 
 커밋 메시지 제목은 `docs: Edit README.md to include New Features Use-Cases` 와 같이 작성한다.
