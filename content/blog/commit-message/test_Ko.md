@@ -1,6 +1,5 @@
 ---
 title: How to write a Commit Message
-
 date: "2020-01-15T18:18:37.121Z"
 description: This style guide acts as the official guide to follow in your projects. Udacity evaluators will use this guide to grade your projects. There are many opinions on the "ideal" style in the world of development. Therefore, in order to reduce the confusion on what style students should follow during the course of their projects, we urge all students to refer to this style guide for their projects.
 ---

@@ -1,10 +1,8 @@
 ---
-title: Code Test
+title: "[ES6] let과 const"
 date: "2020-01-14T18:18:37.121Z"
-description: This is a Test. (let & const)
+description: "javascript : var, let, const 차이점"
 ---
-
-JS Code Test Page
 
 ```js
 function func() {
@@ -87,27 +85,4 @@ a = "test3" // 가능
 const b = "test"
 const b = "test2" // Uncaught SyntaxError: Identifier 'a' has already been declared
 b = "test3" // Uncaught TypeError
-```
-
-<br>
-HTML Test
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>테스트</title>
-
-    <style type="text/css">
-      .red {
-        background: rgb(235, 51, 51);
-      }
-    </style>
-  </head>
-  <body>
-    <button>CLICK ME</button>
-
-    <script type="text/javascript" src="./toggle.js"></script>
-  </body>
-</html>
 ```

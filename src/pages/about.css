@@ -1,6 +1,7 @@
 .myname {
   padding-bottom: 10px;
   border-bottom: 3px solid rgba(1, 1, 1, 0.18);
+  margin-top: 10px;
 }
 .myname span {
   font-size: 25px;
