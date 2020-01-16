@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import "./index.css"
+// import SwitchExample from "../components/dark-mode/switch"
 
 class BlogIndex extends React.Component {
   render() {

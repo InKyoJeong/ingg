@@ -10,7 +10,7 @@ description: This style guide acts as the official guide to follow in your proje
 
 - **feat**: 새로운 기능 추가
 - **fix**: 버그 수정
-- **docs**: 문서 수정한 경우
+- **docs**: 문서 수정
 - **style**: 코드 포맷 변경, 세미 콜론 누락, 코드 변경 없음
 - **refactor**: 프로덕션 코드 리팩터링
 - **test**: 테스트 추가, 테스트 리팩터링 (프로덕션 코드 변경 없음)
