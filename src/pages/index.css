@@ -1,19 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Passion+One:700&display=swap");
 .index-title {
   color: rgb(2, 129, 119);
   box-shadow: none;
-  font-weight: 700;
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: 1.2em;
+  font-weight: 900;
+  font-family: "Passion One", cursive;
+  font-size: 1.5em;
 }
 .index-date {
   color: black;
+  opacity: 0.5;
 }
 .index-description {
   color: black;
   font-family: "Nanum Gothic", sans-serif;
   font-size: 15px;
   font-style: italic;
+  font-weight: 700;
   line-height: 1.4;
+  opacity: 0.65;
 }

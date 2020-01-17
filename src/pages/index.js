@@ -31,9 +31,7 @@ class BlogIndex extends React.Component {
                   >
                     {title}
                   </h3>
-                  <small style={{ opacity: 0.7 }} className="index-date">
-                    {node.frontmatter.date}
-                  </small>
+                  <small className="index-date">{node.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
