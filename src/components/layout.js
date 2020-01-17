@@ -2,7 +2,7 @@ import React from "react"
 import { Top } from "../components/top/top"
 import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
-import SwitchExample from "../components/dark-mode/switch"
+import SwitchDark from "../components/dark-mode/switch"
 
 class Layout extends React.Component {
   render() {
@@ -69,7 +69,7 @@ class Layout extends React.Component {
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
-          <SwitchExample></SwitchExample>
+          <SwitchDark></SwitchDark>
           <header>{header}</header>
           <main>{children}</main>
           <footer>© {new Date().getFullYear()}, Inkyo Jeong</footer>

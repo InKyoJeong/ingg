@@ -2,10 +2,10 @@ import React, { Component } from "react"
 import Switch from "react-switch"
 import "./switch.css"
 
-class SwitchExample extends Component {
+class SwitchDark extends Component {
   constructor() {
     super()
-    this.state = { checked: false }
+    this.state = { checked: true }
     // 토글 디폴트 값 >> true=check/ false=dark
     this.handleChange = this.handleChange.bind(this)
   }
@@ -34,6 +34,7 @@ class SwitchExample extends Component {
           //   offHandleColor={"#fff"}
           onColor={"#4fa6a1"}
           //   onHandleColor={"#282c35"}
+          disabled
         />
         {/* <p>The switch is {this.state.checked ? "on" : "off"}</p> */}
         {/* THEME.DARK : THEME.LIGHT */}
@@ -41,6 +42,6 @@ class SwitchExample extends Component {
     )
   }
 }
-export default SwitchExample
+export default SwitchDark
 
 // https://github.com/markusenglund/react-switch 를 참고하여 수정
