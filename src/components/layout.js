@@ -63,7 +63,6 @@ class Layout extends React.Component {
 
         <div
           style={{
-            backgroundColor: `var(--bg)`,
             marginLeft: `auto`,
             marginRight: `auto`,
             maxWidth: rhythm(24),
