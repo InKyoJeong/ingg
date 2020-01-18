@@ -34,6 +34,7 @@ class SwitchDark extends Component {
           //   offHandleColor={"#fff"}
           onColor={"#4fa6a1"}
           //   onHandleColor={"#282c35"}
+
           disabled
         />
         {/* <p>The switch is {this.state.checked ? "on" : "off"}</p> */}
