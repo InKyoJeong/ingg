@@ -24,7 +24,7 @@ const SwitchDark = ({ theme }) => (
       onColor={"#4fa6a1"}
       // onHandleColor={"#282c35"}
 
-      disabled
+      // disabled
     />
   </label>
 )

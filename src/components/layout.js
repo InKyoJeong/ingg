@@ -17,16 +17,29 @@ const themes = {
   },
 }
 const ThemedLayout = styled.div`
-  /* color: ${props => themes[props.theme.name].foreground}; */
-  /* background-color: ${props => themes[props.theme.name].background}; */
-  /* transition: all 0.4s ease; */
-  /* min-height: 100vh; */
-  /* & a {
-    color: ${props => (props.theme.name === "dark" ? "#4FC8C0" : "inherit")};
+  color: ${props => themes[props.theme.name].foreground};
+  background-color: ${props => themes[props.theme.name].background};
+  transition: all 0.4s ease;
+  min-height: 100vh;
+
+  a {
+    color: ${props => (props.theme.name === "light" ? "#028177" : "#4FC8C0")};
   }
-  & a {
-    color: ${props => (props.theme.name === "light" ? "#028177" : "inherit")};
-  } */
+  .author-name-content {
+    background-color: ${props =>
+      props.theme.name === "light" ? "#E1E4E3" : "#3b3b3b"};
+  }
+  .index-title {
+    color: ${props => (props.theme.name === "light" ? "#028177" : "#4FC8C0")};
+  }
+  .index-date {
+    color: ${props => (props.theme.name === "light" ? "#000000" : "#FFFFFF")};
+  }
+  .index-description {
+    color: ${props => (props.theme.name === "light" ? "#000000" : "#ffffff")};
+  }
+  blockquote {
+  }
 `
 
 class Layout extends React.Component {
