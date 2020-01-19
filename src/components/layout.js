@@ -3,6 +3,31 @@ import { Top } from "../components/top/top"
 import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 import SwitchDark from "../components/dark-mode/switch"
+import { ThemeContext } from "../context/ThemeContext"
+import styled from "@emotion/styled"
+
+const themes = {
+  light: {
+    foreground: "inherit",
+    background: "#ffffff",
+  },
+  dark: {
+    foreground: "#ffffff",
+    background: "#292e2e",
+  },
+}
+const ThemedLayout = styled.div`
+  /* color: ${props => themes[props.theme.name].foreground}; */
+  /* background-color: ${props => themes[props.theme.name].background}; */
+  /* transition: all 0.4s ease; */
+  /* min-height: 100vh; */
+  /* & a {
+    color: ${props => (props.theme.name === "dark" ? "#4FC8C0" : "inherit")};
+  }
+  & a {
+    color: ${props => (props.theme.name === "light" ? "#028177" : "inherit")};
+  } */
+`
 
 class Layout extends React.Component {
   render() {
@@ -60,20 +85,25 @@ class Layout extends React.Component {
     return (
       <React.Fragment>
         <Top title={title} location={location} rootPath={rootPath} />
-
-        <div
-          style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
-        >
-          <SwitchDark></SwitchDark>
-          <header>{header}</header>
-          <main>{children}</main>
-          <footer>© {new Date().getFullYear()}, Inkyo Jeong</footer>
-        </div>
+        <ThemeContext.Consumer>
+          {theme => (
+            <ThemedLayout theme={theme}>
+              <div
+                style={{
+                  marginLeft: `auto`,
+                  marginRight: `auto`,
+                  maxWidth: rhythm(24),
+                  padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+                }}
+              >
+                <SwitchDark theme={theme} />
+                <header>{header}</header>
+                <main>{children}</main>
+                <footer>© {new Date().getFullYear()}, Inkyo Jeong</footer>
+              </div>
+            </ThemedLayout>
+          )}
+        </ThemeContext.Consumer>
       </React.Fragment>
     )
   }
