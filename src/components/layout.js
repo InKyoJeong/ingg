@@ -23,7 +23,7 @@ const ThemedLayout = styled.div`
   transition: all 0.4s ease;
   min-height: 100vh;
 
-  a {
+  .author-profile a {
     color: ${props => (props.theme.name === "light" ? "#028177" : "#4FC8C0")};
   }
   .author-name-content {

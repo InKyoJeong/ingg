@@ -64,6 +64,7 @@ class BlogPostTemplate extends React.Component {
               listStyle: `none`,
               padding: 0,
             }}
+            className="post-nav"
           >
             <li>
               {previous && (

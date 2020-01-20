@@ -12,3 +12,15 @@
   height: 1.5px;
   margin: 40px 15px;
 }
+.post-nav li {
+  background-color: #3b3b3b;
+  border-radius: 5px;
+}
+.post-nav li a {
+  box-shadow: none;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  padding: 0 10px;
+}
