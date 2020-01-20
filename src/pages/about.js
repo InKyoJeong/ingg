@@ -17,6 +17,7 @@ class NotFoundPage extends React.Component {
         <h1 class="myname">
           <span>정인교 (Jeong InKyo)</span>
         </h1>
+        <hr class="name-hr" />
         <div>
           <span role="img" aria-label="study">
             👨🏻‍💻

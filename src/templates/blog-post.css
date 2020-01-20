@@ -3,10 +3,59 @@
 .inner {
   font-family: "Nanum Gothic", sans-serif;
 }
-
-.post-title {
-  font-size: 2em;
+.inner h1,
+.inner h2,
+.inner h3,
+.inner h4,
+.inner h5 {
+  font-family: "Nanum Gothic", sans-serif;
+  letter-spacing: 0px;
+  /* margin: 30px 0px; */
 }
+.inner h1 {
+  margin: 30px 0px;
+}
+.inner h2 {
+  margin: 25px 0px;
+}
+.inner h3 {
+  margin: 20px 0px;
+}
+
+.inner h4 {
+  text-transform: inherit;
+  margin: 15px 0px;
+}
+.inner h5 {
+  margin: 10px 0px;
+}
+.inner blockquote {
+  color: rgb(119, 119, 119);
+  border-left: 5px solid hsla(0, 0%, 61%, 0.822);
+  margin-left: 10px;
+  font-size: 18px;
+}
+.inner ul,
+.inner ol {
+  padding-left: 20px;
+}
+
+/* image margin 제거 */
+.inner span {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  max-width: 100% !important;
+}
+
+:not(pre) > code[class*="language-"] {
+  color: #4b0000;
+  border: 1px solid #310000;
+  background-color: rgb(240, 229, 229);
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .bio-hr {
   background: linear-gradient(90deg, #3d4f52, #3fa19b, #565f69);
   height: 1.5px;

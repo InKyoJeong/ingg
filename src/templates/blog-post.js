@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import "./blog-post.css"
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -34,6 +35,7 @@ class BlogPostTemplate extends React.Component {
                 ...scale(-1 / 5),
                 display: `block`,
                 marginBottom: rhythm(1),
+
                 opacity: 0.6,
               }}
             >
