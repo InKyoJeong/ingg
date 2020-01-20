@@ -48,6 +48,7 @@ class BlogPostTemplate extends React.Component {
             style={{
               marginBottom: rhythm(1),
             }}
+            className="bio-hr"
           />
           <footer>
             <Bio />

@@ -7,3 +7,8 @@
 .post-title {
   font-size: 2em;
 }
+.bio-hr {
+  background: linear-gradient(90deg, #3d4f52, #3fa19b, #565f69);
+  height: 1.5px;
+  margin: 40px 15px;
+}
