@@ -5,6 +5,7 @@ import { rhythm, scale } from "../utils/typography"
 import SwitchDark from "../components/dark-mode/switch"
 import { ThemeContext } from "../context/ThemeContext"
 import styled from "@emotion/styled"
+import { Footer } from "./footer/footer"
 
 const themes = {
   light: {
@@ -112,7 +113,7 @@ class Layout extends React.Component {
                 <SwitchDark theme={theme} />
                 <header>{header}</header>
                 <main>{children}</main>
-                <footer>© {new Date().getFullYear()}, Inkyo Jeong</footer>
+                <Footer />
               </div>
             </ThemedLayout>
           )}
