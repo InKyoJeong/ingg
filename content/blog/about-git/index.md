@@ -47,8 +47,6 @@ text.txt 파일을 스테이지에 올리고 커밋한다.
 `git log`를 입력하면 커밋 내역을 확인할 수 있다. HEAD가 master 브랜치를 가리키고 있다.
 ![branch6](./content-pic/cli6.png)
 
-#### HEAD
-
 > #### 지금 작업 중인 브랜치가 무엇인지 Git은 어떻게 파악할까. 다른 버전 관리 시스템과는 달리 Git은 'HEAD’라는 특수한 포인터가 있다. 이 포인터는 지금 작업하는 로컬 브랜치를 가리킨다. 기본적으로는 'master'의 선두 부분을 나타낸다. 'HEAD'를 이동하면, 사용하는 브랜치가 변경된다.
 
 <br>
@@ -102,7 +100,18 @@ text.txt파일 내용도 물론 'ingg 3'까지만 존재한다.
 
 white브랜치가 master브랜치에서 분기된 이후에 master브랜치에 추가된 커밋은 white브랜치에 영향을 미치지 않는다는 것을 알 수 있다.
 
-<!--
+<br>
 
-갈라지는 브랜치는 `git log --oneline --graph` 명령으로 쉽게 확인할 수 있다. 현재 브랜치가 가리키고 있는 히스토리가 무엇이고 어떻게 갈라져 나왔는지 보여준다.
--->
+#### 4. 브랜치 정보 확인하기
+
+white브랜치의 text파일에 텍스트 추가, white파일을 생성하고 텍스트를 추가한 후 커밋한다.
+![branch17](./content-pic/cli17.png)
+![branch18](./content-pic/cli18.png)
+![branch19](./content-pic/cli19.png)
+
+갈라지는 브랜치는 `git log --oneline --branches --graph` 명령으로 쉽게 확인할 수 있다. 현재 브랜치가 가리키고 있는 히스토리가 무엇이고 어떻게 갈라져 나왔는지 보여준다.
+![branch20](./content-pic/cli20.png)
+white브랜치에서는 'text 3' 커밋 다음에 'white ingg 4' 커밋이 만들어졌고,
+master브랜치와 white브랜치 커밋은 같은 **Parent** 커밋('text 3')을 가지고 있다.
+
+<!-- #### 5. 브랜치 병합하기 -->
