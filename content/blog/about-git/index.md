@@ -28,29 +28,38 @@ Git과 Github는 이제 필수이다.
 
 <br>
 
-#### 브랜치 생성하기
+#### 준비
 
-먼저 practice 라는 디렉토리를 만들고 이동한 후 `git init`으로 초기화 하자.
+먼저 practice 라는 디렉토리를 만들고 이동한 후 `git init`으로 초기화 한다.
 `ls -al` 명령으로 .git 디렉토리를 확인할 수 있다.
-
 ![branch](./content-pic/cli1.png)
 
-<!--
-practice 디렉토리 안에 text.txt 파일을 만들고 INGG 라는 내용을 입력한다.
+practice 디렉토리 안에 text.txt 파일을 만들고 'ingg 1' 이라는 내용을 입력한다.
+![branch2](./content-pic/cli2.png)
 
-깃에서 브랜치를 만들거나 확인하는 명령은 `git branch`이다.
+text.txt 파일을 스테이지에 올리고 커밋한다.
+![branch3](./content-pic/cli3.png)
+
+마찬가지로 text 2, text 3도 커밋한다.
+![branch4](./content-pic/cli4.png)
+![branch5](./content-pic/cli5.png)
+
+`git log`를 입력하면 커밋 내역을 확인할 수 있다. HEAD가 master 브랜치를 가리키고 있다.
+![branch6](./content-pic/cli6.png)
+
+#### HEAD
+
+> 지금 작업 중인 브랜치가 무엇인지 Git은 어떻게 파악할까. 다른 버전 관리 시스템과는 달리 Git은 'HEAD’라는 특수한 포인터가 있다. 이 포인터는 지금 작업하는 로컬 브랜치를 가리킨다. 기본적으로는 'master'의 선두 부분을 나타낸다. 'HEAD'를 이동하면, 사용하는 브랜치가 변경된다.
+
+<!-- #### 브랜치 생성하기 -->
+
+<!-- 깃에서 브랜치를 만들거나 확인하는 명령은 `git branch`이다.
 
 ```
 $ git branch 브랜치이름
 ``` -->
 
-<!-- <br>
-
-##### HEAD
-
-지금 작업 중인 브랜치가 무엇인지 Git은 어떻게 파악할까. 다른 버전 관리 시스템과는 달리 Git은 'HEAD’라는 특수한 포인터가 있다. 이 포인터는 지금 작업하는 로컬 브랜치를 가리킨다. 기본적으로는 'master'의 선두 부분을 나타낸다. 'HEAD'를 이동하면, 사용하는 브랜치가 변경된다. -->
-
-<!-- <br>
+ <!-- <br>
 
 #### 브랜치 이동하기
 
