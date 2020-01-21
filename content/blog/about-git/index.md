@@ -1,30 +1,61 @@
 ---
-title: Git & Github
-date: 2020-01-20 21:59:98
-description: test
+title: "[Git] Git & Branch"
+date: 2020-01-21 21:59:98
+description: "대부분의 프로젝트에서 기능 개발과 에러 수정이 순차적인 흐름으로 진행되지 않기 때문에 작업을 병렬로 진행하기 위해서는 별도의 기능이 필요하다.
+그래서 필요한 것이 `브랜치(Branch)`이다. 모든 버전 관리 시스템에는 브랜치라는 개념이 있다. 나뭇가지라는 본래의 뜻에서 알 수 있듯이, 브랜치란 나무에서 가지가 새 줄기를 뻗듯 여러 갈래로 퍼지는 데이터 흐름을 말한다."
 ---
 
-![ex_screenshot](./git-pic.jpeg)
-
-#### Coming Soon
+![git](./git-pic.jpeg)
 
 <!--
-# TEST test 테스트 브랜치 깃과 깃허브
+Git과 Github는 이제 필수이다.
 
-vl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage test
+**커맨드 라인 인터페이스(Command Line Interface, CLI)**는 터미널을 이용하는 방식이다. 기본적인 리눅스 명령을 알아야하고, 깃 명령도 알아야 하기 때문에 처음엔 어렵지만 익숙해지면 깃을 훨씬 빠르게 다룰 수 있다.
 
-## TEST test 테스트 브랜치 깃과 깃허브
+### Git(깃)이란?
 
-vl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage test
+버전 관리 시스템(VCS - Version Control System)은 파일 변화를 시간에 따라 기록했다가 나중에 특정 시점의 버전을 다시 꺼내올 수 있는 시스템이다. -->
 
-### TEST test 테스트 브랜치 깃과 깃허브
+### 브랜치란?
 
-vl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage test
+대부분의 프로젝트에서 기능 개발과 에러 수정이 순차적인 흐름으로 진행되지 않기 때문에 작업을 병렬로 진행하기 위해서는 별도의 기능이 필요하다.
 
-#### TEST test 테스트 브랜치 깃과 깃허브
+그래서 필요한 것이 `브랜치(Branch)`이다. 모든 버전 관리 시스템에는 브랜치라는 개념이 있다. 나뭇가지라는 본래의 뜻에서 알 수 있듯이, 브랜치란 나무에서 가지가 새 줄기를 뻗듯 여러 갈래로 퍼지는 데이터 흐름을 말한다.
 
-vl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage test
+깃으로 버전 관리를 시작하면 기본적으로 `master`라는 브랜치가 만들어진다. 사용자가 커밋할 때마다 `master` 브랜치는 최신 커밋을 가리킨다. 즉, 브랜치는 커밋을 가리키는 포인터 같은 것이다.
 
-##### TEST test 테스트 브랜치 깃과 깃허브
+> #### Git 에서 “master” 브랜치는 특별하지 않다. 다른 브랜치와 다르지 않다. 다만 모든 저장소에서 “master” 브랜치가 존재하는 이유는 git init 으로 초기화할 때 자동으로 만들어진 이 브랜치를 굳이 다른 이름으로 변경하지 않기 때문이다.
 
-vl피태그 테스트 p tage testvl피태그 테스트 p tage testvl피태그 테스트 p tage testvvv -->
+<br>
+
+#### 브랜치 생성하기
+
+먼저 practice 라는 디렉토리를 만들고 이동한 후 `git init`으로 초기화 하자.
+`ls -al` 명령으로 .git 디렉토리를 확인할 수 있다.
+
+![branch](./content-pic/cli1.png)
+
+<!--
+practice 디렉토리 안에 text.txt 파일을 만들고 INGG 라는 내용을 입력한다.
+
+깃에서 브랜치를 만들거나 확인하는 명령은 `git branch`이다.
+
+```
+$ git branch 브랜치이름
+``` -->
+
+<!-- <br>
+
+##### HEAD
+
+지금 작업 중인 브랜치가 무엇인지 Git은 어떻게 파악할까. 다른 버전 관리 시스템과는 달리 Git은 'HEAD’라는 특수한 포인터가 있다. 이 포인터는 지금 작업하는 로컬 브랜치를 가리킨다. 기본적으로는 'master'의 선두 부분을 나타낸다. 'HEAD'를 이동하면, 사용하는 브랜치가 변경된다. -->
+
+<!-- <br>
+
+#### 브랜치 이동하기
+
+다른 브랜치로 이동하는 명령은 `git checkout`이다.
+
+```
+$ git checkout
+``` -->

@@ -25,6 +25,7 @@
 .inner h4 {
   text-transform: inherit;
   margin: 15px 0px;
+  line-height: 1.4;
 }
 .inner h5 {
   margin: 10px 0px;
@@ -47,6 +48,12 @@
   max-width: 100% !important;
 }
 
+/* image 캡쳐 뒷배경 제거 */
+img {
+  box-shadow: unset !important;
+}
+
+/* `` Code style */
 :not(pre) > code[class*="language-"] {
   color: #4b0000;
   border: 1px solid #310000;
@@ -54,6 +61,22 @@
   font-size: 14px;
   padding-left: 5px;
   padding-right: 5px;
+  text-shadow: unset !important;
+}
+
+/* ```Code Style */
+pre[class*="language-"] {
+  padding: 0.8em;
+  background: #202020;
+  text-shadow: unset !important;
+  /* color: white; */
+}
+code[class*="language-"] {
+  text-shadow: unset !important;
+  color: rgb(162, 177, 177);
+}
+.inner .operator {
+  background-color: unset;
 }
 
 .bio-hr {
@@ -75,4 +98,9 @@
 }
 .post-title {
   font-size: 2em;
+}
+
+/* code style (```) */
+pre {
+  border-radius: 5px;
 }
