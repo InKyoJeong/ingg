@@ -28,19 +28,19 @@ Git과 Github는 이제 필수이다.
 
 <br>
 
-#### 준비
+#### 1. 준비
 
 먼저 practice 라는 디렉토리를 만들고 이동한 후 `git init`으로 초기화 한다.
 `ls -al` 명령으로 .git 디렉토리를 확인할 수 있다.
 ![branch](./content-pic/cli1.png)
 
-practice 디렉토리 안에 text.txt 파일을 만들고 'ingg 1' 이라는 내용을 입력한다.
+practice 디렉토리 안에 text.txt 파일을 만들고 내용을 입력한다.
 ![branch2](./content-pic/cli2.png)
 
 text.txt 파일을 스테이지에 올리고 커밋한다.
 ![branch3](./content-pic/cli3.png)
 
-마찬가지로 text 2, text 3도 커밋한다.
+마찬가지로 text 2, text 3도 차례로 커밋한다.
 ![branch4](./content-pic/cli4.png)
 ![branch5](./content-pic/cli5.png)
 
@@ -49,22 +49,60 @@ text.txt 파일을 스테이지에 올리고 커밋한다.
 
 #### HEAD
 
-> 지금 작업 중인 브랜치가 무엇인지 Git은 어떻게 파악할까. 다른 버전 관리 시스템과는 달리 Git은 'HEAD’라는 특수한 포인터가 있다. 이 포인터는 지금 작업하는 로컬 브랜치를 가리킨다. 기본적으로는 'master'의 선두 부분을 나타낸다. 'HEAD'를 이동하면, 사용하는 브랜치가 변경된다.
+> #### 지금 작업 중인 브랜치가 무엇인지 Git은 어떻게 파악할까. 다른 버전 관리 시스템과는 달리 Git은 'HEAD’라는 특수한 포인터가 있다. 이 포인터는 지금 작업하는 로컬 브랜치를 가리킨다. 기본적으로는 'master'의 선두 부분을 나타낸다. 'HEAD'를 이동하면, 사용하는 브랜치가 변경된다.
 
-<!-- #### 브랜치 생성하기 -->
+<br>
 
-<!-- 깃에서 브랜치를 만들거나 확인하는 명령은 `git branch`이다.
+#### 2. 브랜치 생성하기
 
+깃에서 브랜치를 만들거나 확인하는 명령은 `git branch`이다.
+
+```js
+$ git branch <branch_name>
 ```
-$ git branch 브랜치이름
-``` -->
 
- <!-- <br>
+<br>
 
-#### 브랜치 이동하기
+`git branch white`를 입력하여 white라는 브랜치를 만들어 보자.
+옵션을 지정하지 않고 branch 명령어를 실행하면 브랜치 목록 전체를 확인할 수 있다.
+git branch로 현재 브랜치를 확인한다.
+![branch7](./content-pic/cli7.png)
+![branch8](./content-pic/cli8.png)
+`*`표시는 현재 선택된 브랜치(master)이다.
 
+브랜치를 더 추가한 후 git branch명령으로 모든 브랜치를 확인해보자.
+![branch9](./content-pic/cli9.png)
+![branch10](./content-pic/cli10.png)
+
+ <br>
+
+#### 3. 브랜치 이동하기
+
+text.txt파일 안에 master를 붙여 내용을 추가한 후 커밋해보자.
+![branch11](./content-pic/cli11.png)
+![branch12](./content-pic/cli12.png)
+
+master를 붙인 커밋은 'master'에만 적용되어 있다. 나머지 브랜치는 아직 'text 3'에 머물고 있다.
+![branch13](./content-pic/cli13.png)
+
+matser에서 다른 브랜치로 이동해보자.
 다른 브랜치로 이동하는 명령은 `git checkout`이다.
 
+```js
+$ git checkout <branch>
 ```
-$ git checkout
-``` -->
+
+![branch14](./content-pic/cli14.png)
+
+이동 후 커밋로그를 확인해보면 **HEAD**가 **white**브랜치를 가리키고 있고, white브랜치를 분기하기 전까지 master브랜치에 있던 커밋들이 그대로 white브랜치에 복사된 것을 알 수 있다.
+![branch15](./content-pic/cli15.png)
+
+text.txt파일 내용도 물론 'ingg 3'까지만 존재한다.
+![branch16](./content-pic/cli16.png)
+
+white브랜치가 master브랜치에서 분기된 이후에 master브랜치에 추가된 커밋은 white브랜치에 영향을 미치지 않는다는 것을 알 수 있다.
+
+<!--
+
+갈라지는 브랜치는 `git log --oneline --graph` 명령으로 쉽게 확인할 수 있다. 현재 브랜치가 가리키고 있는 히스토리가 무엇이고 어떻게 갈라져 나왔는지 보여준다.
+-->
