@@ -54,7 +54,7 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p className="author-profile">
+      <div className="author-profile">
         <span className="author-name-prefix">Written by</span>
         <Link to={"/about"} className="author-name-content">
           <span>#{author}</span>
@@ -78,7 +78,7 @@ const Bio = () => {
             Instagram
           </a>
         </div>
-      </p>
+      </div>
     </div>
   )
 }
