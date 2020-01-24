@@ -19,7 +19,9 @@ description: "대부분의 프로젝트에서 기능 개발과 에러 수정이 
 
 <br>
 
-#### 1. 준비
+### 1. Git Basic
+
+#### 준비
 
 먼저 practice 라는 디렉토리를 만들고 이동한 후 `git init`으로 초기화 한다.
 `ls -al` 명령으로 .git 디렉토리를 확인할 수 있다.
@@ -40,7 +42,7 @@ practice 디렉토리 안에 text.txt 파일을 만들고 내용을 입력한뒤
 
 <br>
 
-#### 2. 브랜치 생성하기
+#### 브랜치 생성
 
 깃에서 브랜치를 만들거나 확인하는 명령은 `git branch`이다.
 
@@ -61,7 +63,7 @@ $ git branch <branch_name>
 
  <br>
 
-#### 3. 브랜치 이동하기
+#### 브랜치 이동
 
 text.txt파일 안에 master를 붙여 내용을 추가한 후 커밋해보자.
 ![branch11](./content-pic/cli11.png)
@@ -90,7 +92,7 @@ text.txt파일 내용도 물론 'ingg 3'까지만 존재한다.
 
 <br>
 
-#### 4. 브랜치 정보 확인하기
+#### 브랜치 정보 확인
 
 **_white_**브랜치의 text파일에 텍스트 추가, white파일을 생성하고 텍스트를 추가한 후 커밋한다.
 ![branch17](./content-pic/cli17.png)
@@ -104,11 +106,11 @@ text.txt파일 내용도 물론 'ingg 3'까지만 존재한다.
 
 <br>
 
-#### 5. 브랜치 병합하기
+### 2. Merge vs Rebase
 
 브랜치 통합에는 `merge` 를 사용하는 방법과 `rebase`를 사용하는 방법의 2가지 종류가 있다. 어느 쪽을 사용하느냐에 따라 통합 후의 브랜치의 이력이 크게 달라진다.
 
-- **_merge_**
+#### merge
 
 `merge`를 이용하면 여러 개의 브랜치를 하나로 모을 수 있다.
 
@@ -130,11 +132,7 @@ text.txt파일 내용도 물론 'ingg 3'까지만 존재한다.
 
 <br>
 
----
-
-<br>
-
-- **_rebase_**
+#### rebase
 
 `rebase`는 **_base branch_**를 재설정한다.
 
