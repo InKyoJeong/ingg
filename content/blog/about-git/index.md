@@ -25,10 +25,8 @@ description: "대부분의 프로젝트에서 기능 개발과 에러 수정이 
 `ls -al` 명령으로 .git 디렉토리를 확인할 수 있다.
 ![branch](./content-pic/cli1.png)
 
-practice 디렉토리 안에 text.txt 파일을 만들고 내용을 입력한다.
+practice 디렉토리 안에 text.txt 파일을 만들고 내용을 입력한뒤 커밋한다.
 ![branch2](./content-pic/cli2.png)
-
-text.txt 파일을 스테이지에 올리고 커밋한다.
 ![branch3](./content-pic/cli3.png)
 
 마찬가지로 text 2, text 3도 차례로 커밋한다.
@@ -53,12 +51,11 @@ $ git branch <branch_name>
 <br>
 
 `git branch white`를 입력하여 **_white_**라는 브랜치를 만들어 보자.
-옵션을 지정하지 않고 branch 명령어를 실행하면 브랜치 목록 전체를 확인할 수 있다.
+옵션을 지정하지 않고 branch 명령어를 실행하면 브랜치 목록 전체를 확인할 수 있다. `*`표시는 현재 선택된 브랜치(**_master_**)이다.
 ![branch7](./content-pic/cli7.png)
 ![branch8](./content-pic/cli8.png)
-`*`표시는 현재 선택된 브랜치(**_master_**)이다.
 
-브랜치를 더 추가한 후 **_git branch_**명령으로 모든 브랜치를 확인해보자.
+브랜치를 더 추가하고 모든 브랜치를 확인해보자.
 ![branch9](./content-pic/cli9.png)
 ![branch10](./content-pic/cli10.png)
 
@@ -80,9 +77,10 @@ master를 붙인 커밋은 **_'master'_** 에만 적용되어 있다. 나머지 
 $ git checkout <branch>
 ```
 
-![branch14](./content-pic/cli14.png)
+<br>
 
 이동 후 커밋로그를 확인해보면 **HEAD**가 **_white_**브랜치를 가리키고 있고, **_white_**브랜치를 분기하기 전까지 **_master_**브랜치에 있던 커밋들이 그대로 **_white_**브랜치에 복사된 것을 알 수 있다.
+![branch14](./content-pic/cli14.png)
 ![branch15](./content-pic/cli15.png)
 
 text.txt파일 내용도 물론 'ingg 3'까지만 존재한다.
@@ -152,7 +150,9 @@ text.txt파일 내용도 물론 'ingg 3'까지만 존재한다.
 ![merge7](./content-pic/mg7-1.png)
 <br>
 
-> 두개의 차이점은 **_merge_**는 히스토리가 병렬로 나아가는 반면, **_rebase_**는 히스토리가 일렬로 쭉 나아가기 때문에 버전을 파악하기가 좋다는 장점이 있다.
+> **_merge_**는 히스토리가 병렬로 나아가는 반면, **_rebase_**는 히스토리가 일렬로 쭉 나아가기 때문에 버전을 파악하기가 좋다는 장점이 있다.<br>
+>
+> \* 어딘가에 **_push_**로 내보낸 커밋에 대해서는 절대 **_rebase_** 하지 말아야 한다는 점에 주의한다.
 
 <!--
 <br>
