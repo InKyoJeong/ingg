@@ -34,8 +34,8 @@ class NotFoundPage extends React.Component {
         <h2>Contact</h2>
         <p class="email-1">inkyo.dev@gmail.com</p>
         <p class="email-2">viapolar@likelion.org</p>
-        <h2>Project</h2>
-        <p>-</p>
+        {/* <h2>Project</h2>
+        <p>-</p> */}
       </Layout>
     )
   }
