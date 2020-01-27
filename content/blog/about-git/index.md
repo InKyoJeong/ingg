@@ -17,6 +17,14 @@ description: "대부분의 프로젝트에서 기능 개발과 에러 수정이 
 
 > #### Git 에서 “master” 브랜치는 특별하지 않다. 다른 브랜치와 다르지 않다. 다만 모든 저장소에서 “master” 브랜치가 존재하는 이유는 git init 으로 초기화할 때 자동으로 만들어진 이 브랜치를 굳이 다른 이름으로 변경하지 않기 때문이다.
 
+---
+
+1. [Basic](#Basic)
+2. [Merge vs Rebase](#Merge-vs-Rebase)
+3. [동시에 작업하기](#동시에-작업하기)
+
+---
+
 <br>
 
 ### 1. Basic
@@ -250,7 +258,7 @@ Fast-forward
 앞서 설명한 `빨리 감기 병합(fast-forward merge)`이 실행되는 것을 확인할 수 있다.
 ![merge13](./content-pic/mg13.png)
 
-6. 이제 dev2 브랜치를 병합한다.
+6. 이제 **_dev2_**브랜치를 병합한다.
 
 ```
 $ git merge dev2
@@ -287,7 +295,7 @@ $ git add .
 $ git commit -m "merge"
 ```
 
-이 시점까지의 이력은 다음과 같다. 이 병합은 충돌 부분을 수정했기 때문에 그 변화를 기록하는 병합 커밋이 새로 생성 되었다. **HEAD**가 이동한 것을 확인할 수 있다. 아래와 같은 방식은 `non fast-forward merge`이다.
+이 시점까지의 이력은 다음과 같다. 이 병합은 충돌 부분을 수정했기 때문에 그 변화를 기록하는 병합 커밋이 새로 생성되었다. **HEAD**가 이동한 것을 확인할 수 있다. 아래와 같은 방식은 `non fast-forward merge`이다.
 ![merge14](./content-pic/mg14.png)
 
 <!-- 원격 브랜치와 Fetch
