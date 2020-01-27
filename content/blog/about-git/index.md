@@ -19,15 +19,13 @@ description: "대부분의 프로젝트에서 기능 개발과 에러 수정이 
 
 ---
 
-1. [Basic](#Basic)
-2. [Merge vs Rebase](#Merge-vs-Rebase)
+1. [Basic](#basic)
+2. [Merge vs Rebase](#merge-vs-rebase)
 3. [동시에 작업하기](#동시에-작업하기)
-
----
 
 <br>
 
-### 1. Basic
+### <a name="basic"></a>1. Basic
 
 #### 준비
 
@@ -114,7 +112,7 @@ text.txt파일 내용도 물론 'ingg 3'까지만 존재한다.
 
 <br>
 
-### 2. Merge vs Rebase
+### <a name="merge-vs-rebase"></a>2. Merge vs Rebase
 
 브랜치 통합에는 `merge` 를 사용하는 방법과 `rebase`를 사용하는 방법의 2가지 종류가 있다. 어느 쪽을 사용하느냐에 따라 통합 후의 브랜치의 이력이 크게 달라진다.
 
@@ -162,7 +160,7 @@ text.txt파일 내용도 물론 'ingg 3'까지만 존재한다.
 
 <br>
 
-### 3. 동시에 작업하기
+### <a name="동시에-작업하기"></a>3. 동시에 작업하기
 
 두 개의 브랜치를 통해 동시에 작업하는 경우 이를 통합하고 충돌을 해결하는 방법을 알아보자.
 
