@@ -31,7 +31,7 @@ class BlogPostTemplate extends React.Component {
             >
               <div className="link-to-top__button">
                 <span role="img" aria-label="arrow">
-                  ⬆️
+                  ▲
                 </span>
               </div>
             </a>
