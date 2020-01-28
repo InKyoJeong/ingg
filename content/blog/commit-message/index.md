@@ -20,6 +20,8 @@ description: This style guide acts as the official guide to follow in your proje
 예시 1) `docs: Edit README.md to include ...`<br>
 예시 2) `feat: Summarize changes in around 50 characters or less`
 
+---
+
 ### Reference
 
 > [Udacity Git Commit Message Style Guide](https://udacity.github.io/git-styleguide/) 를 참고하여 번역한 글입니다.

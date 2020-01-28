@@ -297,4 +297,8 @@ $ git push
 
 <br>
 
+---
+
+### Reference
+
 > https://www.atlassian.com/git/tutorials/comparing-workflows 를 참고하여 수정 및 번역한 글입니다.
