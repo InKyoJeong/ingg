@@ -118,7 +118,7 @@ pre {
 
   display: block !important;
   opacity: 0.7;
-  border-radius: 20%;
+  border-radius: 50%;
 
   z-index: 999;
   /* 사진보다 앞으로 */

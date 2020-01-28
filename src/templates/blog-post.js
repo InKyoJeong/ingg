@@ -29,7 +29,11 @@ class BlogPostTemplate extends React.Component {
                 boxShadow: `none`,
               }}
             >
-              <div className="link-to-top__button">⏏︎</div>
+              <div className="link-to-top__button">
+                <span role="img" aria-label="arrow">
+                  ⬆️
+                </span>
+              </div>
             </a>
           </div>
           <header>
