@@ -20,6 +20,18 @@ class BlogPostTemplate extends React.Component {
           description={post.frontmatter.description || post.excerpt}
         />
         <article>
+          <div className="link-to-top">
+            <a
+              href="#header"
+              className="link-to-top__a"
+              style={{
+                textDecoration: `none`,
+                boxShadow: `none`,
+              }}
+            >
+              <div className="link-to-top__button">⏏︎</div>
+            </a>
+          </div>
           <header>
             <h1
               className="post-title"

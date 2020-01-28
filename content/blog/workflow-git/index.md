@@ -277,7 +277,7 @@ Mary는 수정을 사항을 반영하고 커밋, 푸시한다. 그녀의 모든 
 
 ![workflow2-5](./content-pic/wf2-5.svg)
 
-Bill이 풀 요청을 수락 할 준비가되면 누군가 병합해야한다. (Bill 또는 Mary누구나 수행할 수 있다.)
+Bill이 풀 리퀘스트를 수락할 준비가되면 누군가 병합해야한다. (Bill 또는 Mary누구나 수행할 수 있다.)
 
 ```
 $ git checkout master

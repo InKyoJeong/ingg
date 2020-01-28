@@ -104,3 +104,56 @@ code[class*="language-"] {
 pre {
   border-radius: 5px;
 }
+
+/* Top Scroll */
+.link-to-top {
+  /* background-color: #53b3b0; */
+  background: linear-gradient(-90deg, #495e61, #4ecdc4);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  -webkit-box-shadow: 6px 6px 7px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 6px 7px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 6px 7px -6px rgba(0, 0, 0, 0.75);
+
+  display: block !important;
+  opacity: 0.7;
+  border-radius: 20%;
+
+  z-index: 999;
+  /* 사진보다 앞으로 */
+  text-align: center;
+  /* 글씨 가로중앙정렬 */
+  /* align-items: center; */
+
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+.link-to-top__button {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 글씨 세로중앙정렬 */
+}
+.link-to-top__a {
+  text-decoration: overline;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 900;
+  color: white;
+}
