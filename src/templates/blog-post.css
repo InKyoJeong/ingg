@@ -126,10 +126,10 @@ pre {
   /* 글씨 가로중앙정렬 */
   /* align-items: center; */
 
-  animation: fadein 2s;
-  -moz-animation: fadein 2s; /* Firefox */
-  -webkit-animation: fadein 2s; /* Safari and Chrome */
-  -o-animation: fadein 2s; /* Opera */
+  animation: fadein 3.5s;
+  -moz-animation: fadein 3.5s; /* Firefox */
+  -webkit-animation: fadein 3.5s; /* Safari and Chrome */
+  -o-animation: fadein 3.5s; /* Opera */
 }
 
 @keyframes fadein {
