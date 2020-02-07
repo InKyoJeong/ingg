@@ -9,8 +9,14 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 import "./bio.css"
-
 import { rhythm } from "../utils/typography"
+
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+library.add(fab, faCheckSquare, faCoffee, faGithub)
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -61,8 +67,10 @@ const Bio = () => {
         </Link>
         <br />
         <div className="author-introduce">Front-End Developer</div>
+
         <div className="author-sns">
           <a href="https://github.com/inkyojeong" style={{ boxShadow: `none` }}>
+            {/* <FontAwesomeIcon icon="coffee" /> */}
             Github
           </a>{" "}
           {/* {social.github && (

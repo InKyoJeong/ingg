@@ -45,6 +45,20 @@ To develop locally, `gatsby develop`, then open `https://localhost:8000`
 
 9.  **`README.md`**: A text file containing useful reference information about your project.
 
+## 🛠Installation
+
+```
+@emotion/core
+@emotion/styled
+gatsby-plugin-sass
+node-sass
+react-switch
+$ npm i --save @fortawesome/fontawesome-svg-core
+$ npm i --save @fortawesome/free-solid-svg-icons
+$ npm i --save @fortawesome/react-fontawesome
+$ npm i --save @fortawesome/free-brands-svg-icons
+```
+
 ## 📌 My Structure
 
 ```
