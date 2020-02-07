@@ -12,11 +12,11 @@ import "./bio.css"
 import { rhythm } from "../utils/typography"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab, faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faCheckSquare, faCoffee } from "@fortawesome/free-solid-svg-icons"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { faHashtag } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-library.add(fab, faCheckSquare, faCoffee, faGithub)
+library.add(fab, faHashtag)
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -63,14 +63,25 @@ const Bio = () => {
       <div className="author-profile">
         <span className="author-name-prefix">Written by</span>
         <Link to={"/about"} className="author-name-content">
-          <span>#{author}</span>
+          <span>
+            <FontAwesomeIcon
+              icon={["fab", "slack-hash"]}
+              style={{ marginRight: 2 }}
+              // size="lg"
+            />
+            {author}
+          </span>
         </Link>
         <br />
         <div className="author-introduce">Front-End Developer</div>
 
         <div className="author-sns">
           <a href="https://github.com/inkyojeong" style={{ boxShadow: `none` }}>
-            {/* <FontAwesomeIcon icon="coffee" /> */}
+            <FontAwesomeIcon
+              icon={["fab", "github"]}
+              style={{ marginRight: 2 }}
+              size="lg"
+            />
             Github
           </a>{" "}
           {/* {social.github && (
@@ -80,9 +91,19 @@ const Bio = () => {
             href="https://facebook.com/e.viapolar"
             style={{ boxShadow: `none` }}
           >
+            <FontAwesomeIcon
+              icon={["fab", "facebook"]}
+              style={{ marginRight: 2 }}
+              size="lg"
+            />
             Facebook
           </a>{" "}
           <a href="https://instagram.com/in.gg" style={{ boxShadow: `none` }}>
+            <FontAwesomeIcon
+              icon={["fab", "instagram"]}
+              style={{ marginRight: 2 }}
+              size="lg"
+            />
             Instagram
           </a>
         </div>
