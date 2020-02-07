@@ -66,7 +66,7 @@ const Bio = () => {
           <span>
             <FontAwesomeIcon
               icon={["fab", "slack-hash"]}
-              style={{ marginRight: 2 }}
+              // style={{ marginRight: 2 }}
             />
             {author}
           </span>
@@ -78,7 +78,7 @@ const Bio = () => {
           <a href="https://github.com/inkyojeong" style={{ boxShadow: `none` }}>
             <FontAwesomeIcon
               icon={["fab", "github"]}
-              style={{ fontSize: 18, marginRight: 2 }}
+              // style={{ fontSize: 18, marginRight: 2 }}
             />
             Github
           </a>{" "}
@@ -91,14 +91,14 @@ const Bio = () => {
           >
             <FontAwesomeIcon
               icon={["fab", "facebook"]}
-              style={{ fontSize: 18, marginRight: 2 }}
+              // style={{ fontSize: 18, marginRight: 2 }}
             />
             Facebook
           </a>{" "}
           <a href="https://instagram.com/in.gg" style={{ boxShadow: `none` }}>
             <FontAwesomeIcon
               icon={["fab", "instagram"]}
-              style={{ fontSize: 18, marginRight: 2 }}
+              // style={{ fontSize: 18, marginRight: 2 }}
             />
             Instagram
           </a>
