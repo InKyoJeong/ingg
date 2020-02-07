@@ -9,6 +9,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 import "./bio.css"
+import "./bio-icon.scss"
 import { rhythm } from "../utils/typography"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -78,7 +79,7 @@ const Bio = () => {
           <a href="https://github.com/inkyojeong" style={{ boxShadow: `none` }}>
             <FontAwesomeIcon
               icon={["fab", "github"]}
-              // style={{ fontSize: 18, marginRight: 2 }}
+              className="author-sns__github"
             />
             Github
           </a>{" "}
