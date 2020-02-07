@@ -79,7 +79,7 @@ const Bio = () => {
           <a href="https://github.com/inkyojeong" style={{ boxShadow: `none` }}>
             <FontAwesomeIcon
               icon={["fab", "github"]}
-              className="author-sns__github"
+              // className="author-sns__github"
             />
             Github
           </a>{" "}
