@@ -74,6 +74,7 @@ src
 │   │   ├── top.js
 │   │   └── top.css
 │   ├── bio.js  // Profile
+│   ├── bio-icon.scss
 │   ├── bio.css
 │   ├── layout.js   // Components collection. Overall design
 │   └── seo.js
