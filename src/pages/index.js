@@ -5,7 +5,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import "./index.css"
-// import SwitchExample from "../components/dark-mode/switch"
+
+import ReactGA from "react-ga"
+ReactGA.initialize("UA-158078349-01")
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 class BlogIndex extends React.Component {
   render() {
