@@ -73,7 +73,7 @@ const Bio = () => {
           </span>
         </Link>
         <br />
-        <div className="author-introduce">Front-End Developer</div>
+        <div className="author-introduce">Front-End Developer , DevLog</div>
 
         <div className="author-sns">
           <a href="https://github.com/inkyojeong" style={{ boxShadow: `none` }}>

@@ -1,21 +1,34 @@
-.myname {
+.about-myname,
+.about-introduce {
   /* padding-bottom: 10px; */
   /* border-bottom: 3px solid rgba(1, 1, 1, 0.18); */
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 14px;
 }
-.name-hr {
+.about-myname__hr {
   background: linear-gradient(90deg, #3d4f52, #3fa19b, #565f69);
   height: 1.5px;
 }
 
-.myname span {
+.about-myname span,
+.about-activities,
+.about-introduce {
   font-size: 25px;
 }
+
 h2 {
-  margin-top: 0px;
+  margin-top: 30px;
   margin-bottom: 15px;
 }
-.email-1 {
-  margin-bottom: 5px;
+
+.about-link,
+.about-contact {
+  box-shadow: none;
+}
+tr td:nth-child(2) {
+  text-align: center;
+}
+
+.about-activities__period {
+  width: 20%;
 }

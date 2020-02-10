@@ -14,28 +14,59 @@ class NotFoundPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="About Me" />
-        <h1 class="myname">
-          <span>정인교 (Jeong InKyo)</span>
+        <h1 class="about-myname">
+          <span>정인교 (InKyo Jeong)</span>
         </h1>
-        <hr class="name-hr" />
-        <div>
-          <span role="img" aria-label="study">
-            👨🏻‍💻
+        <hr class="about-myname__hr" />
+        {/* <h1 class="about-introduce">
+          <span>
+            Junior,{" "}
+            <span role="img" aria-label="study">
+              👨🏻‍💻
+            </span>
+            Dev Log
           </span>
-          Junior
-          <span role="img" aria-label="study">
-            👨🏻‍💻
-          </span>
-        </div>
-        <p> HTML,CSS / Javascript / React / Git</p>
-        <br />
-        <h2>Now</h2>
-        <p>LikeLion 7th</p>
-        <h2>Contact</h2>
-        <p class="email-1">inkyo.dev@gmail.com</p>
-        <p class="email-2">viapolar@likelion.org</p>
-        {/* <h2>Project</h2>
-        <p>-</p> */}
+        </h1> */}
+        {/* <p> HTML,CSS / Javascript / React / Git</p> */}
+
+        <table>
+          <tr>
+            <td>Blog</td>
+            <td>
+              <a href="https://ingg.io" className="about-link">
+                https://ingg.io
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>Github</td>
+            <td>
+              <a
+                href="https://github.com/InKyoJeong"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about-link"
+              >
+                https://github.com/InKyoJeong
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>Contact</td>
+            <td>
+              <a href="mailto:inkyo.dev@gmail.com" className="about-contact">
+                inkyo.dev@gmail.com
+              </a>
+            </td>
+          </tr>
+        </table>
+        <table>
+          <h1 class="about-activities">Activities</h1>
+          <tr>
+            <td class="about-activities__period">19.03 ~ 19.12</td>
+            <td>LikeLion, 7th</td>
+          </tr>
+        </table>
       </Layout>
     )
   }
