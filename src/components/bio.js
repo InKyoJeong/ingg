@@ -14,10 +14,10 @@ import { rhythm } from "../utils/typography"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
-import { faHashtag } from "@fortawesome/free-solid-svg-icons"
+import { faHashtag, faPencilAlt } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-library.add(fab, faHashtag)
+library.add(fab, faHashtag, faPencilAlt)
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -73,7 +73,7 @@ const Bio = () => {
           </span>
         </Link>
         <br />
-        <div className="author-introduce">Front-End Developer , DevLog</div>
+        <div className="author-introduce">Front-End Developer</div>
 
         <div className="author-sns">
           <a href="https://github.com/inkyojeong" style={{ boxShadow: `none` }}>
