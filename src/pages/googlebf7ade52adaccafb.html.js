@@ -14,6 +14,7 @@ class GoogleSearch extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="GoogleSearch" />
+        google-site-verification: googlebf7ade52adaccafb.html
       </Layout>
     )
   }
