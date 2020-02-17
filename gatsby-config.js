@@ -81,5 +81,13 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://ingg.io",
+        sitemap: "https://ingg.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
   ],
 }
