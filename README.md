@@ -60,6 +60,7 @@ $ npm i --save @fortawesome/free-brands-svg-icons
 $ npm install --save gatsby-plugin-sitemap
 $ npm install --save gatsby-plugin-robots-txt
 $ npm install --save gatsby-plugin-google-analytics
+disqus-react
 ```
 
 ## 📌 My Structure
