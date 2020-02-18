@@ -1,6 +1,6 @@
 ---
 title: "[프론트엔드 개발환경] 1. NPM"
-date: "2020-02-18T17:18:37.121Z"
+date: 2020-02-18 19:50:98
 ---
 
 ![npm](./npm.png)
@@ -20,7 +20,7 @@ date: "2020-02-18T17:18:37.121Z"
 **_npm_**에 업로드된 노드 모듈을 패키지라고 한다. 패키지 설치는 `install`을 이용한다.
 
 ```js
-npm install <package>
+$ npm install <package>
 ```
 
 <br>
@@ -28,7 +28,7 @@ npm install <package>
 패키지를 전역 설치하려면 `-g` 옵션을 지정한다. 모든 프로젝트가 공통으로 사용한다면 패키지를 전역으로 설치한다.
 
 ```js
-npm install -g <package>
+$ npm install -g <package>
 ```
 
 <br>
@@ -43,10 +43,10 @@ npm install -g <package>
 정보를 디폴트로 설정하려면 `--yes` 또는 `-y` 옵션을 지정하면 된다.
 
 ```js
-npm init
+$ npm init
 
 // 또는
-npm init -y
+$ npm init -y
 ```
 
 <br>
@@ -88,7 +88,7 @@ npm init -y
 추가한 명령어는 `run`옵션을 지정하여 실행한다.
 
 ```js
-npm run <script_name>
+$ npm run <script_name>
 ```
 
 <br>
