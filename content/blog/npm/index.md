@@ -1,5 +1,5 @@
 ---
-title: "[프론트엔드 개발환경] 1. NPM"
+title: "[프론트엔드 개발환경] NPM"
 date: 2020-02-18 19:50:98
 ---
 
@@ -122,6 +122,9 @@ $ npm run <script_name>
 },
 ```
 
-<!-- reference
-https://semver.org/
-https://docs.npmjs.com/ -->
+<br>
+
+> Reference
+
+- https://semver.org/
+- https://docs.npmjs.com/
