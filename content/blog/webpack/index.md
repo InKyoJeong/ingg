@@ -190,7 +190,7 @@ ES6에서는 클라이언트 사이드 자바스크립트에서도 동작하는 
 <script type="module" src="./src/app.js"></script>
 ```
 
-이때는 **_app.js_**에서 **\__math_**를 가져오기 때문에 **_math.js_**은 따로 로드하지 않아도 된다.
+이때는 **_app.js_**에서 **_math_**를 가져오기 때문에 **_math.js_**은 따로 로드하지 않아도 된다.
 
 그러나 아직까지는 모든 브라우저에서 지원하지 않기 때문에 브라우저와 무관하게 사용할 수 있는 모듈이 필요하다.
 (브라우저의 모듈 지원 상황은 [여기](https://caniuse.com/#search=module)에서 볼 수 있다.)
@@ -256,8 +256,8 @@ module.exports = {
 ```
 
 첫줄의 **path**는 경로를 만들어주며 **Node.js**에 기본으로깔려있는 패키지이다. 웹팩자체가 노드에서 돌아가기 때문에 이 모듈도 노드형 모듈을 사용한 것이다.
-`import path from "path"` 와 같다. **_webpack.config.js_**는 모던자바스크립트 파일이 아니라서,
-import를 쓸 수 없다.
+`import path from "path"` 와 같다. (**_webpack.config.js_**는 모던자바스크립트 파일이 아니라서,
+import를 쓸 수 없다.)
 **entry**는 시작점 경로를 지정하는 옵션이며, **output**은 번들링 결과물을 위치할 경로다.
 
 ![webpack3](./content-pic/webpack3.png)
