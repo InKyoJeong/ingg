@@ -54,7 +54,7 @@ module.exports = {
                 "package.json": "json",
                 // "코드파일형식" : "css에서사용할 이름"
               },
-              showLineNumbers: true,
+              // showLineNumbers: true,
               noInlineHighlight: false,
             },
           },
