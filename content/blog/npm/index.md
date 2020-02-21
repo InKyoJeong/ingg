@@ -19,7 +19,7 @@ date: 2020-02-18 19:50:98
 
 **_npm_**에 업로드된 노드 모듈을 패키지라고 한다. 패키지 설치는 `install`을 이용한다.
 
-```js
+```
 $ npm install <package>
 ```
 
@@ -27,7 +27,7 @@ $ npm install <package>
 
 패키지를 전역 설치하려면 `-g` 옵션을 지정한다. 모든 프로젝트가 공통으로 사용한다면 패키지를 전역으로 설치한다.
 
-```js
+```
 $ npm install -g <package>
 ```
 
@@ -42,7 +42,7 @@ $ npm install -g <package>
 `npm init` 은 프로젝트를 초기화 한다. 몇가지 정보를 입력한 후에 `package.json` 파일이 생성 된다.
 정보를 디폴트로 설정하려면 `--yes` 또는 `-y` 옵션을 지정하면 된다.
 
-```js
+```
 $ npm init
 
 // 또는
@@ -59,7 +59,7 @@ $ npm init -y
 
 **_Node.js_**는 package.json 파일안에 프로젝트의 모든 정보를 기록한다.
 
-```
+```package.json
 {
   "name": "test2",
   "version": "1.0.0",
@@ -73,9 +73,9 @@ $ npm init -y
 }
 ```
 
-명령어를 추가할 수도 있다. **_package.json_**의 **_scripts_** 부분에 키를 추가하면 된다.
+명령어를 추가할 수도 있다. **_scripts_** 안에 키를 추가하면 된다.
 
-```js
+```package.json
 {
   "scripts": {
     "<script_name>": "Example"
@@ -87,7 +87,7 @@ $ npm init -y
 
 추가한 명령어는 `run`옵션을 지정하여 실행한다.
 
-```js
+```
 $ npm run <script_name>
 ```
 
@@ -113,7 +113,7 @@ $ npm run <script_name>
 
 **예시)**
 
-```js
+```package.json
 "dependencies": {
   "my_dep": "^1.0.4",
   "another_dep1": "~2.2.0",

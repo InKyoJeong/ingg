@@ -90,9 +90,10 @@ src
 │   ├── index.js    // home(post) style. title, description, date, etc
 │   └── index.css
 ├── styles // (Add) Global style
+│   └── code.scss   // Code content style
 ├── templates
 │   ├── blog-post.js    // Inside post design.
-│   └── blog-post.css
+│   └── blog-post.css   // Post style and Code block styles
 └── utils //typography.js
 
 ```

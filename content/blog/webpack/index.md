@@ -87,8 +87,8 @@ sum(3, 4)	//Uncaught TypeError: sum is not a function
 
 **즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)**은 정의되자마자 즉시 실행되는 Javascript Function 를 말한다.
 
-```java
-(function() {
+```js
+・(function() {
   statements
 })()
 ```
@@ -97,8 +97,8 @@ sum(3, 4)	//Uncaught TypeError: sum is not a function
 
 IIFE 내부에서 정의된 변수는 외부 범위에서 접근이 불가능하다.
 
-```java
-(function() {
+```js
+・(function() {
   var aName = "Mary"
 })()
 
@@ -221,8 +221,8 @@ $ npm install --save-dev webpack-cli
 `--save-dev`옵션이나 `-D`옵션을 추가하여 설치하면 _package.json_ 파일안에서
 **_dependencies_**가 아니라 **_devDependencies_**에 기록이 되는데, 라이브러리를 설치할때 어플리케이션에서 직접쓰이는것과 개발환경에 쓰이는 것을 이렇게 분리하여 설치하는 것이 좋다.
 
-```js
-// ex)
+```package.json
+...
 
 "dependencies": {
     "react-switch": "^5.0.1"

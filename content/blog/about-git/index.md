@@ -58,7 +58,7 @@ practice 디렉토리 안에 text.txt 파일을 만들고 내용을 입력한뒤
 
 깃에서 브랜치를 만들거나 확인하는 명령은 `git branch`이다.
 
-```js
+```
 $ git branch <branch_name>
 ```
 
@@ -87,7 +87,7 @@ master를 붙인 커밋은 **_'master'_** 에만 적용되어 있다. 나머지 
 **_matser_**에서 다른 브랜치로 이동해보자.
 다른 브랜치로 이동하는 명령은 `git checkout`이다.
 
-```js
+```
 $ git checkout <branch>
 ```
 
