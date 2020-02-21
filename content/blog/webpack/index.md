@@ -33,7 +33,7 @@ date: 2020-02-20 01:50:98
 
 예를들어 _math.js_ 와 *app.js*를 스크립트 태그에 넣는다고 하자. *math.js*을 먼저 로딩하고 *app.js*을 로딩한다.
 
-```html{5-6}
+```html{5,6}
 <!DOCTYPE html>
 <html>
   <head> </head>
