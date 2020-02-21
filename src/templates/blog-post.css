@@ -105,18 +105,19 @@ code[class*="language-text"] {
   padding-bottom: 0px;
 }
 
+/* 코드 형식 표시  */
 .gatsby-highlight pre[class*="language-"]::before {
   display: block;
   border-radius: 0px 0px 4px 4px;
-  letter-spacing: 0.075em;
+  letter-spacing: 0.045em;
   line-height: 1;
   position: absolute;
-  left: 1.1rem;
+  left: 0.8rem;
   text-align: right;
   text-transform: uppercase;
   top: 0px;
   color: #232129;
-  font-size: 0.75rem;
+  font-size: 0.67rem;
   padding: 0.25rem 0.5rem;
 }
 .gatsby-highlight pre[class="language-js"]::before {
@@ -139,6 +140,15 @@ code[class*="language-text"] {
   background: #235a2a;
   background-color: #235a2a;
   text-transform: lowercase;
+}
+
+/* Code HighLight Style */
+.gatsby-highlight-code-line {
+  background-color: rgb(43, 61, 66);
+  /* opacity: 0.9; */
+  display: block;
+  border-left: 5px solid rgb(5, 167, 158);
+  padding-left: 2px;
 }
 
 /* ----------------- */

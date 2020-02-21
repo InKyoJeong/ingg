@@ -42,9 +42,9 @@ date: 2020-01-27 18:59:98
 레포지토리가 로컬로 복제되면, 개발자는 표준 Git 커밋 프로세스를 따라 변경할 수 있다.
 
 ```
-git status
-git add <some-file>
-git commit -m "<message>"
+$ git status
+$ git add <some-file>
+$ git commit -m "<message>"
 ```
 
 <br>
@@ -54,7 +54,7 @@ git commit -m "<message>"
 로컬 레포지토리에 새로운 변경 내용이 커밋되면 다른 개발자들과 공유하기 위해 `push`되어야한다.
 
 ```
-git push origin master
+$ git push origin master
 ```
 
 <br>
