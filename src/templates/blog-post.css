@@ -92,14 +92,14 @@ pre[class*="language-"] {
 code[class*="language-"] {
   text-shadow: unset !important;
   color: rgb(162, 177, 177);
-  padding: 1.7rem 0px 0.7rem 0px;
+  padding: 1.7rem 0px 0.7rem 0.5rem;
   font-size: 0.85rem;
   line-height: 1.42;
   display: block;
 }
 code[class*="language-text"] {
   color: rgb(162, 177, 177);
-  padding: 1rem 0px;
+  padding: 1rem 0px 1rem 0.5rem;
 }
 .gatsby-highlight pre[class*="language-text"] {
   padding-bottom: 0px;
