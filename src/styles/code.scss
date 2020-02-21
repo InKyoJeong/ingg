@@ -89,3 +89,15 @@
     color: hsl(276, 47%, 56%);
   }
 }
+
+.language-json {
+  .token.property {
+    color: hsl(276, 47%, 56%);
+  }
+  .token.operator {
+    color: hsl(184, 72%, 66%);
+  }
+  .token.string {
+    color: hsl(135, 48%, 55%);
+  }
+}

@@ -52,6 +52,7 @@ module.exports = {
                 env: "bash",
                 mdx: "md",
                 "package.json": "json",
+                // "코드파일형식" : "css에서사용할 이름"
               },
             },
           },

@@ -134,7 +134,7 @@ code[class*="language-text"] {
   background: #2ca9e2;
   background-color: #2ca9e2;
 }
-.gatsby-highlight pre[class="language-package.json"]::before {
+.gatsby-highlight pre[class="language-json"]::before {
   content: "package.json";
   background: #235a2a;
   background-color: #235a2a;
