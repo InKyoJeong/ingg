@@ -90,15 +90,13 @@ code[class*="language-text"] {
 /* Code HighLight Style */
 .gatsby-highlight-code-line {
   background-color: rgb(43, 61, 66);
-  /* opacity: 0.9; */
+  // opacity: 0.9;
   border-left: 5px solid rgb(5, 167, 158);
-  // position: absolute;
-  // left: 0;
   display: block;
-  // width: 100%;
   margin-left: -1rem;
-  // margin-right: 1rem;
-  padding-left: 1rem;
+  // margin-right: -6rem;
+  width: 630px;
+  padding-left: 0.7rem;
 }
 
 // Code Color
@@ -181,6 +179,9 @@ code[class*="language-text"] {
   .token.number {
     color: hsl(22, 69%, 60%);
   }
+  .token.regex {
+    color: rgb(159, 212, 218);
+  }
 }
 
 /* package.json code color*/
@@ -193,5 +194,12 @@ code[class*="language-text"] {
   }
   .token.string {
     color: hsl(135, 60%, 62%);
+  }
+}
+
+/* CSS code color*/
+.language-css {
+  .token.selector {
+    color: #d8a182;
   }
 }

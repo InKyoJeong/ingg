@@ -203,7 +203,7 @@ ES6에서는 클라이언트 사이드 자바스크립트에서도 동작하는 
 
 그래서 웹팩을 사용한다. 웹팩은 하나의 시작점(**Entry point**)으로부터 의존적인 모듈을 전부 찾아내서 하나의 파일로 만든다. 이 결과물을 **Output**이라고 한다.
 
-### 설치
+### 4-1. 설치
 
 Webpack4 이후 버전부터는 cli를 같이 설치해야 커맨드라인에서 사용할 수 있다.
 
@@ -236,7 +236,7 @@ $ npm install --save-dev webpack-cli
 
 <br>
 
-### webpack.config.js
+### 4-2. webpack.config.js
 
 **_webpack.config.js_**은 Webpack이 실행될 때 참조하는 설정 파일이다. 최상단에 `webpack.config.js` 파일을 만들면 이를 웹팩에서 자동으로 사용한다.
 
@@ -258,7 +258,6 @@ module.exports = {
 첫줄의 **path**는 경로를 만들어주며 **Node.js**에 기본으로깔려있는 패키지이다. 웹팩자체가 노드에서 돌아가기 때문에 이 모듈도 노드형 모듈을 사용한 것이다.
 `import path from "path"` 와 같다. (**_webpack.config.js_**는 모던자바스크립트 파일이 아니라서,
 import를 쓸 수 없다.)
-**entry**는 시작점 경로를 지정하는 옵션이며, **output**은 번들링 결과물을 위치할 경로다.
 
 ![webpack3](./content-pic/webpack3.png)
 
@@ -289,9 +288,12 @@ import를 쓸 수 없다.)
 - Mode
 - Browser Compatibility -->
 
-<!-- ### Entry
+### 4-3. Concepts
 
-기본값은 `./src/index.js` 이고, 다르게 설정할 수 있다. (다중엔트리 포인트를 설정할 수도 있다.)
+- #### Entry
+
+**entry**는 최초 진입점이다. 시작점 경로를 지정하는 옵션이다.
+기본값은 `./src/index.js` 이고, 다르게 설정할 수 있다. _(다중엔트리 포인트를 설정할 수도 있다.)_
 
 ```js
 // webpack.config.js
@@ -301,13 +303,171 @@ module.exports = {
     main: "./path/to/my/entry/file.js",
   },
 }
-``` -->
+```
+
+<br>
+
+- #### Output
+
+**output**은 번들링 결과물을 위치할 경로다. `path.resolve()`함수는 절대경로 주소를 얻어온다.
+
+```js
+// webpack.config.js
+
+const path = require("path")
+
+module.exports = {
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "./dist"),
+  },
+}
+```
+
+`[name]`옵션은 entry에서 설정한 값을 포함한다. 주로 다중 엔트리 포인트를 만들때 쓴다.
+
+```js{7}
+module.exports = {
+  entry: {
+    app: "./src/app.js",
+    search: "./src/search.js",
+  },
+  output: {
+    filename: "[name].js",
+    path: __dirname + "/dist",
+  },
+}
+```
+
+- #### Loader
+
+로더는 웹팩이 웹 애플리케이션을 해석할 때 자바스크립트 파일이 아닌 것들을 변환할 수 있도록 도와준다.
+파일을 다른 언어 *(ex : TypeScript)*에서 *JavaScript*로 변환하거나
+인라인 이미지를 데이터 *URL*로 로드 할 수 있다.
+또한 자바스크립트 모듈에서 직접 CSS파일을 `import`할 수 있다.
+
+#### Loader를 쓰는 이유
+
+위의 *app.js*에서 *style.css*파일을 만들어 **import**하고 웹팩을 빌드하면 오류가 발생한다.
+
+```css
+body {
+  background-color: red;
+}
+```
+
+```js{2}
+import * as math from "./math.js"
+import "./style.css"
+
+console.log(math.sum(1, 2))
+```
+
+```
+ERROR in ./src/style.css 1:5
+Module parse failed: Unexpected token (1:5)
+You may need an appropriate loader to handle this file type, currently no loaders are configured
+to process this file. See https://webpack.js.org/concepts#loaders
+```
+
+css모듈을 파싱하는 과정에서 오류 메세지가 나오고 적절한 로더를 사용해야 한다고 말해준다.
+
+#### css-loader
+
+*css-loader*를 설치하고 *webpack.config.js*파일에 설정을 추가한다.
+
+```
+$ npm install --save-dev css-loader
+```
+
+```js{10-16}
+//webpack.config.js
+module.exports = {
+  mode: "development",
+  entry: {
+   ...
+  },
+  output: {
+    ...
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,         // .css로 끝나는 모든 파일
+        use: "css-loader"       // css-loader를 적용
+      }
+    ]
+  }
+};
+```
+
+`test`에 사용된 것은 **정규표현식(regular expression)**으로, 로더를 적용할 파일 유형이다. CSS인 파일을 전부 찾아준다.
+`/\.(scss|sass)$/`  이렇게 `|`을 넣어서 *scss*와 *sass*파일을 찾게할수도 있다.
+`use`는 해당 파일에 적용할 로더의 이름이다.
+
+적용후 빌드하면 **_dist/main.js_**에서 *css*코드가 *js*코드로 변환된 것을 볼 수 있다.
+
+#### style-loader
+
+*style-loader*는 *css*를 **DOM**에 삽입한다. 모듈로 변경된 스타일 시트는 돔에 추가되어야 브라우저가 해석할 수 있다.
+*css-loader*로 처리하면 자바스크립트 코드로만 변경되었을 뿐 **DOM**에 적용되지 않았기 때문에 스트일시트가 적용되지 않았다.
+
+```
+npm install --save-dev style-loader
+```
+
+```js{6}
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+}
+```
+
+따라서 *style-loader*를 이용하면 자바스크립트로 변경된 스타일시트를 동적으로 돔에 추가할 수 있다.
+`.css` 확장자로 끝나는 모듈을 읽어 들여 *css-loader*를 적용하는 것이 먼저이므로 *css-loader*앞에 *style-loader*를 쓴다. (오른쪽부터 적용)
+
+이제 빌드하면 html에서 css가 적용된 것을 볼 수 있다.
+
+> **Loader 적용 순서**<br>
+> : 여러 개의 로더를 사용하는 경우 로더가 적용되는 순서에 주의해야 한다.
+> 로더는 기본적으로 **_오른쪽에서 왼쪽 순 (또는 아래에서 위쪽)_**으로 적용된다.
+> 아래 예제에서 실행은 *sass-loader*로 시작하고 *css-loader*로 계속되고 마지막으로 *style-loader*로 끝난다.
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader" },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+          { loader: "sass-loader" },
+        ],
+      },
+    ],
+  },
+}
+```
 
 <br>
 
 > Reference
 
 - [MDN - IIFE](https://developer.mozilla.org/docs/Glossary/IIFE)
-  <!-- - [lecture-frontend-dev-env](https://github.com/jeonghwan-kim/lecture-frontend-dev-env) -->
-- [Webpack.js.org](https://webpack.js.org/concepts/)
 - [JavaScript 표준을 위한 움직임: CommonJS와 AMD](https://d2.naver.com/helloworld/12864)
+- [Webpack - concepts](https://webpack.js.org/concepts/)
+- [Webpack - loaders](https://webpack.js.org/loaders/style-loader/)
+  <!-- - [참고 : 정규표현식 해석해주는 사이트](regexper.com) -->
+      <!-- - [lecture-frontend-dev-env](https://github.com/jeonghwan-kim/lecture-frontend-dev-env) -->

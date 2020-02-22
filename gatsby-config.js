@@ -53,6 +53,7 @@ module.exports = {
                 mdx: "md",
                 "package.json": "json",
                 // "코드파일형식" : "css에서사용할 이름"
+                // "webpack.config.js": "webpack",
               },
               // showLineNumbers: true,
               noInlineHighlight: false,

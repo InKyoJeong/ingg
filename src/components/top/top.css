@@ -16,16 +16,6 @@
     #4ecdc4,
     #495e61
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  /* background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#556270),
-    color-stop(50%, #4ecdc4),
-    to(#556270)
-  );
-  background: linear-gradient(-45deg, #495e61, #4ecdc4, #556270); */
   background-size: 200% 200%;
   animation: Gradient 5s ease infinite;
   -webkit-animation: Gradient 5s ease infinite;
