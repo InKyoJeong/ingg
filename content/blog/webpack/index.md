@@ -290,6 +290,19 @@ import를 쓸 수 없다.)
 
 ### 4-3. Concepts
 
+- #### Mode
+
+*mode*는 `development, production, none`이 있는데
+*development*는 개발환경의 결과물을 만들때, 운영환경에서는 *production*을 사용한다.
+
+```js{2}
+module.exports = {
+  mode: "development",
+  ...
+```
+
+<br>
+
 - #### Entry
 
 **entry**는 최초 진입점이다. 시작점 경로를 지정하는 옵션이다.
@@ -463,9 +476,155 @@ module.exports = {
 }
 ```
 
+\* 기타 다른 로더들은 Webpack의 [Docs](https://webpack.js.org/loaders/)를 참고
+
 <br>
 
-<!-- - #### Plugin -->
+- #### Plugin
+
+웹팩의 기본적인 동작에 추가적인 기능을 제공하는 속성이다.
+로더는 파일을 해석하고 변환하는 과정에 관여하는 반면, 플러그인은 해당 결과물의 형태를 바꾸는 역할을 한다.
+
+Plugin은 **클래스** 형태로 정의하고 _apply_ 라는 **메소드**를 정의하며, [event hook](https://webpack.js.org/api/compiler-hooks/)을 tap안에 지정한다.
+
+```js
+//helloworld-plugin.js
+
+class HelloWorldPlugin {
+  apply(compiler) {
+    compiler.hooks.done.tap("Hello World Plugin", stats => {
+      /* stats is passed as argument when done hook is tapped. */
+      console.log("Hello World!")
+    })
+  }
+}
+
+module.exports = HelloWorldPlugin
+```
+
+그 다음 플러그인을 사용하려면 *webpack.config.js*의 `plugins` 배열에 **생성자 함수**로 생성한 객체 인스턴스를 포함한다.
+
+```js{2,15}
+const path = require("path");
+const HelloWorldPlugin = require("./helloworld-plugin");
+
+module.exports = {
+  mode: "development",
+  entry: {
+      ...
+  },
+  output: {
+      ...
+  },
+  module: {
+      ...
+  },
+  plugins: [new HelloWorldPlugin()],
+}
+```
+
+```
+$ npm run build
+
+> test3@1.0.0 build /Users/ingg/Documents/test3
+> webpack
+
+Hello World!
+Hash: b6f189fa57dc5a2bc07
+...
+```
+
+<br>
+
+#### BannerPlugin
+
+BannerPlugin을 이용해서 결과물에 빌드 정보나 커밋정보를 추가할 수 있다.
+
+```js{3,8-12}
+//webpack.config.js
+const path = require("path");
+const webpack = require("webpack");
+
+module.exports = {
+  // ...(생략)
+  },
+  plugins: [
+    new webpack.BannerPlugin({
+      banner: "hello world"
+    })
+  ]
+};
+```
+
+```js{3}
+// dist/main.js
+
+/*! hello world */
+/******/ (function(modules) { // webpackBootstrap
+/******  ....
+```
+
+아래와 같이 빌드 날짜와 시간을 함수로 전달할 수도 있다.
+
+```js{1-5}
+plugins: [
+  new webpack.BannerPlugin({
+    banner: () => `빌드 날짜: ${new Date().toLocaleString()}`,
+  }),
+]
+```
+
+```js{1}
+/*! 빌드 날짜: 2020. 2. 23. 오전 2:03:48 */
+/******/ (function(modules) { // webpackBootstrap
+/******  ....
+```
+
+배너 정보가 많다면 파일로 따로 분리하자.
+
+```js
+//banner.js
+const childProcess = require("child_process")
+
+module.exports = function banner() {
+  const commit = childProcess.execSync("git rev-parse --short HEAD")
+  const user = childProcess.execSync("git config user.name")
+  const date = new Date().toLocaleString()
+
+  return (
+    `commitVersion: ${commit}` + `Build Date: ${date}\n` + `Author: ${user}`
+  )
+}
+```
+
+```js{3-4, 8}
+//webpack.config.js
+const path = require("path")
+const webpack = require("webpack")
+const banner = require("./banner.js")
+
+module.exports = {
+  // ...(생략)
+  plugins: [new webpack.BannerPlugin(banner)],
+}
+```
+
+`npm run build`하면 이런식으로 _git커밋 버전, git커밋 유저, 날짜_ 가 남겨지는 것을 볼 수 있다.
+
+```js{4-6}
+// dist/main.js
+
+/*!
+ * commitVersion: 1edb52a
+ * Build Date: 2020. 2. 23. 오전 2:16:13
+ * Author: InKyoJeong
+ *
+ */
+ ...
+```
+
+그밖에 자주사용하는 플러그인으로는 `DefinePlugin`, `HtmlWebpackPlugin`, `CleanWebpackPlugin`, `MiniCssExtractPlugin` 등이 있다.
+[(참고)](https://webpack.js.org/plugins/)
 
 <br>
 
@@ -474,6 +633,6 @@ module.exports = {
 - [MDN - IIFE](https://developer.mozilla.org/docs/Glossary/IIFE)
 - [JavaScript 표준을 위한 움직임: CommonJS와 AMD](https://d2.naver.com/helloworld/12864)
 - [Webpack - concepts](https://webpack.js.org/concepts/)
-- [Webpack - loaders](https://webpack.js.org/loaders/style-loader/)
   <!-- - [참고 : 정규표현식 해석해주는 사이트](regexper.com) -->
       <!-- - [lecture-frontend-dev-env](https://github.com/jeonghwan-kim/lecture-frontend-dev-env) -->
+- [Webpack - compiler hooks](https://webpack.js.org/api/compiler-hooks/)
