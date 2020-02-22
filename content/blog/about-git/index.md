@@ -21,7 +21,7 @@ description: "대부분의 프로젝트에서 기능 개발과 에러 수정이 
 
 ---
 
-### 📌 Content
+### 📌 Contents
 
 1. [Basic](#basic)
 2. [Merge vs Rebase](#merge-vs-rebase)

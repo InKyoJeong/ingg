@@ -10,7 +10,7 @@ date: 2020-01-27 18:59:98
 
 ---
 
-### 📌 Content
+### 📌 Contents
 
 1. [Centralized Workflow](#centralized-workflow)
 2. [Feature Branch Workflow](#feature-branch-workflow)
