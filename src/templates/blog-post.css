@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 
 .inner {
   font-family: "Nanum Gothic", sans-serif;
@@ -88,11 +91,9 @@ img {
   -webkit-box-shadow: 6px 6px 7px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 6px 7px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 6px 6px 7px -6px rgba(0, 0, 0, 0.75);
-
   display: block !important;
   opacity: 0.7;
   border-radius: 50%;
-
   z-index: 999;
   /* 사진보다 앞으로 */
   text-align: center;

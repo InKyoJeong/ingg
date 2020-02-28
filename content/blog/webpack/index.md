@@ -88,7 +88,7 @@ sum(3, 4)	//Uncaught TypeError: sum is not a function
 **즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)**은 정의되자마자 즉시 실행되는 Javascript Function 를 말한다.
 
 ```js
-・(function() {
+(function() {
   statements
 })()
 ```
@@ -98,7 +98,7 @@ sum(3, 4)	//Uncaught TypeError: sum is not a function
 IIFE 내부에서 정의된 변수는 외부 범위에서 접근이 불가능하다.
 
 ```js
-・(function() {
+(function() {
   var aName = "Mary"
 })()
 
@@ -179,7 +179,7 @@ import * as math from "./math.js"
 // import {sum} from "./math.js"
 // sum만 가져오고 싶다면 이렇게 사용할 수도 있다.
 
-console.log(math.sum(1, 2))
+console.log(math.sum(1, 2));
 ```
 
 `import * as name`은 모든 **export**를 가져오고 `name` 매개 변수는 모듈 객체의 이름으로, **export**를 참조하기위한 일종의 네임 스페이스로 사용된다.
@@ -425,7 +425,7 @@ module.exports = {
 #### style-loader
 
 *style-loader*는 *css*를 **DOM**에 삽입한다. 모듈로 변경된 스타일 시트는 돔에 추가되어야 브라우저가 해석할 수 있다.
-*css-loader*로 처리하면 자바스크립트 코드로만 변경되었을 뿐 **DOM**에 적용되지 않았기 때문에 스트일시트가 적용되지 않았다.
+*css-loader*로 처리하면 자바스크립트 코드로만 변경되었을 뿐 **DOM**에 적용되지 않았기 때문에 스타일시트가 적용되지 않았다.
 
 ```
 npm install --save-dev style-loader
@@ -566,7 +566,7 @@ module.exports = {
 
 아래와 같이 빌드 날짜와 시간을 함수로 전달할 수도 있다.
 
-```js{1-5}
+```js
 plugins: [
   new webpack.BannerPlugin({
     banner: () => `빌드 날짜: ${new Date().toLocaleString()}`,

@@ -53,13 +53,13 @@ To develop locally, `gatsby develop`, then open `https://localhost:8000`
 gatsby-plugin-sass
 node-sass
 react-switch
-$ npm i --save @fortawesome/fontawesome-svg-core
-$ npm i --save @fortawesome/free-solid-svg-icons
-$ npm i --save @fortawesome/react-fontawesome
-$ npm i --save @fortawesome/free-brands-svg-icons
-$ npm install --save gatsby-plugin-sitemap
-$ npm install --save gatsby-plugin-robots-txt
-$ npm install --save gatsby-plugin-google-analytics
+@fortawesome/fontawesome-svg-core
+@fortawesome/free-solid-svg-icons
+@fortawesome/react-fontawesome
+@fortawesome/free-brands-svg-icons
+gatsby-plugin-sitemap
+gatsby-plugin-robots-txt
+gatsby-plugin-google-analytics
 disqus-react
 ```
 
