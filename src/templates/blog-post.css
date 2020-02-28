@@ -42,6 +42,10 @@ html {
 .inner ul,
 .inner ol {
   padding-left: 20px;
+  margin-bottom: 1rem;
+}
+.inner li {
+  margin-bottom: 0.3rem;
 }
 
 /* image margin 제거 */

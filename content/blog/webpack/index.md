@@ -16,7 +16,7 @@ date: 2020-02-23 01:50:98
 
 ### 📌 Contents
 
-1. [Basic](#basic)
+1. [Intro](#intro)
 2. [IIFE](#iife)
 3. [CommonJS와 AMD](#cjs-amd)
 4. [Webpack](#webpack)
@@ -25,7 +25,7 @@ date: 2020-02-23 01:50:98
 
 <br>
 
-## <a name="basic"></a>1. Basic
+## <a name="intro"></a>1. Intro
 
 ### import / export 구문이 없었던 모듈 이전 상황
 
@@ -50,7 +50,7 @@ date: 2020-02-23 01:50:98
 
 ```js
 function sum(x, y) {
-  return x + y
+  return x + y;
 }
 ```
 
@@ -61,7 +61,7 @@ function sum(x, y) {
 ```js
 sum(1, 2)
 
-console.log(sum(1, 2)) // 3
+console.log(sum(1, 2)); // 3
 ```
 
 <br>
@@ -584,12 +584,12 @@ plugins: [
 
 ```js
 //banner.js
-const childProcess = require("child_process")
+const childProcess = require("child_process");
 
 module.exports = function banner() {
-  const commit = childProcess.execSync("git rev-parse --short HEAD")
-  const user = childProcess.execSync("git config user.name")
-  const date = new Date().toLocaleString()
+  const commit = childProcess.execSync("git rev-parse --short HEAD");
+  const user = childProcess.execSync("git config user.name");
+  const date = new Date().toLocaleString();
 
   return (
     `commitVersion: ${commit}` + `Build Date: ${date}\n` + `Author: ${user}`
@@ -599,9 +599,9 @@ module.exports = function banner() {
 
 ```js{3-4, 8}
 //webpack.config.js
-const path = require("path")
-const webpack = require("webpack")
-const banner = require("./banner.js")
+const path = require("path");
+const webpack = require("webpack");
+const banner = require("./banner.js");
 
 module.exports = {
   // ...(생략)
@@ -633,6 +633,6 @@ module.exports = {
 - [MDN - IIFE](https://developer.mozilla.org/docs/Glossary/IIFE)
 - [JavaScript 표준을 위한 움직임: CommonJS와 AMD](https://d2.naver.com/helloworld/12864)
 - [Webpack - concepts](https://webpack.js.org/concepts/)
-  <!-- - [참고 : 정규표현식 해석해주는 사이트](regexper.com) -->
       <!-- - [lecture-frontend-dev-env](https://github.com/jeonghwan-kim/lecture-frontend-dev-env) -->
 - [Webpack - compiler hooks](https://webpack.js.org/api/compiler-hooks/)
+ * [참고 : 정규표현식 해석해주는 사이트](https://regexper.com/) 
