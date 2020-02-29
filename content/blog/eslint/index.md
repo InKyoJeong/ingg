@@ -1,6 +1,6 @@
 ---
 title: "[프론트엔드 개발환경] ESLint"
-date: 2020-03-01 01:00:98
+date: 2020-03-01 02:30:98
 ---
 
 ![eslint](./lint.jpeg)
@@ -126,7 +126,7 @@ $ npm install --save-dev eslint eslint-config-google
 
 ### <a name="prettier"></a>3. Prettier와 통합하기
 
-**프리티어(Prettier)**는 **코드 포매터(code formatter)**이다. 포맷팅을 맡더라도 코드 품질같은 검사는 **ESLint** 몫이기 때문에 주로 둘을 통합하여 사용한다.
+[**프리티어(Prettier)**](https://prettier.io/)는 **코드 포매터(code formatter)**이다. 포맷팅을 맡더라도 코드 품질같은 검사는 **ESLint** 몫이기 때문에 주로 둘을 통합하여 사용한다.
 
 #### eslint-config-prettier
 
@@ -158,14 +158,14 @@ $ npm install --save-dev eslint-plugin-prettier
 
 - 사용예시
 
-```json
+```json{4}
 // ex 1)
 // .eslintrc.json
 {
   "extends": ["plugin:prettier/recommended"]   
 }
 ```
-```js
+```js{4}
 // ex 2)
 // .eslintrc.js
 module.exports = {
@@ -178,7 +178,7 @@ module.exports = {
 
 <br>
 
-특별한 ESLint 플러그인 (ex: eslint-plugin-react)을 지원 하려면 다음과 같이 사용하는 플러그인에 대해 제외할 것을 추가한다.
+특별한 ESLint 플러그인 (_ex: eslint-plugin-react_)을 지원 하려면 다음과 같이 사용하는 플러그인에 대해 제외할 것을 추가한다.
 ```
 {
   "extends": [
@@ -189,3 +189,9 @@ module.exports = {
   ]
 }
 ```
+
+<br>
+
+> References
+
+- [https://eslint.org/](https://eslint.org/docs/user-guide/getting-started)
