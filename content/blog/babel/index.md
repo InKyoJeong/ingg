@@ -1,6 +1,6 @@
 ---
 title: "[프론트엔드 개발환경] Babel"
-date: 2020-02-29 20:50:98
+date: 2020-02-29 06:16:98
 ---
 
 ![webpack](./pic/babel.png)
@@ -360,7 +360,7 @@ module: {
 
 _js_ 확장자로 끝나는 파일은 _babel-loader_ 가 처리한다. 이제 웹팩으로 빌드하고 _dist_ 폴더의 _main.js_ 를 살펴보면 변경된 코드 등의 결과를 볼 수 있다.
 
-바벨이 하는 역할은 웹팩과 엄밀히 다르다. 웹팩은 모듈을 번들링하고, 바벨은 코드 자체를 변경시켜준다는 차이가 있다는 점에서 다르다. 
+바벨이 하는 역할은 웹팩과 엄밀히 다르다. 웹팩은 모듈을 번들링하고, 바벨은 코드 자체를 변경시켜준다는 차이가 있다. 
 
 
 <!-- 
@@ -369,3 +369,4 @@ _js_ 확장자로 끝나는 파일은 _babel-loader_ 가 처리한다. 이제 �
 > References
 
 - [https://babeljs.io/docs/en/](https://babeljs.io/docs/en/)
+- [https://github.com/babel/babel-loader](https://github.com/babel/babel-loader)

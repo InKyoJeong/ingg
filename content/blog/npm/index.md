@@ -15,7 +15,7 @@ date: 2020-02-18 19:50:98
 
 ![npm2](./npm2.png)
 
-## 패키지 설치
+### 패키지 설치
 
 **_npm_**에 업로드된 노드 모듈을 패키지라고 한다. 패키지 설치는 `install`을 이용한다.
 
@@ -37,7 +37,7 @@ $ npm install -g <package>
 
 <br>
 
-## 개발 프로젝트 세팅
+### 개발 프로젝트 세팅
 
 `npm init` 은 프로젝트를 초기화 한다. 몇가지 정보를 입력한 후에 `package.json` 파일이 생성 된다.
 정보를 디폴트로 설정하려면 `--yes` 또는 `-y` 옵션을 지정하면 된다.
@@ -55,7 +55,7 @@ $ npm init -y
 
 <br>
 
-## package.json
+### package.json
 
 **_Node.js_**는 package.json 파일안에 프로젝트의 모든 정보를 기록한다.
 
@@ -93,7 +93,7 @@ $ npm run <script_name>
 
 <br>
 
-## Semantic Versioning (유의적 버전)
+### Semantic Versioning (유의적 버전)
 
 패키지를 설치하면 **_package.json_** 의 `dependencies` 에 새롭게 추가한 패키지가 추가되며 버전이 표시된다. 유의적 버전은 이 버전 번호를 어떻게 정하는지를 명시하는 규칙이라고 볼 수 있는데, 버전은 `1.0.4`와 같은 형식이고 각각 `Major, Minor, Patch (주, 부, 수)` 를 뜻한다.
 
