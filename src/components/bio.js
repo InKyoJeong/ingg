@@ -13,11 +13,15 @@ import "./bio-icon.scss"
 import { rhythm } from "../utils/typography"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-import { faHashtag, faPencilAlt } from "@fortawesome/free-solid-svg-icons"
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faSlackHash,
+} from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-library.add(fab, faHashtag, faPencilAlt)
+library.add(faFacebook, faGithub, faInstagram, faSlackHash)
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
