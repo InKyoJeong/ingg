@@ -1,6 +1,9 @@
 .author-sns {
-  width: 235px;
+  width: 250px;
   height: 18px;
+  @media screen and (max-width: 360px) {
+    width: 235px;
+  }
 }
 .author-sns__icon {
   width: 20px;
