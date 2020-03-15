@@ -3,6 +3,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.inner hr {
+  background-color: hsla(0, 0%, 78%, 0.3);
+}
+
 .inner {
   font-family: "Nanum Gothic", sans-serif;
 }
@@ -22,7 +26,7 @@ html {
   margin: 25px 0px;
 }
 .inner h3 {
-  margin: 20px 0px;
+  margin: 20px 0px 10px 0px;
 }
 
 .inner h4 {

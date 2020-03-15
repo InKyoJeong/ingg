@@ -23,6 +23,8 @@ date: 2020-01-27 18:59:98
 
 ### <a name="centralized-workflow"></a>1. Centralized Workflow
 
+<hr>
+
 ![workflow1](./content-pic/wf.svg)
 
 **Centralized Workflow**는 단일 중앙 레포지토리를 사용하기 때문에 **_master_** 브랜치만 이용한다.
@@ -195,6 +197,8 @@ $ git push origin master
 
 ### <a name="feature-branch-workflow"></a>2. Feature Branch Workflow
 
+<hr>
+
 **Feature Branch Workflow**의 핵심은 기능 개발이 **_master_** 브랜치가 아니라 기능별로 나눠진 브랜치에서 이루어 진다는 것이다.
 
 ### 2-1. 작동 원리
@@ -289,16 +293,23 @@ $ git push
 **_master_** 브랜치로 이동하여 가져온 `marys-feature`브랜치의 내용을 로컬의 **_master_** 브랜치와 병합한다. 마지막으로 병합된 **_master_** 브랜치를 중앙 저장소로 푸시한다.
 <br>
 
----
 
 ### <a name="gitflow-workflow"></a>3. Gitflow Workflow
 
+<hr>
+
+Gitflow Workflow는 [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/)이 처음 제시한 것이다. 프로젝트 릴리즈 중심으로 설계된 엄격한 브랜칭 모델을 제시한다. Gitflow는 출시주기가 예정된 프로젝트에 이상적이다. feature브랜치 외에도 릴리스를 준비, 유지 보수 및 기록하기 위해 개별 브랜치를 사용한다. 물론 Feature Branch Workflow의 모든 이점 (풀 리퀘스트, 효율적인 협업 등)을 활용할 수 있다.
+
 ### <a name="forking-workflow"></a>4. Forking Workflow
+
+<hr>
+
+Forking Workflow는 다른 Git Workflow와 근본적으로 다르다. 단일 서버 측 레포지토리를 사용하여 "중앙" 코드베이스로 작동하는 대신 모든 개발자에게 자체 서버 측 리포지토리를 제공한다. 이것은 각 기여자가 두개의 Git 레포지토리(하나는 개인로컬, 하나는 공용서버용)를 가진다는 것을 의미한다. Forking Workflow는 대부분의 오픈 소스 프로젝트에서 볼 수 있다.
 
 <br>
 
----
 
-### Reference
 
-> https://www.atlassian.com/git/tutorials/comparing-workflows 를 참고하여 수정 및 번역한 글입니다.
+> Reference
+
+- https://www.atlassian.com/git/tutorials/comparing-workflows 를 참고하여 수정 및 번역한 글입니다.

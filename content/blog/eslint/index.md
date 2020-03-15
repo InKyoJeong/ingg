@@ -15,16 +15,16 @@ Lint는 보푸라기라는 뜻인데 프로그래밍 쪽에서는 에러가 있�
 
 ### 📌 Contents
 
-1. [설치&사용](#usage)
-2. [규칙(Rules)](#rules)
+1. [Intro](#usage)
+2. [Rules](#rules)
 3. [Prettier와 통합하기](#prettier)
 
 ---
 
 <br>
 
-### <a name="usage"></a>1. 설치 & 사용
-
+### <a name="usage"></a>Intro
+---
 1. _npm_ 또는 _yarn_ 으로 설치한다. `--global`옵션을 붙여 전역으로 설치할 수도 있지만 ESLint에서는 권장하지 않는다.
 
 ```
@@ -50,7 +50,9 @@ $ npx eslint <yourfile.js>
 
 <br>
 
-### <a name="rules"></a>2. 규칙(Rules)
+### <a name="rules"></a>Rules
+
+---
 
 ```js
 // .eslintrc.js
@@ -124,7 +126,9 @@ $ npm install --save-dev eslint eslint-config-google
 
 <br>
 
-### <a name="prettier"></a>3. Prettier와 통합하기
+### <a name="prettier"></a>Prettier와 통합하기
+
+---
 
 [**프리티어(Prettier)**](https://prettier.io/)는 **코드 포매터(code formatter)**이다. 포맷팅을 맡더라도 코드 품질같은 검사는 **ESLint** 몫이기 때문에 주로 둘을 통합하여 사용한다.
 

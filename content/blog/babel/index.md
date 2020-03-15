@@ -37,6 +37,8 @@ date: 2020-02-29 06:16:98
 
 ### <a name="intro"></a>1. Intro
 
+<hr>
+
 #### 패키지 설치
 
 ```
@@ -76,6 +78,8 @@ npm install --save-dev @babel/core @babel/cli
 ( `npx babel --help` 명령어로 사용법을 볼 수 있다.)
 
 ### <a name="plugin"></a>2. Plugins
+
+<hr>
 
 플러그인은 코드를 변환하게하는 작은 js프로그램이다. 바벨은 파싱과 출력을 담당하고 플러그인이 변환 작업을 처리한다.
 자신만의 플러그인을 작성하여 변환을 코드에 적용할 수도 있고, 공식 플러그인을 사용할 수도 있다.
@@ -142,6 +146,9 @@ const fn = function (something) {
 화살표함수가 일반 함수로 변경된 것을 확인할 수 있다.
 
 ### <a name="preset"></a>3. Presets
+
+<hr>
+
 하나하나 필요한 것마다 플러그인을 설정하기는 번거롭기 때문에 일종의 **"플러그인 세트"**인 **프리셋(preset)**을 사용할 수도 있다.
 
 프리셋도 마찬가지로 커스텀 프리셋을 만들 수 있다.
@@ -258,6 +265,8 @@ var fn = function fn(something) {
 
 ### <a name="polyfill"></a>4. Polyfill
 
+<hr>
+
 아래와 같이 코드를 추가하고 실행하면 첫줄만 바뀌고 그대로 출력된다.
 ```js{2,3}
 const fn = something => window.alert(something);
@@ -331,6 +340,9 @@ $ npm i core-js@2
 <br>
 
 ### <a name="with"></a>5. Webpack과 사용하기
+
+<hr>
+
 **Babel Loader**는 _Babel_과 _webpack_을 이용하여 _JavaScript_파일을 변환한다.
 
 #### 설치

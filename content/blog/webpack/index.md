@@ -25,9 +25,11 @@ date: 2020-02-23 01:50:98
 
 <br>
 
-## <a name="intro"></a>1. Intro
+### <a name="intro"></a>1. Intro
 
-### import / export 구문이 없었던 모듈 이전 상황
+<hr>
+
+#### import / export 구문이 없었던 모듈 이전 상황
 
 자바스크립트는 `script` 태그를 사용하여 외부의 스크립트 파일을 가져올 수는 있지만, 파일마다 독립적인 파일 스코프를 갖지 않고 하나의 **전역 객체(Global Object)**를 공유한다.
 
@@ -66,7 +68,7 @@ console.log(sum(1, 2)); // 3
 
 <br>
 
-### 전역 스코프에 함수가 노출되면 생기는 문제점
+#### 전역 스코프에 함수가 노출되면 생기는 문제점
 
 여기서 문제는 `sum`이 전역스코프에 노출되는 것이다.
 
@@ -83,7 +85,9 @@ sum(3, 4)	//Uncaught TypeError: sum is not a function
 <!-- script 태그로 모듈을 가져오는 방식은 파일을 가져올 수 있을 뿐, 함수나 객체를 가져올 수 없다. -->
 <br>
 
-## <a name="iife"></a>2. IIFE
+### <a name="iife"></a>2. IIFE
+
+<hr>
 
 **즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)**은 정의되자마자 즉시 실행되는 Javascript Function 를 말한다.
 
@@ -125,9 +129,11 @@ IIFE는 스코프 문제를 해결했지만 바로 실행한다는 점에서 모
 
 <br>
 
-## <a name="cjs-amd"></a>3.CommonJS와 AMD
+### <a name="cjs-amd"></a>3.CommonJS와 AMD
 
-### CommonJS
+<hr>
+
+#### CommonJS
 
 [CommonJS](http://www.commonjs.org/)는 자바스크립트를 브라우저에서뿐만 아니라, 서버사이드 애플리케이션이나 데스크톱 애플리케이션에서도 사용하려고 조직한 자발적 워킹 그룹이다. 대표적으로 서버 사이드 플랫폼인 **_Node.js_**에서 이를 사용한다.
 
@@ -139,7 +145,7 @@ IIFE는 스코프 문제를 해결했지만 바로 실행한다는 점에서 모
 
 이렇게 **CommonJS**는 모듈화의 조건을 충족시키지만 이 방식은 브라우저에서는 필요한 모듈을 모두 내려받을 때까지 아무것도 할 수 없게 된다는 결정적인 단점이 있었다.
 
-### AMD
+#### AMD
 
 **AMD(Asynchronous Module Definition)**는 비동기로 로딩되는 환경에서 모듈을 사용하는 것이 목표다.
 이 방식은 `define` 함수 내에 코드를 작성함으로써 스코프 분리가 가능하다.
@@ -158,7 +164,7 @@ define(['./foo.js', './boo.js'], function(foo, boo){
 많은 사람들은 CJS를 사용하고 있었고, 또 그만큼 많은 사람들이 웹에 올리기 위해 AMD 스타일에 맞춰서 변환하고 있었습니다. 무엇인가 변화가 필요했습니다. 귀찮은 과정을 쳐내는, 혹은 통합시켜주는 툴이 필요했습니다 -->
 <br>
 
-### ES6 모듈
+#### ES6 모듈
 
 ES6에서는 **export**를 이용해 모듈로 만들고 **import**로 가져온다.
 
@@ -197,13 +203,15 @@ ES6에서는 클라이언트 사이드 자바스크립트에서도 동작하는 
 
 <br>
 
-## <a name="webpack"></a>4.Webpack
+### <a name="webpack"></a>4.Webpack
+
+<hr>
 
 ![webpack2](./content-pic/webpack.png)
 
 그래서 웹팩을 사용한다. 웹팩은 하나의 시작점(**Entry point**)으로부터 의존적인 모듈을 전부 찾아내서 하나의 파일로 만든다. 이 결과물을 **Output**이라고 한다.
 
-### 4-1. 설치
+#### 4-1. 설치
 
 Webpack4 이후 버전부터는 cli를 같이 설치해야 커맨드라인에서 사용할 수 있다.
 
@@ -236,7 +244,7 @@ $ npm install --save-dev webpack-cli
 
 <br>
 
-### 4-2. webpack.config.js
+#### 4-2. webpack.config.js
 
 **_webpack.config.js_**은 Webpack이 실행될 때 참조하는 설정 파일이다. 최상단에 `webpack.config.js` 파일을 만들면 이를 웹팩에서 자동으로 사용한다.
 
@@ -288,9 +296,9 @@ import를 쓸 수 없다.)
 - Mode
 - Browser Compatibility -->
 
-### 4-3. Concepts
+#### 4-3. Concepts
 
-- #### Mode
+- _Mode_
 
 *mode*는 `development, production, none`이 있는데
 *development*는 개발환경의 결과물을 만들때, 운영환경에서는 *production*을 사용한다.
@@ -303,7 +311,7 @@ module.exports = {
 
 <br>
 
-- #### Entry
+- _Entry_
 
 **entry**는 최초 진입점이다. 시작점 경로를 지정하는 옵션이다.
 기본값은 `./src/index.js` 이고, 다르게 설정할 수 있다. _(다중엔트리 포인트를 설정할 수도 있다.)_
@@ -320,7 +328,7 @@ module.exports = {
 
 <br>
 
-- #### Output
+- _Output_
 
 **output**은 번들링 결과물을 위치할 경로다. `path.resolve()`함수는 절대경로 주소를 얻어온다.
 
@@ -354,7 +362,7 @@ module.exports = {
 
 <br>
 
-- #### Loader
+- _Loader_
 
 로더는 웹팩이 웹 애플리케이션을 해석할 때 자바스크립트 파일이 아닌 것들을 변환할 수 있도록 도와준다.
 파일을 다른 언어 *(ex : TypeScript)*에서 *JavaScript*로 변환하거나
@@ -480,7 +488,7 @@ module.exports = {
 
 <br>
 
-- #### Plugin
+- _Plugin_
 
 웹팩의 기본적인 동작에 추가적인 기능을 제공하는 속성이다.
 로더는 파일을 해석하고 변환하는 과정에 관여하는 반면, 플러그인은 해당 결과물의 형태를 바꾸는 역할을 한다.
