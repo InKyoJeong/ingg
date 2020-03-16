@@ -40,7 +40,7 @@ src
 │   ├── about.css
 │   ├── index.js    // home(post) style. title, description, date, etc
 │   └── index.css
-├── styles // (Add) Global style
+├── styles // Global style
 │   └── code.scss   // Code content style
 ├── templates
 │   ├── blog-post.js    // Inside post design.

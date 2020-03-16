@@ -33,13 +33,9 @@ const ThemedLayout = styled.div`
   .index-title {
     color: ${props => (props.theme.name === "light" ? "#028177" : "#4FC8C0")};
   }
-  .index-date {
-    color: ${props => (props.theme.name === "light" ? "#000000" : "#FFFFFF")};
-  }
+  .index-date,
   .index-description {
-    color: ${props => (props.theme.name === "light" ? "#000000" : "#ffffff")};
-  }
-  blockquote {
+    color: ${props => (props.theme.name === "light" ? "#000000" : "#FFFFFF")};
   }
 `
 
