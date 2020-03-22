@@ -1,5 +1,5 @@
 ---
-title: "[Git] Git Workflow"
+title: "[Git] Workflow를 통한 협업"
 date: 2020-01-27 18:59:98
 ---
 

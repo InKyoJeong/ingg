@@ -11,6 +11,11 @@ export const Top = ({ title, location, rootPath }) => {
           {title}
         </Link>
       )}
+      {/* {isRoot ? (
+        <FontAwesomeIcon icon={"layer-group"} className="top__list" />
+      ) : (
+        ""
+      )} */}
     </div>
   )
 }
