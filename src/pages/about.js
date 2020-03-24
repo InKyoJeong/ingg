@@ -63,8 +63,17 @@ class NotFoundPage extends React.Component {
         <table>
           <h1 class="about-activities">Activities</h1>
           <tr>
-            <td class="about-activities__period">19.03 ~ 19.12</td>
-            <td>LikeLion, 7th</td>
+            <td class="about-activities__period">19.01 ~ 19.12</td>
+            <td>
+              LikeLion 7th,{" "}
+              <a
+                href="https://github.com/InKyoJeong/Resume/blob/master/Certificate/cer.md"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Completion
+              </a>
+            </td>
           </tr>
         </table>
       </Layout>
