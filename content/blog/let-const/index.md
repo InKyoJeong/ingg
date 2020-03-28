@@ -19,8 +19,8 @@ ECMAScript 6는 2015년 6월에 업데이트 되었으며 ECMAScript 언어의 6
 
 1. [const & let](#const)
 2. [화살표 함수 (Arrow Function)](#arrow)
-3. [전개 연산자 (Spread Operator)](#spread)
-4. [비구조화 할당 (Destructuring)](#dest)
+3. [비구조화 할당 (Destructuring)](#dest)
+4. [전개 연산자 (Spread Operator)](#spread)
 
 ---
 
@@ -119,7 +119,7 @@ const b = "test2"; // Uncaught SyntaxError: Identifier 'b' has already been decl
 b = "test3"; // 불가능 (Uncaught TypeError)
 ```
 
-> 자바스크립트에서 한 번 초기화했던 변수에 다른 값을 대입하는 경우는 의외로 적다. 따라서 기본적으로는 변수 선언 시 **const**를 사용하고, 값을 변경해야하는 상황이 있으면 **let**을 사용하면 된다.
+> #### 자바스크립트에서 한 번 초기화했던 변수에 다른 값을 대입하는 경우는 의외로 적다. 따라서 기본적으로는 변수 선언 시 const를 사용하고, 값을 변경해야하는 상황이 있으면 let을 사용하면 된다.
 
 <br>
 
@@ -241,6 +241,66 @@ const mary = new Person("Mary", 25); //Uncaught TypeError: Person is not a const
 ```
 <!-- #### 4. yield 키워드를 사용할 수 없다.  -->
 
+<br>
+
+### <a name="dest"></a>비구조화 할당 (Destructuring)
+<hr>
+
+비구조화 할당은 배열, 객체, 반복 가능 객체에서 값을 꺼내 그 값을 별도의 변수에 대입하는 문장이다. 객체와 배열로부터 속성이나 요소를 쉽게 꺼낼 수 있다.
+
+```js
+var candyMachine = {
+  status: {
+    name: "jelly",
+    count: 4
+  },
+  getCandy: function() {
+    this.status.count--;
+    return this.status.count;
+  }
+};
+
+var getCandy = candyMachine.getCandy;
+var count = candyMachine.status.count;
+```
+
+**객체 속성을 같은 이름의 변수에 대입하는 코드**이다. 아래와 같이 바꿀 수 있다.
+
+```js
+const candyMachine = {
+  status: {
+    name: "jelly",
+    count: 4
+  },
+  getCandy() {
+    this.status.count--;
+    return this.status.count;
+  }
+};
+
+const {
+  getCandy,
+  status: { count }
+} = candyMachine;
+```
+
+_candyMachine_ 객체 안의 속성을 찾아 변수와 매칭한다. _count_ 처럼 여러 단계 안의 속성도 찾을 수 있다.
+
+#### 배열도 비구조화 할 수 있다.
+
+```js
+var array = ["nodejs", {}, 10, true];
+var first = array[0];
+var second = array[1];
+var last = array[3];
+```
+
+array라는 배열에 첫번째,두번째,마지막 요소를 변수에 대입하는 과정이다. 아래와 같이 바꿀 수 있다.
+
+```js
+const array = ["nodejs", {}, 10, true];
+const [first, second, , last] = array;
+```
 <br>
 
 ### <a name="spread"></a>전개 연산자 (Spread Operator)
@@ -367,66 +427,7 @@ const info = (something, args) => console.log(...args);
 
 이렇게 하면 누군가 제공한 *Argument*를 `console.log`할 수 있다.
 
-> 전개 연산자는 React프로젝트에서 자주 사용한다. 두개의 Object를 병합하거나, 어떤 대상의 복사본을 만들거나, 어떤 한 콘텐츠를 다른 배열에 넣는 등의 상황에 사용한다.
+> #### 전개 연산자는 React프로젝트에서 자주 사용한다. 두개의 Object를 병합하거나, 어떤 대상의 복사본을 만들거나, 어떤 한 콘텐츠를 다른 배열에 넣는 등의 상황에 사용한다.
 
 <br>
 
-### <a name="dest"></a>비구조화 할당 (Destructuring)
-<hr>
-
-비구조화 할당은 배열, 객체, 반복 가능 객체에서 값을 꺼내 그 값을 별도의 변수에 대입하는 문장이다. 객체와 배열로부터 속성이나 요소를 쉽게 꺼낼 수 있다.
-
-```js
-var candyMachine = {
-  status: {
-    name: "jelly",
-    count: 4
-  },
-  getCandy: function() {
-    this.status.count--;
-    return this.status.count;
-  }
-};
-
-var getCandy = candyMachine.getCandy;
-var count = candyMachine.status.count;
-```
-
-**객체 속성을 같은 이름의 변수에 대입하는 코드**이다. 아래와 같이 바꿀 수 있다.
-
-```js
-const candyMachine = {
-  status: {
-    name: "jelly",
-    count: 4
-  },
-  getCandy() {
-    this.status.count--;
-    return this.status.count;
-  }
-};
-
-const {
-  getCandy,
-  status: { count }
-} = candyMachine;
-```
-
-_candyMachine_ 객체 안의 속성을 찾아 변수와 매칭한다. _count_ 처럼 여러 단계 안의 속성도 찾을 수 있다.
-
-#### 배열도 비구조화 할 수 있다.
-
-```js
-var array = ["nodejs", {}, 10, true];
-var first = array[0];
-var second = array[1];
-var last = array[3];
-```
-
-array라는 배열에 첫번째,두번째,마지막 요소를 변수에 대입하는 과정이다. 아래와 같이 바꿀 수 있다.
-
-```js
-const array = ["nodejs", {}, 10, true];
-const [first, second, , last] = array;
-```
-<br>
