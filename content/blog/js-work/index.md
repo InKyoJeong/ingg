@@ -13,11 +13,11 @@ description: "자바스크립트는 싱글스레드이다. 어떻게 자바스�
 
 ### 📌 Contents
 
-- [자바스크립트 엔진](#engine)
-- [자바스크립트 런타임](#run)
-- [비동기적 자바스크립트](#async)
-- [콜백 함수](#callback)
-- [프로미스 (Promise)](#promise)
+1. [자바스크립트 엔진](#engine)
+2. [자바스크립트 런타임](#run)
+3. [비동기적 자바스크립트](#async)
+4. [콜백 함수](#callback)
+5. [프로미스 (Promise)](#promise)
 
 ---
 <br>
