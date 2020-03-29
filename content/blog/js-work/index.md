@@ -1,7 +1,6 @@
 ---
 title: "[JS] Javascript 동작 원리와 비동기처리"
 date: 2020-03-29 02:30:98
-description: "자바스크립트는 싱글스레드이다. 어떻게 자바스크립트는 싱글스레드이면서 비동기인 것일까? 자바스크립트가 어떻게 동작하는지 내부 원리에 대해 알아보자. …"
 ---
 
 ![js](./js.png)
@@ -18,6 +17,7 @@ description: "자바스크립트는 싱글스레드이다. 어떻게 자바스�
 3. [비동기적 자바스크립트](#async)
 4. [콜백 함수](#callback)
 5. [프로미스 (Promise)](#promise)
+6. [async/await](#await)
 
 ---
 <br>
@@ -497,3 +497,75 @@ Mary : 600원 지불
 Bill : 1000원 지불
 ```
 나머지 작업도 실행되긴하지만 가장 먼저 종료한 작업의 결과값만 반환한다.
+
+<br>
+
+### <a name="await"></a>async/await
+
+<hr>
+
+프로미스가 콜백 지옥을 해결했다지만, 아직 장황한 코드는 여전하다. **async/await** 문법은 프로미스를 사용한 코드를 한번 더 깔끔하게 해준다. **async/await**은 노드 7.6버전부터 지원되며, ECMAScript2017의 공식 스펙으로 최신 문법이다.
+
+```js
+async function 함수명(){
+  await 비동기처리_메서드명();
+}
+```
+
+<br>
+
+위에서 했던 지불 금액을 입력하고 잔액을 반환하는 Promise예제를 **async/await** 문법으로 바꿔보자.
+
+```js{16-24}
+function buySomething(nowMoney) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const pay = parseInt(prompt("금액 입력"));
+      const remain = nowMoney - pay;
+      if (remain >= 0) {
+        console.log(`${pay}원 지불`);
+        resolve(remain);
+      } else {
+        reject(`잔액부족: 현재 잔액${nowMoney}원`);
+      }
+    }, 2000);
+  });
+}
+
+async function testAsync() {
+  try {
+    const remain = await buySomething(1000);
+    console.log(`잔액: ${remain}원`);
+  } catch (error) {
+    console.log(error);
+  }
+}
+testAsync();
+```
+
+```
+금액 입력: 200(입력)
+200원 지불
+잔액: 800원
+```
+
+**_try/catch_** 문으로 로직을 감쌌다. **async/await** 문법에서는 프로미스의 `.catch` 메서드와 같이 `try/catch` 문의 `catch{}` 가 에러를 처리한다.
+
+```
+금액 입력: 2000(입력)
+잔액부족: 현재 잔액1000원
+```
+
+화살표 함수도 **_async_** 와 같이 사용할 수 있다.
+
+```js
+const testAsync = async () => {
+  try {
+    const remain = await buySomething(1000);
+    console.log(`잔액: ${remain}원`);
+  } catch (error) {
+    console.log(error);
+  }
+};
+testAsync();
+```
