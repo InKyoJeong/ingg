@@ -13,7 +13,7 @@ class Mincho extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="mincho" />
-        <br></br>
+        <br />
         <iframe
           class="video"
           // width="560"

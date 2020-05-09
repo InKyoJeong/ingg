@@ -4,6 +4,7 @@ import "./footer.scss"
 
 export const Footer = () => (
   <footer className="footer">
-    Copyright © {new Date().getFullYear()}, <strong>Inkyo Jeong</strong>
+    © {new Date().getFullYear()} <strong>INKYO JEONG</strong>. All rights
+    reserved.
   </footer>
 )
