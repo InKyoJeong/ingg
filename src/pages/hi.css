@@ -1,0 +1,13 @@
+.video {
+  width: 600px;
+  height: 360px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .video {
+    width: 360px;
+    height: 200px;
+  }
+}
