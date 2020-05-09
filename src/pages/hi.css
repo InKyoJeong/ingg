@@ -11,3 +11,10 @@
     height: 200px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .video {
+    width: 320px;
+    height: 200px;
+  }
+}
