@@ -1,13 +1,13 @@
 # [ingg.io](https://ingg.io/)
 
-My personal blog. Forked from [GatsbyJS](https://github.com/gatsbyjs/gatsby-starter-blog).
+My personal blog using [Gatsby.js](https://github.com/gatsbyjs/gatsby-starter-blog).
 ![ingg](./content/assets/screen.png)
 
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
 
-## 🛠 Function
+## 🛠 Features I added
 
 - 🌙DarkMode : react-switch
 - ✅Icon : fortawesome/fontawesome
