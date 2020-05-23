@@ -86,6 +86,16 @@ code[class*="language-text"] {
   background-color: #235a2a;
   text-transform: lowercase;
 }
+.gatsby-highlight pre[class="language-c"]::before {
+  content: "c";
+  background: #5d6c78;
+  background-color: #5d6c78;
+}
+.gatsby-highlight pre[class="language-cpp"]::before {
+  content: "c++";
+  background: #ed5ed0;
+  background-color: #ed5ed0;
+}
 
 /* Code HighLight Style */
 .gatsby-highlight-code-line {
