@@ -9,15 +9,8 @@
   padding: 1px 7px;
   margin-left: 6px;
   border-radius: 8px;
-  /* border: 2px solid rgb(2, 71, 66); */
   color: rgb(2, 129, 119);
   box-shadow: none;
-  /* background-image: linear-gradient(
-    to right,
-    rgb(192, 206, 204) 0%,
-    rgb(236, 247, 247) 51%,
-    rgb(187, 212, 212) 100%
-  ); */
   background-color: rgb(225, 228, 227);
   animation: scaleAndRotateSquare infinite 3s;
   -webkit-animation: scaleAndRotateSquare infinite 3s;
