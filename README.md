@@ -13,6 +13,7 @@ My personal blog using [Gatsby.js](https://github.com/gatsbyjs/gatsby-starter-bl
 - ✅Icon : fortawesome/fontawesome
 - 💬Comment : disqus-react
 - 📈Analysis : google-analytics
+- 🖍Code Style : Add Code Label and Highlight
 
 ## 📌 Structure
 

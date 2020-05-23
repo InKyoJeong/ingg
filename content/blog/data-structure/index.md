@@ -3,6 +3,8 @@ title: "[Data Structure] Stack & Queue"
 date: 2020-05-23 11:30:98
 ---
 
+![stack&queue](./content-pic/mainpic.svg)
+
 
 ---
 
@@ -15,7 +17,7 @@ date: 2020-05-23 11:30:98
 
 <br>
 
-## <a name="stack"></a>스택(Stack)
+### <a name="stack"></a>스택(Stack)
 <hr>
 
 스택은 **입력과 출력을 한 방향으로 제한한 자료구조**라고 말할 수 있다. 데이터의 삽입과 삭제가 한쪽 끝에서만 이루어진다. 삽입/삭제가 일어나는 쪽을 스택의 **top**이라고 부른다.
@@ -212,7 +214,7 @@ head->2->1->end
 
 <br>
 
-## <a name="queue"></a>큐(Queue)
+### <a name="queue"></a>큐(Queue)
 
 <hr>
 
