@@ -24,7 +24,7 @@ const ThemedLayout = styled.div`
   min-height: 100vh;
 
   .author-profile a {
-    color: ${props => (props.theme.name === "light" ? "#028177" : "#71CAE7")};
+    color: ${props => (props.theme.name === "light" ? "#04648E" : "#71CAE7")};
   }
   .author-name-content {
     background-color: ${props =>

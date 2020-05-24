@@ -5,7 +5,7 @@ import "./switch.css"
 const SwitchDark = ({ theme }) => (
   <label className="switch-toggle" htmlFor="icon-switch">
     <Switch
-      //   checkedIcon={<div className="icon checkedIcon"></div>}
+      // checkedIcon={<div className="icon checkedIcon"></div>}
       //   height={24}
       //   width={70}
       uncheckedIcon={
@@ -19,11 +19,10 @@ const SwitchDark = ({ theme }) => (
         theme.updateTheme(theme.name === "light" ? "dark" : "light")
       }
       checked={theme.name === "light"}
-      offColor={"#aeb5b8"}
+      offColor={"#000000"}
       offHandleColor={"#292e2e"}
       onColor={"#4fa6a1"}
       // onHandleColor={"#282c35"}
-
       // disabled
     />
   </label>
