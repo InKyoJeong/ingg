@@ -213,3 +213,29 @@ code[class*="language-text"] {
     color: #d8a182;
   }
 }
+
+/* C code color*/
+.language-c {
+  .token.function {
+    color: #b388ff;
+  }
+  .token.number {
+    color: #bde052;
+  }
+  .token.string {
+    color: rgb(252, 120, 68);
+  }
+  .token.directive.keyword,
+  .token.macro.property {
+    color: rgb(204, 139, 113);
+  }
+  .token.class-name {
+    color: rgb(131, 198, 237);
+  }
+  .token.keyword {
+    color: rgb(254, 113, 136);
+  }
+  .token.operator {
+    color: rgb(192, 233, 249);
+  }
+}
