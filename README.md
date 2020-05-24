@@ -30,8 +30,7 @@ src
 │   │   ├── top.js
 │   │   └── top.css
 │   ├── bio.js  // Profile
-│   ├── bio-icon.scss
-│   ├── bio.css
+│   ├── bio.scss
 │   ├── layout.js   // Components collection. Overall design
 │   └── seo.js
 ├── context // ThemeContext.js

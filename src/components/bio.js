@@ -8,8 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
-import "./bio.css"
-import "./bio-icon.scss"
+import "./bio.scss"
 import { rhythm } from "../utils/typography"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
