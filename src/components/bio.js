@@ -19,9 +19,8 @@ import {
   faSlackHash,
 } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome } from "@fortawesome/free-solid-svg-icons"
 
-library.add(faHome, faFacebook, faGithub, faInstagram, faSlackHash)
+library.add(faFacebook, faGithub, faInstagram, faSlackHash)
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
