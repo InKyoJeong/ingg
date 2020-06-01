@@ -25,4 +25,10 @@
   height: 100px;
   margin: auto;
   margin-top: 20px;
+  -webkit-transition: width 0.2s, height 0.2;
+  transition: width 0.2s, height 0.2s;
+}
+.cover_logo:hover {
+  width: 110px;
+  height: 110px;
 }
