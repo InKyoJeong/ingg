@@ -19,3 +19,12 @@
     height: 200px;
   }
 }
+
+.cover_logo {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.Logo {
+  font-size: 30px;
+}

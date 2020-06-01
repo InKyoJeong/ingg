@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./cover.css"
+import homelogo from "../../content/assets/home.svg"
 
 class Cover extends React.Component {
   render() {
@@ -19,8 +20,13 @@ class Cover extends React.Component {
             color: `inherit`,
           }}
           to={`/`}
-        ></Link>
+        >
+          <div class="cover_logo">
+            <img src={homelogo} alt="Logo" />
+          </div>
+        </Link>
         <br />
+
         {/* <iframe
           class="video"
           src="https://www.youtube.com/embed/guMCTWMD1iE"
