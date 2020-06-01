@@ -10,18 +10,20 @@ class Cover extends React.Component {
     return (
       <Layout location={this.props.location}>
         <SEO title="Cover" />
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          <div class="cover_logo">
+
+        <div class="cover_logo">
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
+            }}
+            to={`/`}
+          >
             <img src={homelogo} alt="Logo" />
-          </div>
-        </Link>
+          </Link>
+        </div>
+
         <br />
 
         {/* <iframe
