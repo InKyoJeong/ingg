@@ -49,7 +49,7 @@ class Layout extends React.Component {
         <h1
           style={{
             ...scale(1.2),
-            marginBottom: rhythm(1.4),
+            marginBottom: rhythm(0.9),
             marginTop: 0,
           }}
         >

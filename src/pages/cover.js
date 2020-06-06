@@ -4,13 +4,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./cover.css"
 import homelogo from "../../content/assets/homelogo.svg"
+// import christmas from "../../content/assets/christmas.svg"
 
 class Cover extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
         <SEO title="Cover" />
-
+        {/* <h2 class="cover_christmas">🎄Merry Christmas🎄</h2> */}
         <div class="cover_logo">
           <Link
             style={{
@@ -21,6 +22,7 @@ class Cover extends React.Component {
             to={`/`}
           >
             <img src={homelogo} alt="Logo" />
+            {/* <img src={christmas} alt="Logo" /> */}
           </Link>
         </div>
 

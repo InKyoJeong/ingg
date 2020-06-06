@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
                 <header>
                   <h3
                     style={{
-                      marginBottom: rhythm(1 / 4),
+                      marginBottom: rhythm(1 / 6),
                     }}
                     className="index-title"
                   >
