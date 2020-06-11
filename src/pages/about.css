@@ -25,6 +25,7 @@ h2 {
 }
 tr td:nth-child(2) {
   text-align: center;
+  padding: 0;
 }
 
 .about-activities__period {
