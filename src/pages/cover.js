@@ -44,14 +44,21 @@ class Cover extends React.Component {
           title="taeyeon"
           // allowfullscreen
         ></iframe> */}
-
-        <iframe
+        {/* <iframe
           class="video"
           src="https://www.youtube.com/embed/oiBswnuvv80?rel=0;autoplay=1;"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
           title="kwon"
+        ></iframe> */}
+        <iframe
+          class="video"
+          src="https://www.youtube.com/embed/h2jvHynuMjI?rel=0;autoplay=1;"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="ariana"
         ></iframe>
       </Layout>
     )
