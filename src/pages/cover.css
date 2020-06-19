@@ -9,14 +9,14 @@
 }
 @media screen and (max-width: 768px) {
   .video {
-    width: 360px;
+    width: 355px;
     height: 200px;
   }
 }
 @media screen and (max-width: 400px) {
   .video {
     width: 320px;
-    height: 200px;
+    height: 180px;
   }
 }
 
@@ -25,6 +25,7 @@
   height: 100px;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   -webkit-transition: width 0.2s, height 0.2;
   transition: width 0.2s, height 0.2s;
 }
