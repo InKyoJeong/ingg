@@ -1,5 +1,5 @@
 ---
-title: "[Data Structure] Stack & Queue"
+title: "[Data Structure] 스택(Stack) & 큐(Queue)"
 date: 2020-05-23 22:17:98
 description: "스택(stack)은 데이터의 삽입과 삭제가 한쪽 끝에서만 이루어진다. 큐(queue)는 데이터의 삽입은 한쪽 끝에서, 삭제는 반대쪽 끝에서만 일어난다."
 ---

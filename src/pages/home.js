@@ -2,15 +2,15 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "./cover.css"
+import "./home.css"
 import homelogo from "../../content/assets/homelogo.svg"
 // import christmas from "../../content/assets/christmas.svg"
 
-class Cover extends React.Component {
+class Home extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="Cover" />
+        <SEO title="Home" />
         {/* <h2 class="cover_christmas">🎄Merry Christmas🎄</h2> */}
         <div class="cover_logo">
           <Link
@@ -65,7 +65,7 @@ class Cover extends React.Component {
   }
 }
 
-export default Cover
+export default Home
 
 export const pageQuery = graphql`
   query {
