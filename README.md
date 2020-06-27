@@ -1,7 +1,7 @@
 # [ingg.io](https://ingg.io/)
 
 My personal blog using [Gatsby.js](https://github.com/gatsbyjs/gatsby-starter-blog).
-![ingg](./content/assets/screen.png)
+![ingg](./content/assets/screen2.png)
 
 ## 💫 Deploy
 
