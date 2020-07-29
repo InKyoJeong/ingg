@@ -6,7 +6,7 @@ description: "다른 함수 안에서 내부 함수를 정의하면, 내부 함�
 
 ![js](./images/js.png)
 
-> 이 글은 [JavaScript Scope and Closures by Zell Liew](https://css-tricks.com/javascript-scope-closures/)를 번역한 글 입니다.
+> 이 글은 [JavaScript Scope and Closures by Zell Liew](https://css-tricks.com/javascript-scope-closures/)를 번역한 글입니다.
 
 <br>
 
@@ -276,7 +276,7 @@ function (x) {
 
 ```js
 function makeCake() {
-  setTimeout((_) => console.log("Made a cake"), 1000);
+  setTimeout(() => console.log("Made a cake"), 1000);
 }
 ```
 
@@ -286,7 +286,7 @@ function makeCake() {
 
 ```js
 function makeCake(flavor) {
-  setTimeout((_) => console.log(`Made a ${flavor} cake!`), 1000);
+  setTimeout(() => console.log(`Made a ${flavor} cake!`), 1000);
 }
 ```
 
@@ -306,7 +306,7 @@ makeCake("banana");
 ```js
 function prepareCake(flavor) {
   return function () {
-    setTimeout((_) => console.log(`Made a ${flavor} cake!`), 1000);
+    setTimeout(() => console.log(`Made a ${flavor} cake!`), 1000);
   };
 }
 
@@ -360,7 +360,7 @@ function prepareCake(flavor) {
   // Adding debugger
   debugger;
   return function () {
-    setTimeout((_) => console.log(`Made a ${flavor} cake!`), 1000);
+    setTimeout(() => console.log(`Made a ${flavor} cake!`), 1000);
   };
 }
 
@@ -381,7 +381,7 @@ function prepareCake(flavor) {
   return function () {
     // Adding debugger
     debugger;
-    setTimeout((_) => console.log(`Made a ${flavor} cake!`), 1000);
+    setTimeout(() => console.log(`Made a ${flavor} cake!`), 1000);
   };
 }
 

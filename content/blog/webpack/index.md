@@ -229,18 +229,21 @@ $ npm install --save-dev webpack-cli
 `--save-dev`옵션이나 `-D`옵션을 추가하여 설치하면 _package.json_ 파일안에서
 **_dependencies_**가 아니라 **_devDependencies_**에 기록이 되는데, 라이브러리를 설치할때 어플리케이션에서 직접쓰이는것과 개발환경에 쓰이는 것을 이렇게 분리하여 설치하는 것이 좋다.
 
+
 ```json
 // ex)
 
 "dependencies": {
-    "react-switch": "^5.0.1"
+  "react-switch": "^5.0.1"
 },
 "devDependencies": {
-    "prettier": "^1.19.1",
+  "prettier": "^1.19.1",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
 },
 ```
+
+> cf) npm install (plugin) --save는 빌드시 플러그인이 포함되지만, npm install (plugin) --save-dev로 설치한 플러그인은 --production 빌드시 해당 플러그인이 포함되지않는다.
 
 <br>
 

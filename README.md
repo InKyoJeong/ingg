@@ -12,8 +12,8 @@ My personal blog using [Gatsby.js](https://github.com/gatsbyjs/gatsby-starter-bl
 - 🌙DarkMode : react-switch
 - ✅Icon : fortawesome/fontawesome
 - 💬Comment : disqus-react
-- 📈Analysis : google-analytics
-- 🖍Code Style : Add Code Label and Highlight
+- 📈Analysis : google analytics, google search console
+- 🖍Code Style : Code Label and Code Highlight
 
 ## 📌 Structure
 
