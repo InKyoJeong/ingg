@@ -52,13 +52,23 @@ class Home extends React.Component {
           allowfullscreen
           title="kwon"
         ></iframe> */}
-        <iframe
+        {/* <iframe
           class="video"
           src="https://www.youtube.com/embed/h2jvHynuMjI?rel=0;autoplay=1;"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
           title="ariana"
+        ></iframe> */}
+        <iframe
+          // width="560"
+          // height="315"
+          class="video"
+          src="https://www.youtube.com/embed/DSbqyWXVDYg?rel=0;autoplay=1"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          title="billie"
+          allowfullscreen
         ></iframe>
       </Layout>
     )

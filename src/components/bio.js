@@ -51,19 +51,23 @@ const Bio = () => {
         marginBottom: rhythm(2.1),
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 80,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
+      <div class="circle"></div>
+      <Link to={"/home"} style={{ boxShadow: `none` }}>
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={author}
+          style={{
+            marginRight: rhythm(1.5 / 2),
+            marginBottom: 0,
+            minWidth: 80,
+            borderRadius: `100%`,
+          }}
+          imgStyle={{
+            borderRadius: `50%`,
+          }}
+          className="avatar"
+        />
+      </Link>
       <div className="author-profile">
         <span className="author-name-prefix">Written by</span>
         <Link to={"/about"} className="author-name-content">
@@ -88,7 +92,7 @@ const Bio = () => {
           {/* {social.github && (
                     <a href={`https://github.com/${social.github}`}>GitHub</a>
                   )} */}
-          <a
+          {/* <a
             href="https://facebook.com/e.viapolar"
             style={{ boxShadow: `none` }}
           >
@@ -97,7 +101,7 @@ const Bio = () => {
               className="author-sns__icon"
             />
             Facebook
-          </a>{" "}
+          </a>{" "} */}
           <a href="https://instagram.com/in.gg" style={{ boxShadow: `none` }}>
             <FontAwesomeIcon
               icon={["fab", "instagram"]}

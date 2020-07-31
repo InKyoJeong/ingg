@@ -6,7 +6,7 @@ description: "다른 함수 안에서 내부 함수를 정의하면, 내부 함�
 
 ![js](./images/js.png)
 
-> 이 글은 [JavaScript Scope and Closures by Zell Liew](https://css-tricks.com/javascript-scope-closures/)를 번역한 글입니다.
+> 이 글은 [JavaScript Scope and Closures by Zell Liew](https://css-tricks.com/javascript-scope-closures/)를 저작자의 동의를 얻고 번역한 글입니다.
 
 <br>
 
