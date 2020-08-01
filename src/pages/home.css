@@ -6,6 +6,7 @@
   align-items: center;
   box-shadow: 5px 5px 6px -1px rgba(0, 0, 0, 0.6),
     0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 768px) {
   .video {
@@ -33,6 +34,21 @@
   width: 110px;
   height: 110px;
 }
+
+.list_logo {
+  width: 25px;
+  height: 25px;
+  float: right;
+  margin-right: 5%;
+}
+@media screen and (max-width: 768px) {
+  .list_logo {
+    width: 18px;
+    height: 18px;
+    margin-right: 8%;
+  }
+}
+
 /* .cover_christmas {
   display: flex;
   align-items: center;
