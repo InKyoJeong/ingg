@@ -27,48 +27,15 @@ class Home extends React.Component {
         </div>
 
         <br />
-
-        {/* <iframe
-          class="video"
-          src="https://www.youtube.com/embed/guMCTWMD1iE"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          // allowfullscreen
-          title="mincho"
-        ></iframe> */}
-        {/* <iframe
-          class="video"
-          src="https://www.youtube.com/embed/um0GNZoTPqk?list=PLcTVu2Bx02SsgTiXno8X9zHcn2aasO2yY?rel=0;autoplay=1;"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          title="taeyeon"
-          // allowfullscreen
-        ></iframe> */}
-        {/* <iframe
-          class="video"
-          src="https://www.youtube.com/embed/oiBswnuvv80?rel=0;autoplay=1;"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          title="kwon"
-        ></iframe> */}
-        {/* <iframe
-          class="video"
-          src="https://www.youtube.com/embed/h2jvHynuMjI?rel=0;autoplay=1;"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          title="ariana"
-        ></iframe> */}
         <iframe
           // width="560"
           // height="315"
           class="video"
-          src="https://www.youtube.com/embed/DSbqyWXVDYg?rel=0;autoplay=1"
+          src="https://www.youtube.com/embed/videoseries?list=PLcTVu2Bx02SvLHXkmcxiI74jHYpywCzpO"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          title="billie"
           allowfullscreen
+          title="playlist"
         ></iframe>
       </Layout>
     )
