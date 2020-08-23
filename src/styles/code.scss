@@ -1,8 +1,8 @@
 /* `` Single Code block style */
 :not(pre) > code[class*="language-"] {
-  color: #4b0000;
-  border: 1px solid #310000;
-  background-color: rgb(240, 229, 229);
+  color: black;
+  border: none;
+  background: linear-gradient(90deg, #6cb1e6 0%, #4ecdc4 100%);
   font-size: 14px;
   padding-left: 5px;
   padding-right: 5px;
