@@ -1,6 +1,6 @@
 import React from "react"
 import Switch from "react-switch"
-import "./switch.css"
+import "./switch.scss"
 
 const SwitchDark = ({ theme }) => (
   <label className="switch-toggle" htmlFor="icon-switch">

@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Courgette|Patua+One&display=swap");
-// .author-profile {
-//   height: 80px;
-// }
+
 .author-name-content {
   display: inline-block;
   font-family: "Patua One", cursive;
@@ -37,19 +35,20 @@
 .author-sns {
   font-size: 13.5px;
   font-family: "Courgette", cursive;
-  // font-weight: bolder;
   width: 100%;
   height: 20px;
   margin-top: 5px;
-  // @media screen and (max-width: 360px) {
-  //   width: 235px;
-  // }
-}
-
-.author-sns a {
-  color: rgb(2, 129, 119);
-  &:not(:last-child) {
-    padding-right: 8px;
+  a {
+    color: rgb(2, 129, 119);
+    &:not(:last-child) {
+      padding-right: 8px;
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 15px;
+    font-size: 13.5px;
+    margin-right: 2px;
   }
 }
 
@@ -62,12 +61,6 @@
 }
 
 // prevent icon large when reloading
-.author-sns__icon {
-  width: 20px;
-  height: 15px;
-  font-size: 13.5px;
-  margin-right: 2px;
-}
 .author-profile__icon {
   width: 20px;
   height: 16px;
@@ -81,7 +74,7 @@
   background-color: rgba(250, 250, 250, 0);
   position: absolute;
   border-radius: 50%;
-  border: 2px solid rgba(#277da1, 0.75);
+  border: 2px solid #2e89af;
 }
 
 .avatar {

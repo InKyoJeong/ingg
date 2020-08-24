@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import "./blog-post.css"
+import "./blog-post.scss"
 import "../styles/code.scss"
 
 import { DiscussionEmbed } from "disqus-react"

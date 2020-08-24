@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import "./top.css"
+import "./top.scss"
 
 export const Top = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath
@@ -11,11 +11,6 @@ export const Top = ({ title, location, rootPath }) => {
           {title}
         </Link>
       )}
-      {/* {isRoot ? (
-        <FontAwesomeIcon icon={"layer-group"} className="top__list" />
-      ) : (
-        ""
-      )} */}
     </div>
   )
 }

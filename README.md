@@ -44,7 +44,7 @@ src
 │   └── code.scss   // Code content style
 ├── templates
 │   ├── blog-post.js    // Inside post design.
-│   └── blog-post.css   // Post style and Code block styles
+│   └── blog-post.scss   // Post style and Code block styles
 └── utils //typography.js
 
 ```
