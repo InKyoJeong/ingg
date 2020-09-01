@@ -54,7 +54,7 @@ class NotFoundPage extends React.Component {
           <tr>
             <td class="about-activities__period">19.03 ~ 19.12</td>
             <td>
-              LikeLion, 7th
+              LIKE LION
               {/* <a
                 href="https://github.com/InKyoJeong/Resume/blob/master/Certificate/cer.md"
                 target="_blank"

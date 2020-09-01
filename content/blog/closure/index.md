@@ -10,7 +10,7 @@ description: "다른 함수 안에서 내부 함수를 정의하면, 내부 함�
 
 <br>
 
-### 📌Contents
+### 📌 Contents
 
 1. [스코프(Scope)](#scope)
 2. [클로저(Closures)](#closures)

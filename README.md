@@ -22,13 +22,13 @@ src
 ├── components // Just component with styling
 │   ├── dark-mode // Theme Toggle function
 │   │   ├── switch.js
-│   │   └── switch.css
+│   │   └── switch.scss
 │   ├── footer  // footer design
 │   │   ├── footer.js
 │   │   └── footer.scss
 │   ├── top // Nav bar design(header)
 │   │   ├── top.js
-│   │   └── top.css
+│   │   └── top.scss
 │   ├── bio.js  // Profile
 │   ├── bio.scss
 │   ├── layout.js   // Components collection. Overall design
@@ -37,9 +37,9 @@ src
 ├── pages // 404error page, /(home), /about
 │   ├── 404.js
 │   ├── about.js
-│   ├── about.css
+│   ├── about.scss
 │   ├── index.js    // home(post) style. title, description, date, etc
-│   └── index.css
+│   └── index.scss
 ├── styles // Global style
 │   └── code.scss   // Code content style
 ├── templates
