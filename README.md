@@ -9,9 +9,9 @@ My personal blog using [Gatsby.js](https://github.com/gatsbyjs/gatsby-starter-bl
 
 ## 🛠 Features I added
 
-- 🌙DarkMode : react-switch
+- 🌙DarkMode
 - ✅Icon : fortawesome/fontawesome
-- 💬Comment : disqus-react
+- 💬Comment : utterances
 - 📈Analysis : google analytics, google search console
 - 🖍Code Style : Code Label and Code Highlight
 
@@ -20,7 +20,7 @@ My personal blog using [Gatsby.js](https://github.com/gatsbyjs/gatsby-starter-bl
 ```
 src
 ├── components // Just component with styling
-│   ├── dark-mode // Theme Toggle function
+│   ├── dark-mode // Theme Toggle switch
 │   │   ├── switch.js
 │   │   └── switch.scss
 │   ├── footer  // footer design
