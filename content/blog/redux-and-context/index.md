@@ -7,6 +7,8 @@ description: "리덕스(Redux)는 가장 많이 사용되는 상태 관리 라�
 
 ![Redux](./images/redux.png)
 
+<br>
+
 ### 📌 Contents
 
 1. [Redux란?](#what-redux)

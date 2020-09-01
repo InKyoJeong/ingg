@@ -7,19 +7,24 @@ My personal blog using [Gatsby.js](https://github.com/gatsbyjs/gatsby-starter-bl
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
 
+<br>
+
 ## 🛠 Features I added
 
 - 🌙DarkMode
 - ✅Icon : fortawesome/fontawesome
-- 💬Comment : utterances
+- 💬Comment : utteranc.es
 - 📈Analysis : google analytics, google search console
 - 🖍Code Style : Code Label and Code Highlight
+
+<br>
 
 ## 📌 Structure
 
 ```
 src
 ├── components // Just component with styling
+│   ├── comments // utterances.js
 │   ├── dark-mode // Theme Toggle switch
 │   │   ├── switch.js
 │   │   └── switch.scss
@@ -48,6 +53,8 @@ src
 └── utils //typography.js
 
 ```
+
+<br>
 
 ## 🔑 LICENSE
 
