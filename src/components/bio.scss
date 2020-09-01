@@ -40,8 +40,12 @@
   margin-top: 5px;
   a {
     color: rgb(2, 129, 119);
+    transition: 0.3s;
     &:not(:last-child) {
       padding-right: 8px;
+    }
+    &:hover {
+      opacity: 0.6;
     }
   }
   &__icon {
@@ -81,4 +85,8 @@
   position: relative;
   left: 4px;
   top: 4px;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.6;
+  }
 }

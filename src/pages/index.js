@@ -20,7 +20,7 @@ class BlogIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <Link to={node.fields.slug}>
-              <article key={node.fields.slug}>
+              <article key={node.fields.slug} className="index">
                 <header>
                   <h3
                     style={{
