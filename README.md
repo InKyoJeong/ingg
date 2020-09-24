@@ -1,6 +1,7 @@
 # [ingg.io](https://ingg.io/)
 
-My personal blog using [Gatsby.js](https://github.com/gatsbyjs/gatsby-starter-blog).
+My personal blog using Gatsby.js
+
 ![ingg](./content/assets/githubScreen.png)
 
 ## 💫 Deploy
@@ -23,33 +24,33 @@ My personal blog using [Gatsby.js](https://github.com/gatsbyjs/gatsby-starter-bl
 
 ```
 src
-├── components // Just component with styling
+├── components
 │   ├── comments // utterances.js
 │   ├── dark-mode // Theme Toggle switch
 │   │   ├── switch.js
 │   │   └── switch.scss
-│   ├── footer  // footer design
+│   ├── footer
 │   │   ├── footer.js
 │   │   └── footer.scss
-│   ├── top // Nav bar design(header)
+│   ├── top // Nav bar (header)
 │   │   ├── top.js
 │   │   └── top.scss
 │   ├── bio.js  // Profile
 │   ├── bio.scss
-│   ├── layout.js   // Components collection. Overall design
+│   ├── layout.js
 │   └── seo.js
 ├── context // ThemeContext.js
 ├── pages // 404error page, /(home), /about
 │   ├── 404.js
 │   ├── about.js
 │   ├── about.scss
-│   ├── index.js    // home(post) style. title, description, date, etc
+│   ├── index.js    // post style
 │   └── index.scss
 ├── styles // Global style
 │   └── code.scss   // Code content style
 ├── templates
-│   ├── blog-post.js    // Inside post design.
-│   └── blog-post.scss   // Post style and Code block styles
+│   ├── blog-post.js   // Inside post design
+│   └── blog-post.scss // Post style and Code block styles
 └── utils //typography.js
 
 ```

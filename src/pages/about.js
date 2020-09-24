@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 import "./about.scss"
 
-class NotFoundPage extends React.Component {
+class AboutPage extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -42,15 +42,11 @@ class NotFoundPage extends React.Component {
           </tr>
           <tr>
             <td>Contact</td>
-            <td>
-              <a href="mailto:inkyo.dev@gmail.com" className="about-contact">
-                inkyo.dev@gmail.com
-              </a>
-            </td>
+            <td>inkyo.dev@gmail.com</td>
           </tr>
         </table>
         <table>
-          <h1 class="about-activities">Activities</h1>
+          <h1 class="about-activities">Activity</h1>
           <tr>
             <td class="about-activities__period">19.03 ~ 19.12</td>
             <td>
@@ -64,13 +60,17 @@ class NotFoundPage extends React.Component {
               </a> */}
             </td>
           </tr>
+          <tr>
+            <td class="about-activities__period">20.09 ~ </td>
+            <td>Double Slash</td>
+          </tr>
         </table>
       </Layout>
     )
   }
 }
 
-export default NotFoundPage
+export default AboutPage
 
 export const pageQuery = graphql`
   query {
