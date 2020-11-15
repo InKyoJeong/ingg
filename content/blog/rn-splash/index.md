@@ -173,9 +173,9 @@ export default App;
 이제 앱이 로딩되는 동안 스플래시 이미지가 나타나는 것을 볼 수 있다.
 
 
-<!-- ![splash-ios](./images/splash-result.gif) -->
+<!-- ![splash-ios](./images/splash_ios.gif) -->
 
-<center><img src="./images/splash-result.gif" alt="splash-ios" width="340" height="700"/></center>
+<center><img src="./images/splash_ios.gif" alt="splash-ios" width="340" height="700"/></center>
 
 
 
@@ -383,4 +383,4 @@ public class MainActivity extends ReactActivity {
 
 이제 안드로이드에서도 splash screen이 적용된 것을 확인할 수 있다.
 
-<center><img src="./images/splash-result-and.gif" alt="splash-android" width="340" height="700"/></center>
+<center><img src="./images/splash_android.gif" alt="splash_and" width="400" height="700"/></center>
