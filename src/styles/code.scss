@@ -97,6 +97,12 @@ code[class*="language-text"] {
   background-color: #ed5ed0;
 }
 
+.gatsby-highlight pre[class="language-java"]::before {
+  content: "java";
+  background: #b07219;
+  background-color: #b07219;
+}
+
 /* Code HighLight Style */
 .gatsby-highlight-code-line {
   background-color: rgb(43, 61, 66);
