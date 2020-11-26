@@ -1,7 +1,7 @@
 ---
 title: "[React Native] Splash Screen 적용하기"
 date: 2020-11-14 22:17:98
-description: "React Native (0.60+)에서 Splash Screen을 적용해보자."
+description: "React Native CLI(0.60+)에서 Splash Screen을 적용해보자."
 ---
 
 ![rn](./images/rn.png)
@@ -38,7 +38,7 @@ $ npm install react-native-splash-screen --save
 2. **_React Native CLI 0.60+_** 부터는 아래 명령으로 자동 설치한다.
 
 ```
-cd ios && pod install && cd ..
+$ cd ios && pod install && cd ..
 ```
 
 > #### React Native CLI 0.60 아래 버전이라면 별도로 _link_ 해야한다. <br> _react-native link react-native-splash-screen_
