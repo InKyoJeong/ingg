@@ -3,9 +3,9 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./home.css"
-// import homelogo from "../../content/assets/homelogo.svg"
+import homelogo from "../../content/assets/homelogo.svg"
 // import listlogo from "../../content/assets/listlogo.svg"
-import christmas from "../../content/assets/christmas.svg"
+// import christmas from "../../content/assets/christmas.svg"
 import Snow from "../components/Snow/Snow"
 
 class Home extends React.Component {
@@ -23,8 +23,8 @@ class Home extends React.Component {
             }}
             to={`/`}
           >
-            {/* <img src={homelogo} alt="Logo" /> */}
-            <img src={christmas} alt="Logo" />
+            <img src={homelogo} alt="Logo" />
+            {/* <img src={christmas} alt="Logo" /> */}
           </Link>
         </div>
 
@@ -32,23 +32,23 @@ class Home extends React.Component {
 
         <br />
 
-        {/* <iframe
+        <iframe
           className="video"
           title="playlist"
           src="https://www.youtube.com/embed/videoseries?list=PLcTVu2Bx02SvLHXkmcxiI74jHYpywCzpO"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe> */}
+        ></iframe>
 
-        <iframe
+        {/* <iframe
           className="video"
           title="playlist"
           src="https://www.youtube.com/embed/LpijXpZt6F8?start=14"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
+        ></iframe> */}
 
         <div className="list_logo">
           <a

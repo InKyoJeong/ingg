@@ -51,7 +51,7 @@ const Bio = () => {
         marginBottom: rhythm(2.1),
       }}
     >
-      <div class="circle"></div>
+      <div className="circle"></div>
       <Link to={"/home"} style={{ boxShadow: `none` }}>
         <Image
           fixed={data.avatar.childImageSharp.fixed}
@@ -72,10 +72,10 @@ const Bio = () => {
         <span className="author-name-prefix">Written by</span>
         <Link to={"/about"} className="author-name-content">
           <span>
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={["fab", "slack-hash"]}
               className="author-profile__icon"
-            />
+            /> */}
             {author}
           </span>
         </Link>

@@ -26,10 +26,10 @@ const ThemedLayout = styled.div`
   .author-profile a {
     color: ${props => (props.theme.name === "light" ? "#04648E" : "#71CAE7")};
   }
-  .author-name-content {
+  /* .author-name-content {
     background-color: ${props =>
       props.theme.name === "light" ? "#E1E4E3" : "#3b3b3b"};
-  }
+  } */
   .index-title {
     color: ${props => (props.theme.name === "light" ? "#028177" : "#4FC8C0")};
   }
