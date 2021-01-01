@@ -16,7 +16,7 @@ const SwitchDark = ({ theme }) => (
         </div>
       }
       onChange={() =>
-        theme.updateTheme(theme.name === "light" ? "dark" : "light")
+        theme.updateTheme(theme.name === "dark" ? "light" : "dark")
       }
       checked={theme.name === "light"}
       offColor={"#000000"}
