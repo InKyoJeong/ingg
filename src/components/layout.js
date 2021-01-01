@@ -68,10 +68,10 @@ class Layout extends React.Component {
     }
     return (
       <React.Fragment>
-        <Top title={title} location={location} rootPath={rootPath} />
         <ThemeContext.Consumer>
           {theme => (
             <ThemedLayout theme={theme}>
+              <Top title={title} location={location} rootPath={rootPath} />
               <div
                 style={{
                   marginLeft: `auto`,
