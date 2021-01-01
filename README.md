@@ -1,26 +1,28 @@
-# [ingg.io](https://ingg.io/)
+# ingg.io
 
 My personal blog using Gatsby.js
 
-![ingg](./content/assets/githubScreen.png)
+<img alt='ingg' src='https://postfiles.pstatic.net/MjAyMTAxMDFfMzQg/MDAxNjA5NTEwNjMyNDIy.S_LNUjVIY2cbvJfQgXwqs9TI8dscC2ZXqJtMiaI5b4Ug.oOFcfYbYqWq2lWZlWmp5_vp-iyRwPyOUdUBHefA1JRcg.PNG.viapolar/ingg.png?type=w773' />
+
+<br>
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a159e6d4-d9b3-448a-896e-59d2b0a6d1c4/deploy-status)](https://app.netlify.com/sites/ingg/deploys)
 
 <br>
 
-## 🛠 Features I added
+## 🛠 Features
 
-- 🌙DarkMode
-- ✅Icon : fortawesome/fontawesome
-- 💬Comment : utteranc.es
-- 📈Analysis : google analytics, google search console
-- 🖍Code Style : Code Label and Code Highlight
+- 🌙 DarkMode
+- ✅ Icon
+- 💬 Comment : utteranc.es
+- 📈 Analysis : Google Analytics, Google search console
+- 🖍 Code Style : Code Label and Highlight
 
 <br>
 
-## 📌 Structure
+<!-- ## 📌 Structure
 
 ```
 src
@@ -55,11 +57,11 @@ src
 
 ```
 
-<br>
+<br> -->
 
-## 🔑 LICENSE
+<!-- ## 🔑 LICENSE
 
-[MIT](https://github.com/InKyoJeong/INGG.io/blob/master/LICENSE)
+[MIT](https://github.com/InKyoJeong/INGG.io/blob/master/LICENSE) -->
 
 <!-- Function : Scroll Button , Theme Toggle-->
 <!-- ## 🧐 What's inside?
