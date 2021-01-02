@@ -22,8 +22,8 @@ class AboutPage extends React.Component {
           <tr>
             <td>Blog</td>
             <td>
-              <a href="https://ingg.io" className="about-link">
-                https://ingg.io
+              <a href="https://ingg.dev" className="about-link">
+                https://ingg.dev
               </a>
             </td>
           </tr>

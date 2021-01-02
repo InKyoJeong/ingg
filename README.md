@@ -1,4 +1,4 @@
-# ingg.io
+# ingg.dev
 
 My personal blog using Gatsby.js
 

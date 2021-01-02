@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `INGG.io`,
+    title: `INGG.`,
     author: `Inkyo`,
     description: `Inkyo's Blog`,
-    siteUrl: `https://ingg.io/`,
+    siteUrl: `https://ingg.dev/`,
     social: {
       twitter: `in_g_g`,
       // github: `inkyojeong`,
@@ -125,7 +125,7 @@ module.exports = {
             // if not provided or `undefined`, all pages will have feed reference inserted
             match: "^/blog/",
             // optional configuration to specify external rss feed, such as feedburner
-            link: "https://ingg.io/rss.xml",
+            link: "https://ingg.dev/rss.xml",
           },
         ],
       },
@@ -159,8 +159,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://ingg.io",
-        sitemap: "https://ingg.io/sitemap.xml",
+        host: "https://ingg.dev",
+        sitemap: "https://ingg.dev/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
