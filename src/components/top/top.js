@@ -36,7 +36,7 @@ export const Top = ({ title, location, rootPath }) => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
-              className="svg"
+              className="line"
             >
               <polygon
                 fill={theme.name === "light" ? "#ffffff" : "#292e2e"}
@@ -44,7 +44,7 @@ export const Top = ({ title, location, rootPath }) => {
               />
             </svg>
             {!isRoot && (
-              <Link to={`/`} className="link" style={{ boxShadow: `none` }}>
+              <Link to={`/`} className="link">
                 {title}
               </Link>
             )}

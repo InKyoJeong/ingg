@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import "./home.css"
+import "./home.scss"
 import homelogo from "../../content/assets/homelogo.svg"
 // import listlogo from "../../content/assets/listlogo.svg"
 // import christmas from "../../content/assets/christmas.svg"
@@ -50,7 +50,7 @@ class Home extends React.Component {
           allowfullscreen
         ></iframe> */}
 
-        <div className="list_logo">
+        {/* <div className="list_logo">
           <a
             href="https://www.youtube.com/playlist?list=PLcTVu2Bx02SvLHXkmcxiI74jHYpywCzpO"
             target="_blank"
@@ -59,10 +59,10 @@ class Home extends React.Component {
               boxShadow: `none`,
               textDecoration: `none`,
             }}
-          >
-            {/* <img src={listlogo} alt="Logo2" /> */}
-          </a>
-        </div>
+          > */}
+        {/* <img src={listlogo} alt="Logo2" /> */}
+        {/* </a> */}
+        {/* </div> */}
       </Layout>
     )
   }

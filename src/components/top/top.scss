@@ -19,7 +19,7 @@
   animation: Gradient 5s ease infinite;
   -webkit-animation: Gradient 5s ease infinite;
 
-  .svg {
+  .line {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -29,12 +29,18 @@
   .link {
     display: inline-block;
     font-size: 28px;
-    padding-top: 8px;
+    padding-top: 10px;
     color: white;
     opacity: 0.7;
     margin-left: 20px;
     font-weight: 800;
     font-family: Montserrat, sans-serif;
+    box-shadow: none;
+    transform: rotate(-4deg);
+
+    @media screen and (max-width: 768px) {
+      transform: rotate(-8deg);
+    }
   }
 }
 
