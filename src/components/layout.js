@@ -24,7 +24,7 @@ const ThemedLayout = styled.div`
   min-height: 100vh;
 
   .author-profile a {
-    color: ${props => (props.theme.name === "light" ? "#04648E" : "#71CAE7")};
+    color: ${props => (props.theme.name === "light" ? "#04648E" : "#8aa9f9")};
   }
   /* .author-name-content {
     background-color: ${props =>
@@ -36,6 +36,10 @@ const ThemedLayout = styled.div`
   .index-date,
   .index-description {
     color: ${props => (props.theme.name === "light" ? "#000000" : "#FFFFFF")};
+  }
+  .circle{
+    border: 2px solid ${props =>
+      props.theme.name === "light" ? "#28779a" : "#8aa9f9"};
   }
 `
 
