@@ -26,10 +26,7 @@ const ThemedLayout = styled.div`
   .author-profile a {
     color: ${props => (props.theme.name === "light" ? "#04648E" : "#8aa9f9")};
   }
-  /* .author-name-content {
-    background-color: ${props =>
-      props.theme.name === "light" ? "#E1E4E3" : "#3b3b3b"};
-  } */
+
   .index-title {
     color: ${props => (props.theme.name === "light" ? "#028177" : "#4FC8C0")};
   }
@@ -37,9 +34,9 @@ const ThemedLayout = styled.div`
   .index-description {
     color: ${props => (props.theme.name === "light" ? "#000000" : "#FFFFFF")};
   }
-  .circle{
-    border: 2px solid ${props =>
-      props.theme.name === "light" ? "#28779a" : "#8aa9f9"};
+  .circle {
+    border: 2px solid
+      ${props => (props.theme.name === "light" ? "#28779a" : "#8aa9f9")};
   }
 `
 

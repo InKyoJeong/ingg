@@ -1,5 +1,5 @@
 ---
-title: "[React] 리덕스(Redux)와 Context API"
+title: "[React] 리덕스(Redux)란?"
 date: 2020-09-01 12:25:98
 description: "리덕스(Redux)는 가장 많이 사용되는 상태 관리 라이브러리이다. 리덕스를 사용하면 상태 업데이트 관련 로직을 효율적으로 관리할 수 있다."
 
@@ -7,13 +7,14 @@ description: "리덕스(Redux)는 가장 많이 사용되는 상태 관리 라�
 
 ![Redux](./images/redux.png)
 
+> 이 글은 [Maximilian Schwarzmüller - Redux vs React’s Context API](https://academind.com/learn/react/redux-vs-context-api/#will-react-s-context-api-replace-redux)를 참고한 글입니다.
+
 <br>
 
 ### 📌 Contents
 
-1. [Redux란?](#what-redux)
-2. [Context API란?](#what-context)
-3. [Context API vs Redux](#can-replace)
+1. [Redux란?](#what-redux) 
+2. [Context API vs Redux](#can-replace)
 
 ---
 
@@ -192,11 +193,13 @@ connect(mapStateToProps, mapDispatchToProps)(연동할 컴포넌트)
 
 `mapStateToProps`는 리덕스 스토어 안의 상태를 컴포넌트의 props로 넘겨주기 위해 설정하는 함수이고, `mapDispatchToProps`는 액션 생성 함수를 컴포넌트의 props로 넘겨주기 위해 사용하는 함수이다.
 
-이것이 Redux이고 간단히 React 앱에서 사용하는 방법이다. React의 Context API는 어떻게 작동할까?
+이것이 Redux이고 간단히 React 앱에서 사용하는 방법이다. 
+
+<!-- React의 Context API는 어떻게 작동할까? -->
 
 <br>
 
-### <a name="what-context"></a>Context API란?
+<!-- ### <a name="what-context"></a>Context API란?
 
 <hr />
 
@@ -600,7 +603,7 @@ export default ColorBox;
 
 이렇게 `useContext` Hook을 사용하면 편하게 Context값을 조회할 수 있다.
 
-참고로 **클래스형 컴포넌트**에서 Context를 좀 더 쉽게 사용하는 방법으로는, `static contextType`을 정의하는 방법이 있다.
+참고로 **클래스형 컴포넌트**에서 Context를 좀 더 쉽게 사용하는 방법으로는, `static contextType`을 정의하는 방법이 있다. -->
 
 <br>
 
@@ -621,4 +624,4 @@ export default ColorBox;
 ### Reference
 
 - [Maximilian Schwarzmüller - Redux vs React’s Context API](https://academind.com/learn/react/redux-vs-context-api/#will-react-s-context-api-replace-redux)
-- [Veloport - 리액트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628?Acode=101)
+<!-- - [Veloport - 리액트를 다루는 기술](http://www.yes24.com/Product/Goods/78233628?Acode=101) -->

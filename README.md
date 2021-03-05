@@ -1,8 +1,8 @@
-# ingg.dev
+## INGG.
 
 My personal blog using Gatsby.js
 
-<img alt='ingg' src='https://postfiles.pstatic.net/MjAyMTAxMDFfMzQg/MDAxNjA5NTEwNjMyNDIy.S_LNUjVIY2cbvJfQgXwqs9TI8dscC2ZXqJtMiaI5b4Ug.oOFcfYbYqWq2lWZlWmp5_vp-iyRwPyOUdUBHefA1JRcg.PNG.viapolar/ingg.png?type=w773' />
+<img alt='ingg' src='https://postfiles.pstatic.net/MjAyMTAxMDdfMTcy/MDAxNjA5OTgwNjExMDgz.UobB_nctJFOkUPhfSiAPUbX2Z_rbfvwJPVoP_RY_W0Mg.ReG_5G0H0n832nM0tTd0T8y6DIy6uVNIlLB6ZP5-X9og.PNG.viapolar/ingg.png?type=w773' />
 
 <br>
 

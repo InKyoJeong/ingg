@@ -60,10 +60,10 @@ class AboutPage extends React.Component {
               </a> */}
             </td>
           </tr>
-          <tr>
+          {/* <tr>
             <td class="about-activities__period">20.09 ~ 20.11</td>
             <td>Double Slash</td>
-          </tr>
+          </tr> */}
         </table>
       </Layout>
     )
