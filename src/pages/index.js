@@ -35,6 +35,7 @@ class BlogIndex extends React.Component {
                     {title}
                   </h3>
                   <small className="index-date">{node.frontmatter.date}</small>
+                  <small className="index-time">‣ {node.timeToRead} min</small>
                 </header>
                 <section>
                   <p
@@ -66,6 +67,7 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          timeToRead
           fields {
             slug
           }

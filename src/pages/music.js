@@ -20,7 +20,7 @@ class Music extends React.Component {
             <img src={homelogo} alt="Logo" />
           </Link>
         </div>
-        <h1>Music</h1>
+        {/* <h1>Music</h1>
         <iframe
           className="video"
           title="music"
@@ -28,8 +28,8 @@ class Music extends React.Component {
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
-        <h1>Music_1hour</h1>
+        ></iframe> */}
+        {/* <h1>Music_1hour</h1>
         <iframe
           className="video"
           title="music2"
@@ -37,7 +37,24 @@ class Music extends React.Component {
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
+        ></iframe> */}
+        <iframe
+          className="video"
+          src="https://www.youtube.com/embed/W_z6esc8KQk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
         ></iframe>
+        <iframe
+          className="video"
+          src="https://www.youtube.com/embed/Rsxou6AOeio"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
         {/* 
         재생목록 퍼가기
         컴퓨터에서 YouTube 계정에 로그인합니다.
