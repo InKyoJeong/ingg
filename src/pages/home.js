@@ -33,24 +33,24 @@ class Home extends React.Component {
         <br />
 
         {/* 쏠 -googlemap */}
-        <iframe
+        {/* <iframe
           className="video"
           src="https://www.youtube.com/embed/Rvm74MtZme8"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
+        ></iframe> */}
 
         {/* 재생목록 */}
-        {/* <iframe
+        <iframe
           className="video"
           title="playlist"
           src="https://www.youtube.com/embed/videoseries?list=PLcTVu2Bx02SvLHXkmcxiI74jHYpywCzpO"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe> */}
+        ></iframe>
 
         {/* <iframe
           className="video"
