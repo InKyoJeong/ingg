@@ -7,11 +7,9 @@
   font-weight: bolder;
   letter-spacing: 0.7px;
   padding: 1px 7px;
-  // margin-left: 6px;
   border-radius: 8px;
   color: rgb(2, 129, 119);
   box-shadow: none;
-  // background-color: rgb(225, 228, 227);
   animation: scaleAndRotateSquare infinite 3s;
   -webkit-animation: scaleAndRotateSquare infinite 3s;
 }
@@ -30,7 +28,7 @@
 .author-name-prefix {
   font-size: 14px;
   font-family: "Courgette", cursive;
-  font-weight: bolder;
+  // font-weight: bolder;
 }
 .author-sns {
   font-size: 13.5px;

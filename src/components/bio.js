@@ -71,13 +71,7 @@ const Bio = () => {
       <div className="author-profile">
         <span className="author-name-prefix">Written by</span>
         <Link to={"/about"} className="author-name-content">
-          <span>
-            {/* <FontAwesomeIcon
-              icon={["fab", "slack-hash"]}
-              className="author-profile__icon"
-            /> */}
-            {author}
-          </span>
+          <span>{author}</span>
         </Link>
         <br />
         <div className="author-introduce">Frond-End Developer</div>
@@ -88,27 +82,15 @@ const Bio = () => {
               className="author-sns__icon"
             />
             Github
-          </a>{" "}
-          {/* {social.github && (
-                    <a href={`https://github.com/${social.github}`}>GitHub</a>
-                  )} */}
-          {/* <a
-            href="https://facebook.com/e.viapolar"
-            style={{ boxShadow: `none` }}
-          >
-            <FontAwesomeIcon
-              icon={["fab", "facebook"]}
-              className="author-sns__icon"
-            />
-            Facebook
-          </a>{" "} */}
-          <a href="https://instagram.com/in.gg" style={{ boxShadow: `none` }}>
+          </a>
+
+          {/* <a href="https://instagram.com/in.gg" style={{ boxShadow: `none` }}>
             <FontAwesomeIcon
               icon={["fab", "instagram"]}
               className="author-sns__icon"
             />
             Instagram
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 My personal blog using Gatsby.js
 
-<img alt='ingg' src='https://postfiles.pstatic.net/MjAyMTAxMDdfMTcy/MDAxNjA5OTgwNjExMDgz.UobB_nctJFOkUPhfSiAPUbX2Z_rbfvwJPVoP_RY_W0Mg.ReG_5G0H0n832nM0tTd0T8y6DIy6uVNIlLB6ZP5-X9og.PNG.viapolar/ingg.png?type=w773' />
+<img alt='ingg' src='https://user-images.githubusercontent.com/48676844/128625870-4f64c36c-b702-422d-8f86-bea7c7117951.png' />
 
 <br>
 
@@ -15,10 +15,9 @@ My personal blog using Gatsby.js
 ## 🛠 Features
 
 - 🌙 DarkMode
-- ✅ Icon
-- 💬 Comment : utteranc.es
-- 📈 Analysis : Google Analytics, Google search console
-- 🖍 Code Style : Code Label and Highlight
+- 💬 Comment (utteranc.es)
+- 📈 Analysis (Google Analytics, Google search console)
+- 🖍 Code Label and Highlight
 
 <br>
 

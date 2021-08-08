@@ -45,26 +45,13 @@ class AboutPage extends React.Component {
             <td>inkyo.dev@gmail.com</td>
           </tr>
         </table>
-        <table>
+        {/* <table>
           <h1 class="about-activities">Activity</h1>
           <tr>
             <td class="about-activities__period">19.03 ~ 19.12</td>
-            <td>
-              LIKE LION
-              {/* <a
-                href="https://github.com/InKyoJeong/Resume/blob/master/Certificate/cer.md"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Completion
-              </a> */}
-            </td>
+            <td>LIKE LION</td>
           </tr>
-          {/* <tr>
-            <td class="about-activities__period">20.09 ~ 20.11</td>
-            <td>Double Slash</td>
-          </tr> */}
-        </table>
+        </table> */}
       </Layout>
     )
   }
