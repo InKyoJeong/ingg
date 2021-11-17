@@ -1,6 +1,6 @@
 ---
 title: "[JS] Javascript 동작 원리와 비동기처리"
-tags: ["js"]
+tags: ["javascript"]
 date: 2020-03-29 02:30:98
 ---
 

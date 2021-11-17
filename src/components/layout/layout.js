@@ -38,6 +38,12 @@ const ThemedLayout = styled.div`
     border: 2px solid
       ${props => (props.theme.name === "light" ? "#28779a" : "#8aa9f9")};
   }
+  .category-open,
+  .category-bar__item {
+    background-color: ${props =>
+      props.theme.name === "light" ? "#509dbf" : "#8aa9f9"};
+    color: ${props => (props.theme.name === "light" ? "#edebeb" : "#292E2E")};
+  }
 `
 
 class Layout extends React.Component {

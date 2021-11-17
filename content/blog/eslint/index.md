@@ -1,6 +1,6 @@
 ---
 title: "[JS] ESLint 적용하기"
-tags: ["js"]
+tags: ["javascript"]
 date: 2020-03-01 02:30:98
 ---
 

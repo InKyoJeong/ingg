@@ -43,7 +43,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(1.1),
+        marginBottom: rhythm(0.5),
       }}
     >
       <div className="circle"></div>
