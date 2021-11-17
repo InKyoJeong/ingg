@@ -17,31 +17,33 @@ class AboutPage extends React.Component {
         </h1>
         <hr className="about-myname__hr" />
         <table>
-          <tr>
-            <td>Blog</td>
-            <td>
-              <a href="https://ingg.dev" className="about-link">
-                https://ingg.dev
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>Github</td>
-            <td>
-              <a
-                href="https://github.com/InKyoJeong"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="about-link"
-              >
-                https://github.com/InKyoJeong
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>Contact</td>
-            <td>inkyo.dev@gmail.com</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>Blog</td>
+              <td>
+                <a href="https://ingg.dev" className="about-link">
+                  https://ingg.dev
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Github</td>
+              <td>
+                <a
+                  href="https://github.com/InKyoJeong"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="about-link"
+                >
+                  https://github.com/InKyoJeong
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Contact</td>
+              <td>inkyo.dev@gmail.com</td>
+            </tr>
+          </tbody>
         </table>
       </Layout>
     )
