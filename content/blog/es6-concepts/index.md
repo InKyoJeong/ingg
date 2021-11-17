@@ -1,5 +1,6 @@
 ---
 title: "[JS] ES6 Concepts"
+tags: ["js"]
 date: 2020-03-26 12:30:98
 ---
 

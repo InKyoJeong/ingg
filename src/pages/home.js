@@ -1,12 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import "./home.scss"
+import Snow from "../components/Snow/snow"
 import homelogo from "../../content/assets/homelogo.svg"
-// import listlogo from "../../content/assets/listlogo.svg"
+import "./home.scss"
 // import christmas from "../../content/assets/christmas.svg"
-import Snow from "../components/Snow/Snow"
 
 class Home extends React.Component {
   render() {
@@ -32,16 +31,6 @@ class Home extends React.Component {
 
         <br />
 
-        {/* 쏠 -googlemap */}
-        {/* <iframe
-          className="video"
-          src="https://www.youtube.com/embed/Rvm74MtZme8"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe> */}
-
         {/* 재생목록 */}
         <iframe
           className="video"
@@ -51,29 +40,6 @@ class Home extends React.Component {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-
-        {/* <iframe
-          className="video"
-          title="playlist"
-          src="https://www.youtube.com/embed/LpijXpZt6F8?start=14"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe> */}
-
-        {/* <div className="list_logo">
-          <a
-            href="https://www.youtube.com/playlist?list=PLcTVu2Bx02SvLHXkmcxiI74jHYpywCzpO"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-            }}
-          > */}
-        {/* <img src={listlogo} alt="Logo2" /> */}
-        {/* </a> */}
-        {/* </div> */}
       </Layout>
     )
   }

@@ -1,12 +1,11 @@
 ---
 title: "[Web] CORS 동작 방식과 해결 방법"
+tags: ["web"]
 date: 2021-10-10 22:30:98 
 description: "교차 출처 리소스 공유(Cross-Origin Resource Sharing)에 대해 알아보자."
 ---
 
 ![cors](./images/cors.svg)
-
-
 
 <br>
 

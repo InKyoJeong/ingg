@@ -1,11 +1,11 @@
 import React from "react"
-import { Top } from "../components/top/top"
 import { Link } from "gatsby"
-import { rhythm, scale } from "../utils/typography"
-import SwitchDark from "../components/dark-mode/switch"
-import { ThemeContext } from "../context/ThemeContext"
+import { rhythm, scale } from "../../utils/typography"
+import { Top } from "../top/top"
+import SwitchDark from "../dark-mode/switch"
+import { ThemeContext } from "../../context/ThemeContext"
 import styled from "@emotion/styled"
-import { Footer } from "./footer/footer"
+import { Footer } from "../footer/footer"
 
 const themes = {
   light: {

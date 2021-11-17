@@ -9,7 +9,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 import "./bio.scss"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
 import {
@@ -83,14 +83,6 @@ const Bio = () => {
             />
             Github
           </a>
-
-          {/* <a href="https://instagram.com/in.gg" style={{ boxShadow: `none` }}>
-            <FontAwesomeIcon
-              icon={["fab", "instagram"]}
-              className="author-sns__icon"
-            />
-            Instagram
-          </a> */}
         </div>
       </div>
     </div>

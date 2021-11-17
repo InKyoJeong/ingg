@@ -1,5 +1,6 @@
 ---
 title: "[React Native] Splash Screen 적용하기"
+tags: ["reactnative"]
 date: 2020-11-14 22:17:98
 description: "React Native CLI(0.60+)에서 Splash Screen을 적용해보자."
 ---

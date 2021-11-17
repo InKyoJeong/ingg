@@ -1,5 +1,6 @@
 ---
 title: "[React Native] 빌드 및 배포하기"
+tags: ["reactnative"]
 date: 2020-11-27 03:17:98
 description: "React Native CLI(0.60+)로 개발한 앱을 빌드하고 배포해보자."
 ---

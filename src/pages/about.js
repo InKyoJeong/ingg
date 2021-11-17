@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-
 import "./about.scss"
 
 class AboutPage extends React.Component {
@@ -14,10 +12,10 @@ class AboutPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="About Me" />
-        <h1 class="about-myname">
+        <h1 className="about-myname">
           <span>정인교 (InKyo Jeong)</span>
         </h1>
-        <hr class="about-myname__hr" />
+        <hr className="about-myname__hr" />
         <table>
           <tr>
             <td>Blog</td>
@@ -45,13 +43,6 @@ class AboutPage extends React.Component {
             <td>inkyo.dev@gmail.com</td>
           </tr>
         </table>
-        {/* <table>
-          <h1 class="about-activities">Activity</h1>
-          <tr>
-            <td class="about-activities__period">19.03 ~ 19.12</td>
-            <td>LIKE LION</td>
-          </tr>
-        </table> */}
       </Layout>
     )
   }
