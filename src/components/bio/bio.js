@@ -12,15 +12,10 @@ import "./bio.scss"
 import { rhythm } from "../../utils/typography"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
-import {
-  faFacebook,
-  faGithub,
-  faInstagram,
-  faSlackHash,
-} from "@fortawesome/free-brands-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-library.add(faFacebook, faGithub, faInstagram, faSlackHash)
+library.add(faGithub)
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -48,7 +43,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.1),
+        marginBottom: rhythm(0.5),
       }}
     >
       <div className="circle"></div>

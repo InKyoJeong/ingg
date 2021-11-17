@@ -1,6 +1,6 @@
 ---
 title: "[JS] Babel 이란?"
-tags: ["js"]
+tags: ["javascript"]
 date: 2020-02-29 06:16:98
 ---
 

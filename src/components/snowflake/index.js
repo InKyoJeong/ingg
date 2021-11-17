@@ -1,8 +1,8 @@
 import React from "react"
 
-import "./Snow.scss"
+import "./styles.scss"
 
-const Snow = () => {
+const Snowflake = () => {
   return (
     <div className="snowflakes" aria-hidden="true">
       <div className="snowflake">●</div>
@@ -19,4 +19,4 @@ const Snow = () => {
   )
 }
 
-export default Snow
+export default Snowflake

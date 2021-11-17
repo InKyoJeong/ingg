@@ -2,8 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import Snow from "../components/Snow/snow"
 import homelogo from "../../content/assets/homelogo.svg"
+import Snowflake from "../components/snowflake"
 import "./home.scss"
 // import christmas from "../../content/assets/christmas.svg"
 
@@ -27,7 +27,7 @@ class Home extends React.Component {
           </Link>
         </div>
 
-        <Snow />
+        <Snowflake />
 
         <br />
 

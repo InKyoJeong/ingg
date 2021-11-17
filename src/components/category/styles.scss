@@ -1,0 +1,47 @@
+.category-container {
+  display: flex;
+  // width: 100%;
+  overflow: scroll;
+  border-radius: 10px;
+  font-family: "Courgette";
+  font-size: 14px;
+}
+
+.category-open {
+  width: 88px;
+  margin-right: 5px;
+  font-weight: bolder;
+}
+
+.category-bar {
+  display: flex;
+  overflow: scroll;
+}
+
+.category-open,
+.category-bar {
+  border-radius: 10px;
+}
+
+.category-open,
+.category-bar__item {
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}
+
+.category-bar__item {
+  animation: fadein 1.5s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

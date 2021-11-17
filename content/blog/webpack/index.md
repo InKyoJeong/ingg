@@ -1,6 +1,6 @@
 ---
 title: "[JS] Webpack을 쓰는 이유"
-tags: ["js"]
+tags: ["javascript"]
 date: 2020-02-23 01:50:98
 ---
 
