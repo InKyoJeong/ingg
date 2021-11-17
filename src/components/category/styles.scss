@@ -4,13 +4,17 @@
   overflow: scroll;
   border-radius: 10px;
   font-family: "Courgette";
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .category-open {
   width: 88px;
   margin-right: 5px;
   font-weight: bolder;
+}
+
+.category-bar-outer {
+  overflow: hidden;
 }
 
 .category-bar {

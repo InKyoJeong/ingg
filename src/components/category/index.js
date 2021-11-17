@@ -17,18 +17,20 @@ const Category = ({ onClick }) => {
           +
         </button>
       </div>
-      <div className="category-bar">
-        {showCategory &&
-          categories.map((category, idx) => (
-            <button
-              onClick={onClick}
-              key={idx}
-              id={category.toLowerCase()}
-              className="category-bar__item"
-            >
-              {category}
-            </button>
-          ))}
+      <div className="category-bar-outer">
+        <div className="category-bar">
+          {showCategory &&
+            categories.map((category, idx) => (
+              <button
+                onClick={onClick}
+                key={idx}
+                id={category.toLowerCase()}
+                className="category-bar__item"
+              >
+                {category}
+              </button>
+            ))}
+        </div>
       </div>
     </div>
   )
