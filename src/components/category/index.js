@@ -1,20 +1,15 @@
 import React, { useCallback, useEffect, useState } from "react"
+import useLocalStorage from "../../hooks/useLocalStorage"
 import "./styles.scss"
 
 const categories = ["All", "Javascript", "ReactNative", "Web", "Git"]
 
 const Category = ({ onClick }) => {
-  const [showCategory, setShowCategory] = useState(
-    () => JSON.parse(window.localStorage.getItem("category")) || false
-  )
+  const [showCategory, setShowCategory] = useLocalStorage("category", false)
 
   const onClickDrawer = useCallback(() => {
     setShowCategory(prev => !prev)
   }, [])
-
-  useEffect(() => {
-    window.localStorage.setItem("category", JSON.stringify(showCategory))
-  }, [showCategory])
 
   return (
     <div className="category-container">
