@@ -1,5 +1,4 @@
 import React from "react";
-import useLocalStorage from "../hooks/useLocalStorage";
 
 export const ThemeContext = React.createContext({
   name: "dark",
@@ -7,7 +6,7 @@ export const ThemeContext = React.createContext({
 });
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useLocalStorage("mode", "dark");
+  const [theme, setTheme] = useState("dark");
 
   return (
     <ThemeContext.Provider
