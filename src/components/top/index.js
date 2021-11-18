@@ -1,20 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import "./top.scss"
+import React from "react";
+import { Link } from "gatsby";
+import "./styles.scss";
 
-import { ThemeContext } from "../../context/ThemeContext"
-import styled from "@emotion/styled"
-
-const themes = {
-  light: {
-    foreground: "inherit",
-    background: "#ffffff",
-  },
-  dark: {
-    foreground: "#ffffff",
-    background: "#292e2e",
-  },
-}
+import { ThemeContext } from "../../context/ThemeContext";
+import styled from "@emotion/styled";
+import { themes } from "../../theme";
 
 const ThemedLayout = styled.div`
   color: ${props => themes[props.theme.name].foreground};
@@ -23,10 +13,10 @@ const ThemedLayout = styled.div`
   polygon {
     transition: all 0.4s ease;
   }
-`
+`;
 
 export const Top = ({ title, location, rootPath }) => {
-  const isRoot = location.pathname === rootPath
+  const isRoot = location.pathname === rootPath;
   return (
     <ThemeContext.Consumer>
       {theme => (
@@ -52,5 +42,5 @@ export const Top = ({ title, location, rootPath }) => {
         </ThemedLayout>
       )}
     </ThemeContext.Consumer>
-  )
-}
+  );
+};

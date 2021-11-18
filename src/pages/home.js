@@ -1,10 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
-import homelogo from "../../content/assets/homelogo.svg"
-import Snowflake from "../components/snowflake"
-import "./home.scss"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import homelogo from "../../content/assets/homelogo.svg";
+import Snowflake from "../components/snowflake";
+import "./home.scss";
 // import christmas from "../../content/assets/christmas.svg"
 
 class Home extends React.Component {
@@ -41,11 +41,11 @@ class Home extends React.Component {
           allowFullScreen
         ></iframe>
       </Layout>
-    )
+    );
   }
 }
 
-export default Home
+export default Home;
 
 export const pageQuery = graphql`
   query {
@@ -55,4 +55,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

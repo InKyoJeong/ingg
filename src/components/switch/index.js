@@ -1,8 +1,8 @@
-import React from "react"
-import Switch from "react-switch"
-import "./switch.scss"
+import React from "react";
+import Switch from "react-switch";
+import "./styles.scss";
 
-const SwitchDark = ({ theme }) => (
+const ModeSwitch = ({ theme }) => (
   <label className="switch-toggle" htmlFor="icon-switch">
     <Switch
       uncheckedIcon={
@@ -23,7 +23,7 @@ const SwitchDark = ({ theme }) => (
       // disabled
     />
   </label>
-)
-export default SwitchDark
+);
+export default ModeSwitch;
 
 // https://github.com/markusenglund/react-switch 를 참고하여 수정

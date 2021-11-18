@@ -1,8 +1,8 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout/layout"
-import "./home.scss"
-import homelogo from "../../content/assets/homelogo.svg"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/layout";
+import "./home.scss";
+import homelogo from "../../content/assets/homelogo.svg";
 
 class Music extends React.Component {
   render() {
@@ -48,11 +48,11 @@ class Music extends React.Component {
         'embed/' 뒤에 나오는 동영상 ID를 'videoseries?list='로 대체합니다.
         그런 다음 '=' 뒤에 재생목록 ID를 붙여넣습니다. */}
       </Layout>
-    )
+    );
   }
 }
 
-export default Music
+export default Music;
 
 export const pageQuery = graphql`
   query {
@@ -62,4 +62,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

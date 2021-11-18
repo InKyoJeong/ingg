@@ -5,17 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import Image from "gatsby-image"
-import "./bio.scss"
-import { rhythm } from "../../utils/typography"
+import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import Image from "gatsby-image";
+import "./styles.scss";
+import { rhythm } from "../../utils/typography";
 
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(faGithub)
+library.add(faGithub);
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -36,9 +36,9 @@ const Bio = () => {
         }
       }
     }
-  `)
+  `);
 
-  const { author } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata;
   return (
     <div
       style={{
@@ -81,7 +81,7 @@ const Bio = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;

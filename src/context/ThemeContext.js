@@ -7,7 +7,7 @@ export const ThemeContext = React.createContext({
 });
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useLocalStorage("switch", "dark");
+  const [theme, setTheme] = useLocalStorage("mode", "dark");
 
   return (
     <ThemeContext.Provider

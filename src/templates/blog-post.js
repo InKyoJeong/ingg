@@ -1,20 +1,21 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { rhythm, scale } from "../utils/typography";
+import Utterances from "../components/comments/Utterances";
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import Bio from "../components/bio/bio"
-import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
-import "./blog-post.scss"
-import "../styles/code.scss"
-
-import Utterances from "../components/comments/Utterances"
+import "./blog-post.scss";
+import "./code.scss";
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.markdownRemark;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
+
+    console.log(next, previous);
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -89,11 +90,11 @@ class BlogPostTemplate extends React.Component {
         </nav>
         <Utterances />
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -113,4 +114,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
