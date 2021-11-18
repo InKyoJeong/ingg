@@ -5,9 +5,6 @@ import "./switch.scss"
 const SwitchDark = ({ theme }) => (
   <label className="switch-toggle" htmlFor="icon-switch">
     <Switch
-      // checkedIcon={<div className="icon checkedIcon"></div>}
-      //   height={24}
-      //   width={70}
       uncheckedIcon={
         <div className="icon uncheckedIcon">
           <span role="img" aria-label="dark-mode__moon">
