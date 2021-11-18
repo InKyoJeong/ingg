@@ -15,8 +15,6 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
 
-    console.log(next, previous);
-
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -62,16 +60,7 @@ class BlogPostTemplate extends React.Component {
         </article>
 
         <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-            className="post-nav"
-          >
+          <ul className="post-nav">
             <li>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">

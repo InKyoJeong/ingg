@@ -69,19 +69,28 @@ img {
   height: 1.5px;
   margin: 40px 15px;
 }
+.post-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
 
-.post-nav li {
-  background: linear-gradient(90deg, #6cb1e6 0%, #4ecdc4 100%);
-  border-radius: 5px;
-  a {
-    box-shadow: none;
-    font-family: "Nanum Gothic", sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    color: black;
-    padding: 0 10px;
+  li {
+    background: linear-gradient(90deg, #6cb1e6 0%, #4ecdc4 100%);
+    border-radius: 5px;
+
+    a {
+      box-shadow: none;
+      font-family: "Nanum Gothic", sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      color: black;
+      padding: 0 10px;
+    }
   }
 }
+
 .post-title {
   font-size: 2em;
 }
