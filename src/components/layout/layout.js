@@ -1,11 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
-import { rhythm, scale } from "../../utils/typography"
-import { Top } from "../top/top"
-import SwitchDark from "../dark-mode/switch"
-import { ThemeContext } from "../../context/ThemeContext"
-import styled from "@emotion/styled"
-import { Footer } from "../footer/footer"
+import React from "react";
+import { Link } from "gatsby";
+import { rhythm, scale } from "../../utils/typography";
+import styled from "@emotion/styled";
+import SwitchDark from "../dark-mode/switch";
+import { Top } from "../top/top";
+import { ThemeContext } from "../../context/ThemeContext";
+import { Footer } from "../footer/footer";
 
 const themes = {
   light: {
@@ -16,7 +16,7 @@ const themes = {
     foreground: "#ffffff",
     background: "#292e2e",
   },
-}
+};
 const ThemedLayout = styled.div`
   color: ${props => themes[props.theme.name].foreground};
   background-color: ${props => themes[props.theme.name].background};
@@ -44,13 +44,13 @@ const ThemedLayout = styled.div`
       props.theme.name === "light" ? "#509dbf" : "#8aa9f9"};
     color: ${props => (props.theme.name === "light" ? "#edebeb" : "#292E2E")};
   }
-`
+`;
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+    const { location, title, children } = this.props;
+    const rootPath = `${__PATH_PREFIX__}/`;
+    let header;
     if (location.pathname === rootPath) {
       header = (
         <h1
@@ -71,7 +71,7 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h1>
-      )
+      );
     }
     return (
       <React.Fragment>
@@ -96,8 +96,8 @@ class Layout extends React.Component {
           )}
         </ThemeContext.Consumer>
       </React.Fragment>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;

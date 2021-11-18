@@ -1,15 +1,15 @@
-import React, { useCallback, useEffect, useState } from "react"
-import useLocalStorage from "../../hooks/useLocalStorage"
-import "./styles.scss"
+import React, { useCallback } from "react";
+import useLocalStorage from "../../hooks/useLocalStorage";
+import "./styles.scss";
 
-const categories = ["All", "Javascript", "ReactNative", "Web", "Git"]
+const categories = ["All", "Javascript", "ReactNative", "Web", "Git"];
 
 const Category = ({ onClick }) => {
-  const [showCategory, setShowCategory] = useLocalStorage("category", false)
+  const [showCategory, setShowCategory] = useLocalStorage("category", false);
 
   const onClickDrawer = useCallback(() => {
-    setShowCategory(prev => !prev)
-  }, [])
+    setShowCategory(prev => !prev);
+  }, []);
 
   return (
     <div className="category-container">
@@ -34,7 +34,7 @@ const Category = ({ onClick }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Category
+export default Category;
