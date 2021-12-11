@@ -46,6 +46,8 @@ date: 2020-02-29 06:16:98
 npm install --save-dev @babel/core @babel/cli 
 ```
 
+<br>
+
 #### 프로젝트의 루트에 추가한 config 파일예시
 
 ```json
@@ -68,6 +70,8 @@ npm install --save-dev @babel/core @babel/cli
 }
 ```
 
+<br>
+
 #### CLI 사용
 
 ```
@@ -77,6 +81,8 @@ npm install --save-dev @babel/core @babel/cli
 
 `./node_modules/.bin/babel` 대신 `npx babel` 명령어를 사용할 수 있다.
 ( `npx babel --help` 명령어로 사용법을 볼 수 있다.)
+
+<br>
 
 ### <a name="plugin"></a>2. Plugins
 
@@ -124,6 +130,8 @@ Identifier() name: something
 const nf = gnihtemos => wodniw.trela(gnihtemos);
 ```
 
+<br>
+
 #### 공식 플러그인
 
 `block-scoping`이나 `arrow-functions`와 같은 공식 플러그인을 사용할 수도 있다. 화살표함수 플러그인만 설치해보자.
@@ -145,6 +153,9 @@ const fn = function (something) {
 };
 ```
 화살표함수가 일반 함수로 변경된 것을 확인할 수 있다.
+
+
+<br>
 
 ### <a name="preset"></a>3. Presets
 
@@ -189,6 +200,8 @@ var fn = function (something) {
   return window.alert(something);
 };
 ```
+
+<br>
 
 #### 공식 프리셋
 
@@ -263,6 +276,8 @@ var fn = function fn(something) {
 };
 ```
 크롬과 인터넷 익스플로러 11을 지원하게 설정하면 익스플로러도 포함해야하기 때문에 변환이 된다.
+
+<br>
 
 ### <a name="polyfill"></a>4. Polyfill
 
@@ -352,6 +367,8 @@ $ npm i core-js@2
 npm install -D babel-loader
 ```
 
+<br>
+
 #### 사용
 ```js
 //webpack.config.js
@@ -378,6 +395,8 @@ _js_ 확장자로 끝나는 파일은 _babel-loader_ 가 처리한다. 이제 �
 
 <!-- 
 그동안 주로 접했던 것은 `.babelrc`였는데 이제 공식홈에서는 `babel.config.js`를 쓰기를 권장하고 있다.  -->
+
+<br>
 
 > References
 

@@ -146,6 +146,8 @@ IIFE는 스코프 문제를 해결했지만 바로 실행한다는 점에서 모
 
 이렇게 **CommonJS**는 모듈화의 조건을 충족시키지만 이 방식은 브라우저에서는 필요한 모듈을 모두 내려받을 때까지 아무것도 할 수 없게 된다는 결정적인 단점이 있었다.
 
+<br>
+
 #### AMD
 
 **AMD(Asynchronous Module Definition)**는 비동기로 로딩되는 환경에서 모듈을 사용하는 것이 목표다.
@@ -212,23 +214,27 @@ ES6에서는 클라이언트 사이드 자바스크립트에서도 동작하는 
 
 그래서 웹팩을 사용한다. 웹팩은 하나의 시작점(**Entry point**)으로부터 의존적인 모듈을 전부 찾아내서 하나의 파일로 만든다. 이 결과물을 **Output**이라고 한다.
 
+<br>
+
 #### 4-1. 설치
 
 Webpack4 이후 버전부터는 cli를 같이 설치해야 커맨드라인에서 사용할 수 있다.
 
-```
+```sh
 $ npm install --save-dev webpack
 
-// 특정 버전 설치
+# 특정 버전 설치
 $ npm install --save-dev webpack@<version>
 ```
 
-```
+```sh
 $ npm install --save-dev webpack-cli
 ```
 
+<br>
+
 `--save-dev`옵션이나 `-D`옵션을 추가하여 설치하면 _package.json_ 파일안에서
-**_dependencies_**가 아니라 **_devDependencies_**에 기록이 되는데, 라이브러리를 설치할때 어플리케이션에서 직접쓰이는것과 개발환경에 쓰이는 것을 이렇게 분리하여 설치하는 것이 좋다.
+**_dependencies_** 가 아니라 **_devDependencies_** 에 기록이 되는데, 라이브러리를 설치할때 어플리케이션에서 직접쓰이는것과 개발환경에 쓰이는 것을 이렇게 분리하여 설치하는 것이 좋다.
 
 ```json
 // ex)
@@ -249,7 +255,7 @@ $ npm install --save-dev webpack-cli
 
 #### 4-2. webpack.config.js
 
-**_webpack.config.js_**은 Webpack이 실행될 때 참조하는 설정 파일이다. 최상단에 `webpack.config.js` 파일을 만들면 이를 웹팩에서 자동으로 사용한다.
+**_webpack.config.js_** 은 Webpack이 실행될 때 참조하는 설정 파일이다. 최상단에 `webpack.config.js` 파일을 만들면 이를 웹팩에서 자동으로 사용한다.
 
 ```js
 const path = require("path")
@@ -298,6 +304,8 @@ import를 쓸 수 없다.)
 - Plugins
 - Mode
 - Browser Compatibility -->
+
+<br>
 
 #### 4-3. Concepts
 
@@ -372,6 +380,9 @@ module.exports = {
 인라인 이미지를 데이터 *URL*로 로드 할 수 있다.
 또한 자바스크립트 모듈에서 직접 CSS파일을 `import`할 수 있다.
 
+
+<br>
+
 #### Loader를 쓰는 이유
 
 위의 *app.js*에서 *style.css*파일을 만들어 **import**하고 웹팩을 빌드하면 오류가 발생한다.
@@ -397,6 +408,8 @@ to process this file. See https://webpack.js.org/concepts#loaders
 ```
 
 css모듈을 파싱하는 과정에서 오류 메세지가 나오고 적절한 로더를 사용해야 한다고 말해준다.
+
+<br>
 
 #### css-loader
 
@@ -433,6 +446,8 @@ module.exports = {
 
 적용후 빌드하면 **_dist/main.js_**에서 *css*코드가 *js*코드로 변환된 것을 볼 수 있다.
 
+<br>
+
 #### style-loader
 
 *style-loader*는 *css*를 **DOM**에 삽입한다. 모듈로 변경된 스타일 시트는 돔에 추가되어야 브라우저가 해석할 수 있다.
@@ -462,8 +477,7 @@ module.exports = {
 
 > **Loader 적용 순서**<br>
 > : 여러 개의 로더를 사용하는 경우 로더가 적용되는 순서에 주의해야 한다.
-> 로더는 기본적으로 **_오른쪽에서 왼쪽 순 (또는 아래에서 위쪽)_**으로 적용된다.
-> 아래 예제에서 실행은 *sass-loader*로 시작하고 *css-loader*로 계속되고 마지막으로 *style-loader*로 끝난다.
+> 로더는 기본적으로 **_오른쪽에서 왼쪽 순 (또는 아래에서 위쪽)_** 으로 적용된다. 아래 예제에서 실행 순서는 *1)sass-loader*, *2)css-loader*, *3)style-loader* 이다.
 
 ```js
 module.exports = {
@@ -499,7 +513,7 @@ module.exports = {
 Plugin은 **클래스** 형태로 정의하고 _apply_ 라는 **메소드**를 정의하며, [event hook](https://webpack.js.org/api/compiler-hooks/)을 tap안에 지정한다.
 
 ```js
-//helloworld-plugin.js
+// helloworld-plugin.js
 
 class HelloWorldPlugin {
   apply(compiler) {
@@ -512,6 +526,8 @@ class HelloWorldPlugin {
 
 module.exports = HelloWorldPlugin
 ```
+
+<br>
 
 그 다음 플러그인을 사용하려면 *webpack.config.js*의 `plugins` 배열에 **생성자 함수**로 생성한 객체 인스턴스를 포함한다.
 
@@ -552,7 +568,7 @@ Hash: b6f189fa57dc5a2bc07
 BannerPlugin을 이용해서 결과물에 빌드 정보나 커밋정보를 추가할 수 있다.
 
 ```js{3,8-12}
-//webpack.config.js
+// webpack.config.js
 const path = require("path");
 const webpack = require("webpack");
 
@@ -575,6 +591,8 @@ module.exports = {
 /******  ....
 ```
 
+<br>
+
 아래와 같이 빌드 날짜와 시간을 함수로 전달할 수도 있다.
 
 ```js
@@ -591,10 +609,12 @@ plugins: [
 /******  ....
 ```
 
+<br>
+
 배너 정보가 많다면 파일로 따로 분리하자.
 
 ```js
-//banner.js
+// banner.js
 const childProcess = require("child_process");
 
 module.exports = function banner() {
@@ -609,7 +629,7 @@ module.exports = function banner() {
 ```
 
 ```js{3-4, 8}
-//webpack.config.js
+// webpack.config.js
 const path = require("path");
 const webpack = require("webpack");
 const banner = require("./banner.js");
@@ -620,7 +640,7 @@ module.exports = {
 }
 ```
 
-`npm run build`하면 이런식으로 _git커밋 버전, git커밋 유저, 날짜_ 가 남겨지는 것을 볼 수 있다.
+`npm run build`를 실행하면 이런식으로 _git커밋 버전, git커밋 유저, 날짜_ 가 남겨지는 것을 볼 수 있다.
 
 ```js{4-6}
 // dist/main.js
@@ -634,6 +654,8 @@ module.exports = {
  ...
 ```
 
+<br>
+
 그밖에 자주사용하는 플러그인으로는 `DefinePlugin`, `HtmlWebpackPlugin`, `CleanWebpackPlugin`, `MiniCssExtractPlugin` 등이 있다.
 [(참고)](https://webpack.js.org/plugins/)
 
@@ -646,4 +668,3 @@ module.exports = {
 - [Webpack - concepts](https://webpack.js.org/concepts/)
       <!-- - [lecture-frontend-dev-env](https://github.com/jeonghwan-kim/lecture-frontend-dev-env) -->
 - [Webpack - compiler hooks](https://webpack.js.org/api/compiler-hooks/)
- * [참고 : 정규표현식 해석해주는 사이트](https://regexper.com/) 

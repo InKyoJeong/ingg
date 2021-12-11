@@ -35,7 +35,7 @@ function Person(name) {
   this.name = name;
 }
 
-var foo = new Person("FOO");
+const foo = new Person("FOO");
 ```
 ```js{7-9, 17-19}
 console.dir(Person);
@@ -77,7 +77,7 @@ console.dir(foo);
 <hr>
 
 ```js
-var obj = {
+const obj = {
   name: "foo",
 };
 
@@ -103,7 +103,7 @@ function Person(name, age) {
   this.age = age;
 }
 
-var foo = new Person("FOO", 33);
+const foo = new Person("FOO", 33);
 
 console.log(foo.hasOwnProperty("name")); // true
 ```
@@ -137,7 +137,7 @@ _**Object.prototype**_ 객체에는 해당 메서드가 존재하므로 오류�
 
 ```js
 // 객체 리터럴
-var myObj = {
+const myObj = {
   name: "Kyo",
   hello: function () {
     console.log("Hi, " + this.name);
@@ -153,7 +153,7 @@ function Person(name, age) {
   this.age = age;
 }
 
-var foo = new Person("Foo", 25);
+const foo = new Person("Foo", 25);
 console.log(foo); // Person {name: "Foo", age: 25}
 console.log(foo.hasOwnProperty("name")); // true
 ```
@@ -182,7 +182,7 @@ String.prototype.myMethod = function () {
   console.log("This is my string prototype method");
 };
 
-var str = "Hi!";
+const str = "Hi!";
 str.myMethod(); // This is my string prototype method
 ```
 
@@ -219,7 +219,7 @@ function Person(name) {
   this.name = name;
 }
 
-var foo = new Person("Foo");
+const foo = new Person("Foo");
 
 Person.prototype.hello = function () {
   console.log("Hi");
@@ -244,7 +244,7 @@ function Person(name) {
 // 변경 시점 이전
 console.log(Person.prototype.constructor); // ƒ Person(name){...}
 
-var foo = new Person("Foo");
+const foo = new Person("Foo");
 
 // 디폴트 프로토타입 객체 변경
 Person.prototype = {
@@ -254,7 +254,7 @@ Person.prototype = {
 // 변경 시점 이후
 console.log(Person.prototype.constructor); // ƒ Object() { [native code] }
 
-var boo = new Person("Boo");
+const boo = new Person("Boo");
 
 console.log(foo.job); // undefined
 console.log(boo.job); // Developer
