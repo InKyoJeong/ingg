@@ -1,5 +1,5 @@
 ---
-title: "[React] Hook의 동작 방식 이해하기"
+title: "[React] Hook의 동작 원리 이해하기"
 tags: ["react"]
 date: 2021-12-19 22:09:98
 description: "React Hook은 어떤 방식으로 동작할까? Hook을 구현해보며 동작 방식을 이해해보자."
@@ -169,7 +169,7 @@ function Component() {
 
 <br>
 
-이제 _React_ 에게 어떻게 컴포넌트를 _render_ 할것인지 가르쳐줘야한다. 따라서 _Component_ 를 받는 _render_ 함수를 추가한다. _Component_ 는 함수이므로 호출할 수 있다. 그리고 객체를 리턴하므로 마찬가지로 _render_ 도 호출할 수 있다.
+이제 _React_ 에게 어떻게 컴포넌트를 _render_ 할것인지 가르쳐줘야 한다. 따라서 _Component_ 를 받는 _render_ 함수를 추가한다. _Component_ 는 함수이므로 호출할 수 있다. 그리고 객체를 리턴하므로 마찬가지로 _render_ 도 호출할 수 있다.
 
 ```js{12-16}
 const React = (function () {
