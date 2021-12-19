@@ -1,8 +1,7 @@
 import React, { useCallback } from "react";
+import { CATEGORIES } from "../../constants/category";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import "./styles.scss";
-
-const categories = ["All", "Javascript", "ReactNative", "Web", "Git"];
 
 const Category = ({ onClick }) => {
   const [showCategory, setShowCategory] = useLocalStorage("category", false);
@@ -21,7 +20,7 @@ const Category = ({ onClick }) => {
       <div className="category-bar-outer">
         <div className="category-bar">
           {showCategory &&
-            categories.map((category, idx) => (
+            CATEGORIES.map((category, idx) => (
               <button
                 onClick={onClick}
                 key={idx}
