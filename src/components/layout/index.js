@@ -12,34 +12,35 @@ class Layout extends React.Component {
     const { location, title, children } = this.props;
     const rootPath = `${__PATH_PREFIX__}/`;
     let header;
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
+    // if (location.pathname === rootPath) {
+    header = (
+      <h1
+        style={{
+          ...scale(1.2),
+          marginBottom: rhythm(0.9),
+          marginTop: 0,
+        }}
+      >
+        <Link
           style={{
-            ...scale(1.2),
-            marginBottom: rhythm(0.9),
-            marginTop: 0,
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
           }}
+          to={`/`}
         >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      );
-    }
+          {title}
+        </Link>
+      </h1>
+    );
+    // }
+
     return (
       <React.Fragment>
         <ThemeContext.Consumer>
           {theme => (
             <ThemedLayout theme={theme}>
-              <Top title={title} location={location} rootPath={rootPath} />
+              <Top />
               <div
                 style={{
                   marginLeft: `auto`,

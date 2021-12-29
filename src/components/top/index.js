@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
-import "./styles.scss";
-
 import { ThemeContext } from "../../context/ThemeContext";
 import styled from "@emotion/styled";
 import { themes } from "../../theme";
+import "./styles.scss";
 
 const ThemedLayout = styled.div`
   color: ${props => themes[props.theme.name].foreground};
@@ -15,8 +13,8 @@ const ThemedLayout = styled.div`
   }
 `;
 
-export const Top = ({ title, location, rootPath }) => {
-  const isRoot = location.pathname === rootPath;
+export const Top = () => {
+  // const isRoot = location.pathname === rootPath;
 
   return (
     <ThemeContext.Consumer>
@@ -34,11 +32,11 @@ export const Top = ({ title, location, rootPath }) => {
                 points="0,100 100,0 100,100"
               />
             </svg>
-            {!isRoot && (
+            {/* {!isRoot && (
               <Link to={`/`} className="link">
                 {title}
               </Link>
-            )}
+            )} */}
           </div>
         </ThemedLayout>
       )}

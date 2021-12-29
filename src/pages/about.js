@@ -3,19 +3,21 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import "./about.scss";
+import HomeLogo from "../components/homelogo";
 
 class AboutPage extends React.Component {
   render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
+    // const { data } = this.props;
+    // const siteTitle = data.site.siteMetadata.title;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
+        <HomeLogo />
         <SEO title="About Me" />
-        <h1 className="about-myname">
-          <span>정인교 (InKyo Jeong)</span>
+        <h1 className="about-me">
+          <span>InKyo Jeong</span>
         </h1>
-        <hr className="about-myname__hr" />
+        <hr className="about-me__hr" />
         <table>
           <tbody>
             <tr>

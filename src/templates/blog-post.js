@@ -8,7 +8,6 @@ import SEO from "../components/seo";
 
 import "./blog-post.scss";
 import "./code.scss";
-
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
@@ -21,6 +20,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+
         <article>
           <header>
             <h1
@@ -44,6 +44,7 @@ class BlogPostTemplate extends React.Component {
               {post.frontmatter.date}
             </p>
           </header>
+
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
             className="inner"
