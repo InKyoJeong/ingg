@@ -17,6 +17,7 @@ const ThemedLayout = styled.div`
 
 export const Top = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath;
+
   return (
     <ThemeContext.Consumer>
       {theme => (

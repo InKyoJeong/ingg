@@ -1,0 +1,15 @@
+.cover_logo {
+  width: 6em;
+  height: 6em;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-transition: width 0.2s, height 0.2;
+  transition: width 0.2s, height 0.2s;
+
+  a {
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
+}
