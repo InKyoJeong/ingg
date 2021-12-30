@@ -25,5 +25,3 @@ const ModeSwitch = ({ theme }) => (
   </label>
 );
 export default ModeSwitch;
-
-// https://github.com/markusenglund/react-switch 를 참고하여 수정
