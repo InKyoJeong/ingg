@@ -9,6 +9,7 @@ export const themes = {
     foreground: "#ffffff",
     background: "#292e2e",
   },
+  title: "#00b5a8",
 };
 
 export const ThemedLayout = styled.div`

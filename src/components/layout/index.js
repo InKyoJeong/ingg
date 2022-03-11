@@ -5,7 +5,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 import ModeSwitch from "../switch";
 import { Top } from "../top";
 import { Footer } from "../footer";
-import { ThemedLayout } from "../../theme";
+import { ThemedLayout, themes } from "../../theme";
 
 class Layout extends React.Component {
   render() {
@@ -25,7 +25,7 @@ class Layout extends React.Component {
           style={{
             boxShadow: `none`,
             textDecoration: `none`,
-            color: `inherit`,
+            color: themes.title,
           }}
           to={`/`}
         >
