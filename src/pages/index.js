@@ -5,29 +5,29 @@ import "./index.scss";
 import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Category from "../components/category";
+// import Category from "../components/category";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
   const [postsArr, setPostsArr] = useState(posts);
 
-  const onClick = ({ target }) => {
-    const filterPosts = posts.filter(post => {
-      if (target.id === "all") {
-        return posts;
-      }
-      return post.node.frontmatter.tags.join() === target.id;
-    });
+  // const handleCategoryToggle = ({ target }) => {
+  //   const filterPosts = posts.filter(post => {
+  //     if (target.id === "all") {
+  //       return posts;
+  //     }
+  //     return post.node.frontmatter.tags.join() === target.id;
+  //   });
 
-    setPostsArr(filterPosts);
-  };
+  //   setPostsArr(filterPosts);
+  // };
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
       <Bio />
-      <Category onClick={onClick} />
+      {/* <Category onClick={handleCategoryToggle} /> */}
 
       {postsArr.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
