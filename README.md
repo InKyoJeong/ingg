@@ -2,8 +2,6 @@
 
 My personal blog using Gatsby.js
 
-<img alt='ingg' src='https://user-images.githubusercontent.com/48676844/128625870-4f64c36c-b702-422d-8f86-bea7c7117951.png' />
-
 <br>
 
 ## 💫 Deploy

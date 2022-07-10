@@ -70,6 +70,11 @@ code[class*="language-text"] {
   background: rgb(247, 223, 30);
   background-color: rgb(247, 223, 30);
 }
+.gatsby-highlight pre[class="language-ts"]::before {
+  content: "ts";
+  background: #2f71bb;
+  background-color: #2f71bb;
+}
 .gatsby-highlight pre[class="language-html"]::before {
   content: "html";
   background: #e44c26;
@@ -96,7 +101,6 @@ code[class*="language-text"] {
   background: #ed5ed0;
   background-color: #ed5ed0;
 }
-
 .gatsby-highlight pre[class="language-java"]::before {
   content: "java";
   background: #b07219;
@@ -173,7 +177,8 @@ code[class*="language-text"] {
 }
 
 /* javascript code color*/
-.language-js {
+.language-js,
+.language-ts {
   .token.string {
     color: hsl(135, 48%, 55%);
   }
