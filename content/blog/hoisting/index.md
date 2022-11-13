@@ -4,7 +4,7 @@ tags: ["javascript"]
 date: 2022-11-13 23:30:98 
 ---
 
-![js](./js.png)
+![js](../@images/js.png)
 
 
 

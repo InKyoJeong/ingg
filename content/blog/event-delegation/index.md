@@ -7,7 +7,7 @@ description: "이벤트 위임(event delegation)은 비슷한 방식으로 여�
 
 
 
-![js](./images/js.png)
+![js](../@images/js.png)
 
 
 ### 📌 Contents
