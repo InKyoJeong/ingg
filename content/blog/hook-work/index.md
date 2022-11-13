@@ -7,7 +7,7 @@ description: "React Hook은 어떤 방식으로 동작할까? Hook을 구현해�
 
 ![react](./images/react.png)
 
-React Hook은 어떤 방식으로 동작할까? Hook을 구현해보며 동작 방식을 이해해보자.
+React Hook은 어떤 방식으로 동작할까? Hook을 간단히 구현해보며 동작 방식을 이해해보자.
 
 > #### JSconf 2019, Shawn Wang의 영상을 참고하여 작성한 글입니다.
 
