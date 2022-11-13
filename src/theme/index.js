@@ -27,7 +27,7 @@ export const ThemedLayout = styled.div`
   }
   .index-date,
   .index-description {
-    color: ${props => (props.theme.name === "light" ? "#000000" : "#FFFFFF")};
+    color: ${props => (props.theme.name === "light" ? "#000" : "#FFF")};
   }
   .circle {
     border: 2px solid
@@ -37,6 +37,6 @@ export const ThemedLayout = styled.div`
   .category-bar__item {
     background-color: ${props =>
       props.theme.name === "light" ? "#509dbf" : "#8aa9f9"};
-    color: ${props => (props.theme.name === "light" ? "#edebeb" : "#292E2E")};
+    color: ${props => (props.theme.name === "light" ? "#FFF" : "#292E2E")};
   }
 `;

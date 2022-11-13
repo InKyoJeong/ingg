@@ -2,7 +2,7 @@
 title: "[React] Hook의 동작 원리 이해하기"
 tags: ["react"]
 date: 2021-12-19 22:09:98
-description: "React Hook은 어떤 방식으로 동작할까? Hook을 구현해보며 동작 방식을 이해해보자."
+description: "React Hook은 어떤 방식으로 동작할까? Hook을 간단히 구현해보며 동작 방식을 이해해보자."
 ---
 
 ![react](./images/react.png)
