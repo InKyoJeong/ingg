@@ -1,8 +1,5 @@
 .category-container {
   display: flex;
-  // width: 100%;
-  overflow: scroll;
-  border-radius: 10px;
   font-family: "Courgette";
   font-size: 15px;
 }
@@ -15,14 +12,23 @@
 
 .category-bar-outer {
   overflow: hidden;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .category-bar {
   display: flex;
-  overflow: scroll;
+  overflow-x: scroll;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .category-open,
+.category-bar-outer,
 .category-bar {
   border-radius: 10px;
 }
