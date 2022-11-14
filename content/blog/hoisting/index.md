@@ -74,6 +74,31 @@ console.log(b);
 
 <br>
 
+
+호이스팅이 발생하는 이유에 대해 더 자세히 알아보자. 실행 컨텍스트의 **_Lexical Environment_** 는 **_Environment Record_** (환경 레코드)와 **_Outer LexicalEnvironment Reference_** (외부 렉시컬 환경 참조 컴포넌트)로 구성된다.
+
+**_Environment Record_** 는 유효 범위 안의 식별자와 결과값을 바인드해서 기록하는 하는 영역이다. 여기에 함수 선언, 변수명 등이 담기는데, 컨텍스트 내부 전체를 처음부터 끝까지 훑으면서 순서대로 수집한다. 따라서 자바스크립트 엔진은 코드가 실행되기 전에도 이미 해당 환경에 속한 코드 변수명들을 알고 있기 때문에 호이스팅이 일어나는 것이다.
+
+<!-- 그러므로 만약 해당 값을 참조하는 경우가 발생한다면, 가장먼저 Lexical Environment를 찾게 된다.  
+
+이런 코드가 있다고 가정하자.
+
+```js
+console.log(x); // undefined
+
+var x = 1;
+```
+
+Environment Record는 현재 실행될 컨텍스트의 대상 코드 내에 어떤 식별자들이 있는지에만 관심이 있고, 식별자에 어떤 값이 할당될 것인지에는 관심이 없다. 따라서 위 코드는 변수 생성 단계에서 아래와 같이 Lexical Environment가 구성될 것이다. Lexical Environment에서는 변수 x의 값이 undefined로 초기화되어 있다.
+
+```
+EnvironmentRecord: {
+  x: undefined,
+}
+``` -->
+
+<br>
+
 #### 호이스팅과 TDZ
 
 사실 호이스팅은 정말 위로 끌어올려지는 것이 아니라, 변수나 함수를 선언 이전에 사용할 수 있기 때문에 끌어 올려지는 것처럼 보이는 것이다. **_var_** 와 달리 **_const, let_** 은 호이스팅이 발생하지 않는 것처럼 보이는데, TDZ에 들어가기 때문이다. 그렇다면 TDZ란 무엇일까?
