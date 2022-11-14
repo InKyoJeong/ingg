@@ -1,5 +1,5 @@
 ---
-title: "[JS] 호이스팅 되지 않는 것처럼 보이는 이유"
+title: "[JS] 호이스팅과 TDZ에 대하여"
 tags: ["javascript"]
 date: 2022-11-13 23:30:98 
 ---
