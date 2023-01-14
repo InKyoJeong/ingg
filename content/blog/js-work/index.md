@@ -2,6 +2,7 @@
 title: "[JS] Javascript 동작 원리와 비동기처리"
 tags: ["javascript"]
 date: 2020-03-29 02:30:98
+description: 자바스크립트는 싱글스레드이다. 어떻게 자바스크립트는 싱글스레드이면서 비동기인 것일까? 자바스크립트가 어떻게 동작하는지 내부 원리에 대해 알아보자.
 ---
 
 ![js](../@images/js.png)

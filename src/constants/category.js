@@ -4,5 +4,6 @@ export const CATEGORIES = [
   "React",
   "ReactNative",
   "Web",
+  "CSS",
   "Git",
 ];
