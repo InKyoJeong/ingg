@@ -1,9 +1,12 @@
+@use "../styles/base";
+
 .about-me {
   margin-bottom: 14px;
-}
-.about-me__hr {
-  background: linear-gradient(90deg, #3d4f52, #3fa19b, #565f69);
-  height: 1.5px;
+
+  &__hr {
+    background: linear-gradient(90deg, #3d4f52, #3fa19b, #565f69);
+    height: 1.5px;
+  }
 }
 
 .about-me span,
@@ -11,19 +14,26 @@
   font-size: 25px;
 }
 
-h2 {
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
 .about-link {
   box-shadow: none;
 }
-tr td:nth-child(2) {
-  text-align: center;
-  padding: 0;
+
+.about-table {
+  tr td:nth-child(2) {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  a {
+    color: base.$color-link;
+  }
 }
 
 .about-activities__period {
   width: 20%;
+}
+
+.about.light {
+  color: black;
 }

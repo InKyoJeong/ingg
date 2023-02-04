@@ -2,12 +2,12 @@
 title: "[CSS] Flexbox 더 잘 활용하기"
 tags: ["css"]
 date: 2023-01-14 17:05:98
-description: flexbox를 정확히 이해하고 다양한 속성을 활용해 보자. 
+description: flexbox를 정확히 이해하고 다양한 속성을 활용해 보자.
 ---
 
-![flexbox](./images/flexbox.svg)
+![flexbox](https://user-images.githubusercontent.com/48676844/216775875-bfdf8509-ffd8-4fec-8fc7-4181fa3e1859.svg)
 
-<br> 
+<br>
 
 ### 📌 Contents
 
@@ -17,6 +17,7 @@ description: flexbox를 정확히 이해하고 다양한 속성을 활용해 보
 4. [flex-wrap & align-content](#flexwrap-aligncontent)
 
 ---
+
 <br>
 
 ### <a name="flexbox-intro"></a>flexbox란?
@@ -24,20 +25,18 @@ description: flexbox를 정확히 이해하고 다양한 속성을 활용해 보
 <hr />
 
 flexbox를 이용하면 요소를 쉽게 정렬할 수 있다. 사용 가능한 공간을 최대한 활용할 수 있도록 컨테이너에 요소를 확장하고 축소할 수 있는 기능을 제공한다. 또한 더 적은 코드와 읽기 쉬운 방법으로 **_float_** 레이아웃을 대체한다.
- 
+
 ![flex](https://user-images.githubusercontent.com/48676844/211930298-62edce54-51c7-419c-9fe2-542452a58b1a.svg)
 
-flexbox를 만드려면 부모 요소에 `display: flex` 속성을 지정한다. 이 속성이 적용된 요소는 **flex container**가 되고, 자식 요소는 **flex item**이다. **flex item**들이 배치되는 방향을 **main axis**, 수직 축을 **cross axis**라고한다.  
+flexbox를 만드려면 부모 요소에 `display: flex` 속성을 지정한다. 이 속성이 적용된 요소는 **flex container**가 되고, 자식 요소는 **flex item**이다. **flex item**들이 배치되는 방향을 **main axis**, 수직 축을 **cross axis**라고한다.
 
 <br>
 
 #### flexbox 속성
 
 flexbox 속성은 container에서 사용하는 속성과 item에서 사용하는 속성으로 나뉜다.
- 
 
 ![properties](https://user-images.githubusercontent.com/48676844/211934921-f86a0d8c-2a26-4de1-9696-e832a26879ac.svg)
-
 
 - `flex-wrap`은 flex container에 충분한 공간이 없는 경우 flex item의 줄바꿈 여부를 정의한다.
 - `justify-content`는 flex item이 main axis를 따라 정렬되는 방식을, `align-items`는 cross axis를 따라 정렬되는 방식을 정의한다.
@@ -55,8 +54,7 @@ flexbox 속성은 container에서 사용하는 속성과 item에서 사용하는
 
 <!-- > row, row-reverse, column, column-reverse -->
 
-
-**_flex-direction_** 은 **_row, column_** 외에도 **_row-reverse, column-reverse_** 값을 사용할 수 있다. **main axis** 방향을 반대로 바꾼다. 
+**_flex-direction_** 은 **_row, column_** 외에도 **_row-reverse, column-reverse_** 값을 사용할 수 있다. **main axis** 방향을 반대로 바꾼다.
 
 ```html
 <div class="container">
@@ -76,8 +74,6 @@ flexbox 속성은 container에서 사용하는 속성과 item에서 사용하는
 ```
 
 ![row-reverse](https://user-images.githubusercontent.com/48676844/212118495-348bca9b-72f4-473b-9131-e8a20ffffd77.svg)
-
-
 
 ### justify-content
 
@@ -106,6 +102,7 @@ flexbox 속성은 container에서 사용하는 속성과 item에서 사용하는
   justify-content: space-around;
 }
 ```
+
 ![around](https://user-images.githubusercontent.com/48676844/212114801-f957d38b-a862-4e61-a6b5-f3d7dfe89f82.svg)
 
 **_space-around_** 는 각 flex item의 왼쪽과 오른쪽 모두에 같은 크기의 공간을 둔다.
@@ -127,7 +124,6 @@ flexbox 속성은 container에서 사용하는 속성과 item에서 사용하는
 
 <br>
 
-
 ### align-items
 
 <!-- >   -->
@@ -143,6 +139,7 @@ flexbox 속성은 container에서 사용하는 속성과 item에서 사용하는
   <div class="item">5</div>
 </div>
 ```
+
 ```css{4}
 .container {
   display: flex;
@@ -192,17 +189,17 @@ order의 초기값은 0이다. 만약 요소 하나를 시작 부분으로 옮�
 
 ```css
 .item3 {
-    order: -1;
+  order: -1;
 }
 ```
-![order](https://user-images.githubusercontent.com/48676844/212142245-e4cd8b03-0aa3-4572-8197-83ec23baefbe.svg)
 
+![order](https://user-images.githubusercontent.com/48676844/212142245-e4cd8b03-0aa3-4572-8197-83ec23baefbe.svg)
 
 <br>
 
 ### flex-grow
 
-**_flex-grow_** 속성은 flex item의 확장과 관련된 속성이다. 예를 들어 모든 item에 **1**이상의 값을 부여하면 아이템 각각이 가능한 전체 공간을 차지하게 된다.  
+**_flex-grow_** 속성은 flex item의 확장과 관련된 속성이다. 예를 들어 모든 item에 **1**이상의 값을 부여하면 아이템 각각이 가능한 전체 공간을 차지하게 된다.
 
 ```css{7}
 .container {
@@ -281,7 +278,7 @@ order의 초기값은 0이다. 만약 요소 하나를 시작 부분으로 옮�
 
 ![wrap](https://user-images.githubusercontent.com/48676844/212461414-740b78f9-eba6-488e-827f-bec63b4264f5.gif)
 
-그런데 행이 2개로 늘어나면서 두 행 사이에 불필요한 공간이 생겼다. 이때 **_align-content_** 를 사용하면 쉽게 행을 정렬할 수 있다.  
+그런데 행이 2개로 늘어나면서 두 행 사이에 불필요한 공간이 생겼다. 이때 **_align-content_** 를 사용하면 쉽게 행을 정렬할 수 있다.
 
 ```css{6}
 .container {
@@ -294,6 +291,5 @@ order의 초기값은 0이다. 만약 요소 하나를 시작 부분으로 옮�
 ```
 
 ![align](https://user-images.githubusercontent.com/48676844/212461970-f65d5787-bb61-4c80-870c-b8eb7521dd69.gif)
-
 
 이제 의도한 대로 공간없이 중앙에 배치된것을 볼수 있다. 물론 **_flex-start, flex-end, space-between_** 등을 이용하여 원하는 위치에 두 행을 정렬할 수도 있다.

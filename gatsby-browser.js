@@ -1,12 +1,12 @@
-// custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import "@fontsource/montserrat/variable.css";
+import "@fontsource/merriweather";
+import "./src/styles/reset.scss";
+import "./src/styles/global.scss";
+import "prismjs/themes/prism.css"; // Highlighting for code blocks
 
-import "prismjs/themes/prism.css"
+import React from "react";
+import RootElement from "./src/Root";
 
-//dark mode
-import React from "react"
-import { ThemeProvider } from "./src/context/ThemeContext"
-export const wrapRootElement = ({ element }) => (
-  <ThemeProvider>{element}</ThemeProvider>
-)
+export const wrapRootElement = ({ element }) => {
+  return <RootElement>{element}</RootElement>;
+};

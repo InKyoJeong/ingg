@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, graphql } from "gatsby";
-import { rhythm } from "../utils/typography";
+
+import Bio from "../components/bio/bio";
+import Seo from "../components/seo";
+import Layout from "../components/layout/layout";
+import Category from "../components/category/category";
+import { DarkModeStateContext } from "../context/DarkModeProvider";
 import "./index.scss";
-import Bio from "../components/bio";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Category from "../components/category";
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
-  const posts = data.allMarkdownRemark.edges;
+  const isDarkMode = useContext(DarkModeStateContext);
+
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const posts = data.allMarkdownRemark.nodes;
+
   const [postsArr, setPostsArr] = useState(posts);
 
   const handleCategoryToggle = ({ target }) => {
@@ -17,78 +21,90 @@ const BlogIndex = ({ data, location }) => {
       if (target.id === "all") {
         return posts;
       }
-      return post.node.frontmatter.tags.join() === target.id;
+
+      return post.frontmatter.tags.join() === target.id;
     });
 
     setPostsArr(filterPosts);
   };
 
+  if (posts.length === 0) {
+    return (
+      <Layout location={location} title={siteTitle}>
+        <Bio />
+      </Layout>
+    );
+  }
+
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Home" />
       <Bio />
       <Category onClick={handleCategoryToggle} />
+      <ol style={{ listStyle: `none` }}>
+        {postsArr.map(post => {
+          const title = post.frontmatter.title || post.fields.slug;
 
-      {postsArr.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
-        return (
-          <Link to={node.fields.slug} key={node.fields.slug}>
-            <article className="index">
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 6),
-                  }}
-                  className="index-title"
-                >
-                  {title}
-                </h3>
-                <small className="index-date">{node.frontmatter.date}</small>
-                <small className="index-time">‣ {node.timeToRead} min</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                  className="index-description"
-                />
-              </section>
-            </article>
-          </Link>
-        );
-      })}
+          return (
+            <li key={post.fields.slug}>
+              <article
+                className={`post-list-item ${isDarkMode ? "dark" : "light"}`}
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <Link to={post.fields.slug} itemProp="url">
+                  <h2>
+                    <span itemProp="headline">{title}</span>
+                  </h2>
+                  <small>{post.frontmatter.date}</small>
+                  <small className="post-list-time">
+                    ‣ {post.timeToRead} min
+                  </small>
+                  <section>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description || post.excerpt,
+                      }}
+                      itemProp="description"
+                    />
+                  </section>
+                </Link>
+              </article>
+            </li>
+          );
+        })}
+      </ol>
     </Layout>
   );
 };
 
 export default BlogIndex;
 
+/**
+ * Head export to define metadata for the page
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
+ */
+export const Head = () => <Seo title="All posts" />;
+
 export const pageQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-      edges {
-        node {
-          excerpt
-          timeToRead
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            tags
-          }
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      nodes {
+        excerpt
+        timeToRead
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          tags
         }
       }
     }

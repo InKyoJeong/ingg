@@ -1,0 +1,38 @@
+@use "../../styles/base";
+
+.global-wrapper {
+  margin: base.$spacing-0 auto;
+  max-width: base.$maxWidth-wrapper;
+  padding: base.$spacing-8 base.$spacing-5;
+
+  .main-heading {
+    font-size: base.$fontSize-7;
+    margin: 0;
+    color: base.$color-primary;
+  }
+
+  .header-link-home {
+    font-weight: base.$fontWeight-bold;
+    font-family: base.$font-heading;
+    text-decoration: none;
+    font-size: base.$fontSize-2;
+  }
+
+  .global-header {
+    margin-bottom: base.$spacing-12;
+  }
+
+  .global-footer {
+    padding-top: 45px;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+.global-wrapper.light {
+  color: black;
+}
+
+// .global-wrapper[data-is-root-path="true"] .bio {
+//   margin-bottom: base.$spacing-6;
+// }

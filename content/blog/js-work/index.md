@@ -5,7 +5,7 @@ date: 2020-03-29 02:30:98
 description: 자바스크립트는 싱글스레드이다. 어떻게 자바스크립트는 싱글스레드이면서 비동기인 것일까? 자바스크립트가 어떻게 동작하는지 내부 원리에 대해 알아보자.
 ---
 
-![js](../@images/js.png)
+![js](https://user-images.githubusercontent.com/48676844/216776458-0fd5d4fc-5ce6-4ea4-a1f2-9a9bbaf98337.png)
 
 자바스크립트는 싱글스레드이다. 어떻게 자바스크립트는 싱글스레드이면서 비동기인 것일까? 자바스크립트가 어떻게 동작하는지 내부 원리에 대해 알아보자.
 
@@ -21,14 +21,16 @@ description: 자바스크립트는 싱글스레드이다. 어떻게 자바스크
 6. [async/await](#await)
 
 ---
+
 <br>
 
 ### <a name="engine"></a>자바스크립트 엔진
+
 <hr>
 
-구글의 V8은 자바스크립트 엔진의 대표적인 예이다. Chrome과 Node.js에서 사용한다. 
+구글의 V8은 자바스크립트 엔진의 대표적인 예이다. Chrome과 Node.js에서 사용한다.
 
-![work1](./work1.svg)
+![work1](https://user-images.githubusercontent.com/48676844/216777292-c04b6e58-9955-4d0e-9492-30a9d79a6492.svg)
 
 - **_Memory Heap_** : 메모리 할당이 일어나는 곳
 - **_Call Stack_** : 코드 실행에 따라 호출 스택이 쌓이는 곳
@@ -40,23 +42,25 @@ description: 자바스크립트는 싱글스레드이다. 어떻게 자바스크
 자바스크립트는 기본적으로 작업을 싱글스레드로 처리한다. 즉, 단 하나의 호출 스택을 사용한다. 호출 스택에 쌓인 함수나 코드를 위에서부터 아래로 차례차례 실행한다. 그리고 하나의 작업이 끝나면 **pop**하고 바로 아래의 함수나 코드를 실행한다. 작업을 차례대로 실행하므로 하나의 작업이 끝날 때까지 또 다른 작업을 실행하지 않는다.
 
 다음과 같은 코드를 살펴보자.
+
 ```js
-function first(){
-    second();
-    console.log("첫번째");
+function first() {
+  second();
+  console.log("첫번째");
 }
-function second(){
-    third();
-    console.log("두번째");
+function second() {
+  third();
+  console.log("두번째");
 }
-function third(){
-    console.log("세번째");
+function third() {
+  console.log("세번째");
 }
 first();
 ```
-먼저 _first_ 함수가 호출되고, 그안의 _second_ 함수가 호출되고, 마지막에 _third_ 함수가 호출된다. 
 
-![work3](./work33.png)
+먼저 _first_ 함수가 호출되고, 그안의 _second_ 함수가 호출되고, 마지막에 _third_ 함수가 호출된다.
+
+![work3](https://user-images.githubusercontent.com/48676844/216777341-c9db23ab-a280-4532-a029-2569e5c62760.png)
 
 `main()` 함수는 처음 실행시 전역 컨텍스트(함수가 호출 되었을때 생성되는 환경)이다. 함수의 실행이 완료되면 호출 스택에서 지워진다. _third, second, first, main_ 순으로 **pop**되고 _main_ 함수까지 실행완료되면 호출 스택이 비워진다. 따라서 위 코드는 **세번째, 두번째, 첫번째** 순으로 콘솔에 찍힌다.
 
@@ -65,12 +69,12 @@ first();
 <br>
 
 ### <a name="run"></a>자바스크립트 런타임
-<hr>
 
+<hr>
 
 자바스크립트 엔진 밖에서도 자바스크립트에 관여하는 요소들이 있다. Wep API, Task Queue, Event Loop등이다. 런타임은 특정 언어로 만든 프로그램들을 실행할 수 있는 환경이다. Node.js나 크롬등의 브라우저들은 자바스크립트가 구동되는 환경이기 때문에, 이를 자바스크립트 런타임이라고 한다.
 
-![work2](./work22.svg)
+![work22](https://user-images.githubusercontent.com/48676844/216777299-eed0feba-b612-4332-8f95-27fa216c1529.svg)
 
 - **_Web API_** : Web API는 브라우저에서 제공되는 API이다. 자바스크립트 엔진에서 정의되지 않았던 setTimeout이나 HTTP 요청(ajax) 메소드, DOM 이벤트 등의 메소드를 지원한다.
 - **_Task Queue_** : 이벤트 발생 후 호출되어야 할 콜백 함수들이 기다리는 공간. 이벤트 루프가 정한 순서대로 줄을 서 있으므로 콜백 큐(_Callback Queue_) 라고도 한다.
@@ -80,11 +84,11 @@ first();
 
 #### Task Queue
 
-자바스크립트에서 비동기로 호출되는 함수들은 호출 스택(Call Stack)에 쌓이지 않고 태스크 큐(Task Queue)로 보내진다. 
+자바스크립트에서 비동기로 호출되는 함수들은 호출 스택(Call Stack)에 쌓이지 않고 태스크 큐(Task Queue)로 보내진다.
 
 ```js
 console.log("A");
-setTimeout(function() {
+setTimeout(function () {
   console.log("B");
 }, 0);
 console.log("C");
@@ -98,16 +102,15 @@ console.log("C");
 
 <hr>
 
-비동기처리란 특정 코드가 종료되지 않았어도 대기하지 않고 다음 코드를 실행하는 자바스크립트의 특성이다. 
+비동기처리란 특정 코드가 종료되지 않았어도 대기하지 않고 다음 코드를 실행하는 자바스크립트의 특성이다.
 
-이번에는 아래의 코드가 어떻게 비동기로 작동하는지 자세히 알아보자. 
-
+이번에는 아래의 코드가 어떻게 비동기로 작동하는지 자세히 알아보자.
 
 ```js
 console.log("시작");
 
-setTimeout(function(){
-    console.log("3초후 실행");
+setTimeout(function () {
+  console.log("3초후 실행");
 }, 3000);
 
 console.log("끝");
@@ -116,78 +119,74 @@ console.log("끝");
 // 끝
 // 3초후 실행
 ```
+
 <br>
 
-1. 먼저 전역 컨텍스트 _main()_ 함수가 Call Stack에 쌓이고 _console.log("시작")_ 이 Call Stack에 쌓인다. **"시작"**이 콘솔에 찍힌다. 
+1. 먼저 전역 컨텍스트 _main()_ 함수가 Call Stack에 쌓이고 _console.log("시작")_ 이 Call Stack에 쌓인다. **"시작"** 이 콘솔에 찍힌다.
 
-![test1](./content-pic/t1-1.svg)
-
+![t1-1](https://user-images.githubusercontent.com/48676844/216777402-d2e4a759-7e79-4da4-b6e1-d9a194c20b3c.svg)
 
 2. _console.log("시작")_ 이 리턴되며 Call Stack에서 제거된다.
 
-![test1](./content-pic/t2.svg)
+![t2](https://user-images.githubusercontent.com/48676844/216777405-e9d343f6-3147-4283-8a1d-e903a4d893b6.svg)
 
 2. setTimeout함수가 실행되면서 Call Stack에 setTimeout함수가 들어간다.
 
-![test1](./content-pic/t3.svg)
+![t3](https://user-images.githubusercontent.com/48676844/216777411-10ee6dc4-db76-494d-befc-891d95196962.svg)
 
 3. setTimeout함수는 자바스크립트 엔진이 처리하지않고 **Web API**가 처리하므로 Callback함수를 전달하고, setTimeout작업을 요청한다.
 
-![test1](./content-pic/t4.svg)
-
+![t4](https://user-images.githubusercontent.com/48676844/216777431-bee92adb-a1a3-495d-92f2-47cc3c0965ee.svg)
 
 4. Call Stack에서는 setTimeout작업이 제거된다.
 
-![test1](./content-pic/t5.svg)
+![t5](https://user-images.githubusercontent.com/48676844/216777438-0f036123-f86b-423c-90b4-6d8d76e8295f.svg)
+
 <!-- t5 -->
 
-5. _console.log("끝")_ 이 호출되어 Call Stack에 쌓인다. **"끝"**이 콘솔에 찍힌다.
+5. _console.log("끝")_ 이 호출되어 Call Stack에 쌓인다. **"끝"** 이 콘솔에 찍힌다.
 
-![test1](./content-pic/t6.svg)
+![t6](https://user-images.githubusercontent.com/48676844/216777470-543d8175-2648-4d25-a2a2-9bb2a6c0a6b6.svg)
 
 6. _console.log("끝")_ 이 리턴되며 Call Stack에서 제거된다.
 
-![test1](./content-pic/t5.svg)
+![t5](https://user-images.githubusercontent.com/48676844/216777438-0f036123-f86b-423c-90b4-6d8d76e8295f.svg)
 
-7. _main()_ 함수가 리턴되며 Call Stack에서 제거된다. 
+7. _main()_ 함수가 리턴되며 Call Stack에서 제거된다.
 
-![test1](./content-pic/t7.svg)
-
+![t7](https://user-images.githubusercontent.com/48676844/216777499-e5c458b0-7146-46bd-99bd-5e420e84a7ae.svg)
 
 8. **Web API**는 setTimeout 작업을 실행한다. 3초를 센 후 **Task Queue**로 _Callback_ 함수를 보낸다.
 
-![test1](./content-pic/t8.svg)
+![t8](https://user-images.githubusercontent.com/48676844/216777504-c74d343f-ff29-44e9-8b63-ac28b1d2fcf4.svg)
 
 9. Event Loop는 Call Stack이 비어있으면 Task Queue에서 함수를 하나씩 꺼내 Call Stack에 넣고 실행한다.
 
-![test1](./content-pic/t9.svg)
+![t9](https://user-images.githubusercontent.com/48676844/216777509-05da7534-d853-4e9f-bc3f-77f8bfdda2cc.svg)
 
-10. _console.log("3초후 실행")_ 이 호출되고 Call Stack에 쌓인다. **"3초후 실행"**이 콘솔에 찍힌다.
+10. _console.log("3초후 실행")_ 이 호출되고 Call Stack에 쌓인다. **"3초후 실행"** 이 콘솔에 찍힌다.
 
-![test1](./content-pic/t10.svg)
+![t10](https://user-images.githubusercontent.com/48676844/216777516-287ecc65-6891-44b9-a610-90b97775f4a8.svg)
 
 11. _console.log("3초 후 실행")_ 이 리턴되고 Call Stack에서 제거된다. 차레로 _Callback_ 함수도 제거된다. Event Loop는 Task Queue에 콜백 함수가 들어올 때까지 계속 대기한다.
 
-![test1](./content-pic/t11.svg)
-
+![t11](https://user-images.githubusercontent.com/48676844/216777522-16a3a698-e58c-4f8e-a99b-2927f1696765.svg)
 
 만약 Call Stack에 함수들이 너무 많이 차있으면 3초후 실행되지 않을 수도 있다. Event Loop는 Call Stack이 비어있을 때만 Task Queue의 함수를 Call Stack으로 가져오기 때문이다. 이게 setTimeout() 시간이 정확하지 않을 수도 있는 이유이다.
 
 #### 자바스크립트에서 비동기처리가 필요한 이유
 
-화면에서 서버로 데이터를 요청했을 때 서버가 언제 그 요청에 대한 응답을 할지도 모르는 상태에서 다른 코드를 실행 안하고 기다릴 수는 없기 때문이다. 
+화면에서 서버로 데이터를 요청했을 때 서버가 언제 그 요청에 대한 응답을 할지도 모르는 상태에서 다른 코드를 실행 안하고 기다릴 수는 없기 때문이다.
 
 <br>
 
 ### <a name="callback"></a>콜백함수
 
-
 <hr>
 
-하지만 실행 순서가 중요한 상황도 있다. 이런 상황에서 코드를 실행 순서에 따라 실행하려고 할때 주로 콜백함수를 중첩하는 방법을 사용한다. 
+하지만 실행 순서가 중요한 상황도 있다. 이런 상황에서 코드를 실행 순서에 따라 실행하려고 할때 주로 콜백함수를 중첩하는 방법을 사용한다.
 
 예를 들어 위에서와 같이 setTimeout을 사용하거나, api요청을 보낸 후 응답을 받아오는 경우 등 바로 실행될 수 없는 조건이 담긴 함수가 있는 상황이 있다. 이런 문제를 해결하기 위한 방법 중 하나가 콜백함수다. 다른 함수의 실행이 끝날 때까지 특정 코드가 실행되지 않게 기다려 주므로 비동기 작업을 순차적으로 실행할 수 있는 것이다.
-
 
 ```js
 function f(callback, ...){
@@ -202,50 +201,50 @@ f(a, ...);
 
 콜백함수란 위와같이 다른 함수에 인수로 넘겨지는 함수이다. 함수의 실행이 끝나면 지정한 콜백함수를 실행해 주도록 함수에 요청할 때 사용한다.
 
-
 #### callback 예시
 
 ```js
-function first(callback){
-    setTimeout(function(){
-        console.log("첫번째");
-        callback();
-    }, 3000);
+function first(callback) {
+  setTimeout(function () {
+    console.log("첫번째");
+    callback();
+  }, 3000);
 }
 
-function second(){
-    console.log("두번째");
+function second() {
+  console.log("두번째");
 }
 
-first(function(){
-    second();
+first(function () {
+  second();
 });
 
 // 첫번째
 // 두번째
 ```
 
-_first_ 함수가 실행되고 3초후에 **"첫번째"**를 콘솔에 찍고, 인수로 받은 콜백함수를 실행하면서 _second_ 함수가 실행되어 **"두번째"**가 콘솔에 찍힌다.
+_first_ 함수가 실행되고 3초후에 **"첫번째"** 를 콘솔에 찍고, 인수로 받은 콜백함수를 실행하면서 _second_ 함수가 실행되어 **"두번째"** 가 콘솔에 찍힌다.
 
 <br>
 
 ### <a name="promise"></a>ES6부터 추가된 프로미스(Promise)
+
 <hr>
 
 ```js
-function say(callback){
-    setTimeout(function(){
-        callback();
-    }, 3000);
+function say(callback) {
+  setTimeout(function () {
+    callback();
+  }, 3000);
 }
-say(function(){
-    console.log("A");
-    say(function(){
-        console.log("B");
-        say(function(){
-            console.log("C");
-        });
+say(function () {
+  console.log("A");
+  say(function () {
+    console.log("B");
+    say(function () {
+      console.log("C");
     });
+  });
 });
 
 // A
@@ -253,9 +252,11 @@ say(function(){
 // C
 // 3초후에 "A"를 표시하고, 3초후에 "B"를 표시하고, 마지막으로 3초후에 "C"를 표시한다.
 ```
+
 이렇게 콜백함수를 여러 개 중첩하면 작업내용을 이해하기 어려워진다. 이것을 콜백 지옥(Callback Hell)이라고도 한다. `Promise`를 이용하면 콜백 헬을 극복하고 비동기 처리도 간결하게 작성할 수 있다.
 
 Promise를 사용하려면 먼저 **Promise객체**를 생성해야 한다.
+
 ```js
 const promise = new Promise(function(resolve, reject){
     ...
@@ -277,10 +278,11 @@ const promise = new Promise((resolve, reject) => {
 ```js
 promise.then(ouFulfilled);
 ```
+
 ```js
 promise.catch(onRejected);
-
 ```
+
 프로미스(promise) 내부에서 _resolve_ 가 호출되면 _then_ 이 실행되고, _reject_ 가 호출되면 _catch_ 가 실행된다. _resolve_ 와 _reject_ 에 넣어준 인자는 각각 _then_ 과 _catch_ 의 매개변수에서 받을 수 있다.
 
 ```js
@@ -308,6 +310,7 @@ promise
 //Promise {<pending>}
 // 2^7(입력) = 128
 ```
+
 코드를 입력하면 2초뒤 "10미만 숫자를 입력하시오"라는 입력창이 뜬다. 입력한 숫자가 10미만이면 _then_ 으로 넘긴 함수가 실행되고, 그렇지 않으면 _catch_ 에 넘긴 함수가 실행된다.
 
 <br>
@@ -317,6 +320,7 @@ promise
 ```js
 promise.then(onFulfilled, onRejected);
 ```
+
 _then_ 메서드에 두 번째 인수로 실패 콜백함수를 지정할 수 있다. 그러면 _then_ 메서드에서 처리할 내용과 _catch_ 메서드에서 처리할 내용을 _then_ 메서드 하나로 담을 수 있다.
 
 위의 **_then/catch_** 예시를 아래와 같이 수정할 수 있다.
@@ -347,36 +351,37 @@ promise.then(
 
 #### Promise가 실행하는 콜백함수에 인수 넘기기
 
-_buySomething_ 함수에 넘긴 인수를 **Promise** 객체가 실행하는 익명 함수 안에서 사용하는 예제이다. 
+_buySomething_ 함수에 넘긴 인수를 **Promise** 객체가 실행하는 익명 함수 안에서 사용하는 예제이다.
 
 ```js
-function buySomething(nowMoney){
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const pay = parseInt(prompt("금액 입력"));
-            const remain = nowMoney - pay;
-            if(remain >= 0){
-                console.log(`${pay}원 지불`);
-                resolve(remain);
-            }else{
-                reject(`잔액부족: 현재 잔액${nowMoney}원`);
-            }
-        }, 2000);
-    });
+function buySomething(nowMoney) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const pay = parseInt(prompt("금액 입력"));
+      const remain = nowMoney - pay;
+      if (remain >= 0) {
+        console.log(`${pay}원 지불`);
+        resolve(remain);
+      } else {
+        reject(`잔액부족: 현재 잔액${nowMoney}원`);
+      }
+    }, 2000);
+  });
 }
 
 buySomething(1000)
-    .then((remain) => {
-        console.log(`잔액: ${remain}원`);
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+  .then(remain => {
+    console.log(`잔액: ${remain}원`);
+  })
+  .catch(error => {
+    console.log(error);
+  });
 
 // 금액 입력: 200(입력)
 // 200원 지불
 // 잔액: 800원
 ```
+
 현재금액(_nowMoney_)을 인수로 넘겨 실행하면 지불할 금액을 2초후 입력할 수 있다. 차액이 0이상이면 _then_ 에 넘긴 함수가 **"잔액"을 표시**, 0미만으로 부족하면 _catch_ 에 넘긴 함수가 **"잔액부족" 오류 메세지를 표시**한다.
 
 <br>
@@ -419,7 +424,8 @@ buySomething(1000)
     });
 ```
 
-금액 입력을 여러번 받게 수정했다. 
+금액 입력을 여러번 받게 수정했다.
+
 ```
 100원 지불
 잔액: 900원
@@ -484,12 +490,11 @@ Bill : 1000원 지불
 
 #### Promise.race
 
-
 ```js
 Promise.race(iterable);
 ```
 
-**Promise.race** 메서드는 가장 먼저 종료한 **Promise**객체 결과만 다음 작업으로 보낸다. 먼저 종료한 작업이 성공하면 성공 콜백을 호출하고 실패하면 실패 콜백을 호출한다. 위의 **Promise.all** 예제에서 `all`을 `race`로 바꾸고 입력값을 그대로 입력해보면 
+**Promise.race** 메서드는 가장 먼저 종료한 **Promise**객체 결과만 다음 작업으로 보낸다. 먼저 종료한 작업이 성공하면 성공 콜백을 호출하고 실패하면 실패 콜백을 호출한다. 위의 **Promise.all** 예제에서 `all`을 `race`로 바꾸고 입력값을 그대로 입력해보면
 
 ```
 John : 200원 지불
@@ -497,6 +502,7 @@ John : 200원 지불
 Mary : 600원 지불
 Bill : 1000원 지불
 ```
+
 나머지 작업도 실행되긴하지만 가장 먼저 종료한 작업의 결과값만 반환한다.
 
 <br>
@@ -508,7 +514,7 @@ Bill : 1000원 지불
 프로미스가 콜백 지옥을 해결했다지만, 아직 장황한 코드는 여전하다. **async/await** 문법은 프로미스를 사용한 코드를 한번 더 깔끔하게 해준다. **async/await**은 노드 7.6버전부터 지원되며, ECMAScript2017의 공식 스펙으로 최신 문법이다.
 
 ```js
-async function 함수명(){
+async function 함수명() {
   await 비동기처리_메서드명();
 }
 ```

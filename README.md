@@ -14,8 +14,9 @@ My personal blog using Gatsby.js
 
 - 🌙 DarkMode
 - 💬 Comment (utteranc.es)
-- 📈 Analysis (Google Analytics, Google search console)
-- 🖍 Code Label and Highlight
+- 📁 Category
+- 📈 Google Analytics
+- 🖍 Code Label & Highlight
 
 <br>
 

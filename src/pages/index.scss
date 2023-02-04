@@ -1,34 +1,56 @@
-@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap&subset=korean");
+@use "../styles/base";
 
-.index {
-  transition: 0.2s;
+.post-list-item {
+  margin-bottom: base.$spacing-12;
+  margin-top: base.$spacing-10;
+
+  h2 {
+    font-size: base.$fontSize-2;
+    font-family: base.$fontDoHyeon;
+    font-weight: 300;
+    color: base.$color-primary;
+    margin-bottom: base.$spacing-2;
+    margin-top: base.$spacing-0;
+  }
+
+  small {
+    font-size: base.$fontSize-0;
+    font-family: base.$fontFamily-serif;
+    opacity: 0.5;
+    color: base.$color-text;
+  }
+
+  p {
+    font-size: base.$fontSize-05;
+    font-family: base.$fontFamily-sans;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.4;
+    opacity: 0.65;
+    color: base.$color-text;
+  }
+
+  .post-list-time {
+    opacity: 0.3;
+    margin-left: 1rem;
+  }
+
   &:hover {
-    font-size: 1.05rem;
+    opacity: 0.7;
+    transition: 0.2s;
   }
 }
-.index-title {
-  color: rgb(2, 129, 119);
-  box-shadow: none;
-  font-weight: 100;
-  font-family: "Do Hyeon", sans-serif;
-  font-size: 1.3em;
-}
-.index-date {
-  color: black;
-  opacity: 0.5;
-  margin-right: 1em;
-}
-.index-time {
-  color: gray;
-  opacity: 0.6;
-}
-.index-description {
-  color: black;
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 700;
-  line-height: 1.4;
-  opacity: 0.65;
+
+.post-list-item.light {
+  h2 {
+    color: rgb(2, 129, 119);
+  }
+  small,
+  p {
+    color: black;
+    opacity: 0.7;
+  }
+  .post-list-time {
+    opacity: 0.3;
+  }
 }

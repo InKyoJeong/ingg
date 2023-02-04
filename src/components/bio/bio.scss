@@ -1,0 +1,62 @@
+@use "../../styles/base";
+
+.bio {
+  display: flex;
+  align-items: center;
+  font-family: base.$fontCourgette;
+
+  p {
+    margin-bottom: base.$spacing-0;
+  }
+}
+
+.bio.light {
+  p {
+    color: black;
+  }
+  .bio-summary {
+    color: black;
+  }
+
+  .bio-author,
+  .bio-sns {
+    color: rgb(4, 100, 142);
+  }
+  .bio-circle {
+    border: 2px solid rgb(4, 100, 142);
+  }
+}
+
+.bio-author,
+.bio-sns {
+  color: base.$color-violet;
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+}
+
+.bio-summary {
+  opacity: 0.7;
+  margin: 5px 0;
+}
+
+.bio-circle {
+  width: 88px;
+  height: 88px;
+  background-color: rgba(250, 250, 250, 0);
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #8aa9f9;
+}
+
+.bio-avatar {
+  margin-right: base.$spacing-4;
+  margin-bottom: base.$spacing-0;
+  min-width: 50px;
+  border-radius: 100%;
+  position: relative;
+  left: 4px;
+  margin-right: 1.5rem;
+}

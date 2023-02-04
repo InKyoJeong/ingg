@@ -1,24 +1,24 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import React, { useContext } from "react";
+
+import HomeLogo from "../components/homelogo/homelogo";
+import Layout from "../components/layout/layout";
+import Seo from "../components/seo";
+import { DarkModeStateContext } from "../context/DarkModeProvider";
 import "./about.scss";
-import HomeLogo from "../components/homelogo";
 
-class AboutPage extends React.Component {
-  render() {
-    // const { data } = this.props;
-    // const siteTitle = data.site.siteMetadata.title;
+const AboutPage = ({ location }) => {
+  const isDarkMode = useContext(DarkModeStateContext);
 
-    return (
-      <Layout location={this.props.location}>
-        <HomeLogo />
-        <SEO title="About Me" />
+  return (
+    <Layout location={location}>
+      <HomeLogo />
+      <Seo title="About Me" />
+      <div className={`about ${isDarkMode ? "dark" : "light"}`}>
         <h1 className="about-me">
           <span>InKyo Jeong</span>
         </h1>
         <hr className="about-me__hr" />
-        <table>
+        <table className="about-table">
           <tbody>
             <tr>
               <td>Blog</td>
@@ -47,19 +47,9 @@ class AboutPage extends React.Component {
             </tr>
           </tbody>
         </table>
-      </Layout>
-    );
-  }
-}
+      </div>
+    </Layout>
+  );
+};
 
 export default AboutPage;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;

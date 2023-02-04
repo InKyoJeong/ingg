@@ -19,7 +19,6 @@ description: "React Native CLI(0.60+)에서 Splash Screen을 적용해보자."
 
 <br>
 
-
 ### <a name="install"></a>설치
 
 <hr />
@@ -87,7 +86,6 @@ export default App;
 
 ![ios2](./images/ios2.png)
 
-
 세가지 사이즈(_300px, 600px @x2, 900px @x3_)의 _png_ 파일을 끌어넣을 수 있다. [(예시이미지)](https://github.com/appstud/react-native-splashscreen-tutorial/tree/master/assets/splash_icon)
 
 <br>
@@ -96,20 +94,17 @@ export default App;
 
 ![ios3](./images/ios3.png)
 
-
 **_LaunchScreen.storyBoard_** 에서 기본적으로 설정되어있는 프로젝트 네임과 _Powered by React Native_ 를 지우고 **Background > custom** 에서 색상을 변경한다. 두번째 탭에서 코드로 변경할 수 있다.
 
 ![ios4](./images/ios4.png)
 
 ![ios5](./images/ios5.png)
 
-
 <br>
 
 #### icon 추가
 
 상단의 **+ (Library)** 를 클릭하고 **Image**를 검색하여 **Image View**를 추가한다.
-
 
 ![ios6](./images/ios6.png)
 
@@ -119,7 +114,6 @@ export default App;
 
 ![ios8](./images/ios8.png)
 
-
 <br>
 
 #### 중앙 정렬
@@ -127,7 +121,6 @@ export default App;
 디바이스에 상관없이 중앙 정렬하려면 **Align** 에서 **Horizontally in container**와 **Vertically in container**를 체크하여 추가한다.
 
 ![ios9](./images/ios9.png)
-
 
 <br>
 
@@ -147,6 +140,7 @@ export default App;
 //...
 
 ```
+
 ```shell{18}
 //...
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -173,12 +167,9 @@ export default App;
 
 이제 앱이 로딩되는 동안 스플래시 이미지가 나타나는 것을 볼 수 있다.
 
-
 <!-- ![splash-ios](./images/splash_ios.gif) -->
 
-<center><img src="./images/splash_ios.gif" alt="splash-ios" width="340" height="700"/></center>
-
-
+<center><img src="https://user-images.githubusercontent.com/48676844/216777226-a3047ef6-e0ad-4107-8c16-48f6e742d54e.gif" alt="splash-ios" width="340" height="700"/></center>
 
 <br>
 
@@ -242,7 +233,7 @@ _**android/app/src/main/res**_ 에서 **drawable** 폴더를 만들고 **backgro
 
         <!-- Add the following line to set the default status bar color for all the app. -->
         <item name="android:statusBarColor">@color/app_bg</item>
-        <!-- Add the following line to set the default status bar text color for all the app 
+        <!-- Add the following line to set the default status bar text color for all the app
         to be a light color (false) or a dark color (true) -->
         <item name="android:windowLightStatusBar">false</item>
         <!-- Add the following line to set the default background color for all the app. -->
@@ -257,7 +248,6 @@ _**android/app/src/main/res**_ 에서 **drawable** 폴더를 만들고 **backgro
 
 </resources>
 ```
-
 
 <br>
 
@@ -301,7 +291,7 @@ _**android/app/src/main/res**_ 에서 **drawable** 폴더를 만들고 **backgro
              <action android:name="android.intent.action.MAIN" />
              <category android:name="android.intent.category.LAUNCHER" />
          </intent-filter> -->
-       
+
 
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
@@ -366,7 +356,7 @@ public class MainActivity extends ReactActivity {
 
 <br>
 
-그리고 **_android/app/src/main/res_** 위치에 **layout** 폴더를 만들고 **launch_screen.xml**파일을 추가한다. 
+그리고 **_android/app/src/main/res_** 위치에 **layout** 폴더를 만들고 **launch_screen.xml**파일을 추가한다.
 
 - **android/app/src/main/res/layout/launch_screen.xml**
 
@@ -384,4 +374,4 @@ public class MainActivity extends ReactActivity {
 
 이제 안드로이드에서도 splash screen이 적용된 것을 확인할 수 있다.
 
-<center><img src="./images/splash_android.gif" alt="splash_and" width="400" height="700"/></center>
+<center><img src="https://user-images.githubusercontent.com/48676844/216777214-4995e55b-9f72-4535-aacf-dd9a816043db.gif" alt="splash_and" width="400" height="700"/></center>

@@ -1,14 +1,12 @@
 ---
 title: "[JS] 호이스팅과 TDZ에 대하여"
 tags: ["javascript"]
-date: 2022-11-13 23:30:98 
+date: 2022-11-13 23:30:98
 ---
 
-![js](../@images/js.png)
+![js](https://user-images.githubusercontent.com/48676844/216776458-0fd5d4fc-5ce6-4ea4-a1f2-9a9bbaf98337.png)
 
-
-
-호이스팅(Hoisting)이란 변수나 함수를 선언했을 때 코드 범위(scope) 내의 최상단으로 끌어올려지는 것처럼 보이는 현상이다. 흔히 **_var_** 는 호이스팅이 발생하며, **_const_** 와 **_let_** 은 발생하지 않는다고 하는데, 그 이유는 무엇일까? 그리고 **_const_** 와 **_let_** 이 TDZ에 들어가는 이유는 무엇일까? 
+호이스팅(Hoisting)이란 변수나 함수를 선언했을 때 코드 범위(scope) 내의 최상단으로 끌어올려지는 것처럼 보이는 현상이다. 흔히 **_var_** 는 호이스팅이 발생하며, **_const_** 와 **_let_** 은 발생하지 않는다고 하는데, 그 이유는 무엇일까? 그리고 **_const_** 와 **_let_** 이 TDZ에 들어가는 이유는 무엇일까?
 
 <br>
 
@@ -19,19 +17,15 @@ date: 2022-11-13 23:30:98
 1. [호이스팅(Hoisting)](#about-hoisting)
 2. [TDZ (Temporal Dead Zone)란?](#about-tdz)
 3. [const, let은 왜 TDZ에 들어갈까](#const-let-tdz)
-4. [더 알아보기](#more) 
- 
----
+4. [더 알아보기](#more)
 
+---
 
 <br>
 
 ### <a name="about-hoisting"></a>호이스팅(Hoisting)
 
-
 <hr>
-
-
 
 프로그램은 작성한 순서에 따라 윗줄부터 차례로 실행된다. 그러나 변수 선언은 이 원칙을 따르지 않는다.
 
@@ -74,12 +68,11 @@ console.log(b);
 
 <br>
 
-
 호이스팅이 발생하는 이유에 대해 더 자세히 알아보자. 실행 컨텍스트의 **_Lexical Environment_** 는 **_Environment Record_** (환경 레코드)와 **_Outer LexicalEnvironment Reference_** (외부 렉시컬 환경 참조 컴포넌트)로 구성된다.
 
 **_Environment Record_** 는 유효 범위 안의 식별자와 결과값을 바인드 해서 기록하는 영역이다. 여기에 함수 선언, 변수명 등이 담기는데, 컨텍스트 내부 전체를 처음부터 끝까지 훑으면서 순서대로 수집한다. 따라서 자바스크립트 엔진은 코드가 실행되기 전에도 이미 해당 환경에 속한 코드 변수명들을 알고 있기 때문에 호이스팅이 일어나는 것이다.
 
-<!-- 그러므로 만약 해당 값을 참조하는 경우가 발생한다면, 가장먼저 Lexical Environment를 찾게 된다.  
+<!-- 그러므로 만약 해당 값을 참조하는 경우가 발생한다면, 가장먼저 Lexical Environment를 찾게 된다.
 
 이런 코드가 있다고 가정하자.
 

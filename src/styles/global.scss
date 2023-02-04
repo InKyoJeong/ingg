@@ -1,0 +1,142 @@
+@use "base";
+
+body {
+  font-family: base.$fontNanumGothic;
+  font-size: base.$fontSize-1;
+  color: base.$color-text;
+}
+
+html {
+  line-height: base.$lineHeight-normal;
+  font-size: base.$fontSize-root;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: base.$color-dark;
+
+  transition: 0.4s;
+}
+
+html.light {
+  background-color: #fff;
+}
+
+hr {
+  background: base.$color-accent;
+  margin-bottom: base.$spacing-5;
+  height: 1px;
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: base.$fontFamily-sans;
+  margin-top: base.$spacing-6;
+  margin-bottom: base.$spacing-2;
+  line-height: base.$lineHeight-tight;
+  font-weight: base.$fontWeight-bold;
+}
+
+h1 {
+  font-weight: base.$fontWeight-black;
+  font-size: base.$fontSize-5;
+}
+
+h3 {
+  font-size: base.$fontSize-3;
+  font-weight: base.$fontWeight-black;
+}
+
+h4 {
+  font-size: base.$fontSize-2;
+  margin-bottom: base.$spacing-4;
+}
+
+h1 > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  line-height: base.$lineHeight-relaxed;
+  --baseline-multiplier: 0.179;
+  --x-height-multiplier: 0.35;
+  margin: base.$spacing-0 base.$spacing-0 base.$spacing-8 base.$spacing-0;
+  padding: base.$spacing-0;
+}
+
+em {
+  font-style: italic;
+}
+
+blockquote {
+  color: base.$color-text-light;
+  margin-left: calc(-1 * base.$spacing-6);
+  margin-right: base.$spacing-8;
+  padding: base.$spacing-0 base.$spacing-0 base.$spacing-0 base.$spacing-6;
+  border-left: base.$spacing-1 solid base.$color-primary;
+  font-size: base.$fontSize-2;
+  font-style: italic;
+  margin-bottom: base.$spacing-8;
+}
+
+blockquote > :last-child {
+  margin-bottom: base.$spacing-0;
+}
+
+strong {
+  font-weight: base.$fontWeight-bold;
+}
+
+table {
+  width: 100%;
+  margin-bottom: base.$spacing-8;
+  border-collapse: collapse;
+  border-spacing: 0.25rem;
+}
+
+table thead tr th {
+  border-bottom: 1px solid base.$color-accent;
+}
+
+a {
+  color: base.$color-primary;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+footer {
+  padding: base.$spacing-6 base.$spacing-0;
+}
+
+.gatsby-resp-image-wrapper {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 42rem) {
+  blockquote {
+    padding: base.$spacing-0 base.$spacing-0 base.$spacing-0 base.$spacing-4;
+    margin-left: base.$spacing-0;
+  }
+
+  ul,
+  ol {
+    list-style-position: inside;
+  }
+}

@@ -6,7 +6,7 @@ date: 2020-02-23 01:50:98
 
 ![webpack](./content-pic/web.png)
 
-**Webpack**은 여러개 파일을 하나의 파일로 합쳐주는 **모듈 번들러(Module bundler)**이다.<br>
+**Webpack**은 여러개 파일을 하나의 파일로 합쳐주는 **모듈 번들러(Module bundler)** 이다.<br>
 
 > **Webpack**을 쓰는 이유는 무엇일까?<br>
 
@@ -32,7 +32,7 @@ date: 2020-02-23 01:50:98
 
 #### import / export 구문이 없었던 모듈 이전 상황
 
-자바스크립트는 `script` 태그를 사용하여 외부의 스크립트 파일을 가져올 수는 있지만, 파일마다 독립적인 파일 스코프를 갖지 않고 하나의 **전역 객체(Global Object)**를 공유한다.
+자바스크립트는 `script` 태그를 사용하여 외부의 스크립트 파일을 가져올 수는 있지만, 파일마다 독립적인 파일 스코프를 갖지 않고 하나의 **전역 객체(Global Object)** 를 공유한다.
 
 예를들어 _math.js_ 와 *app.js*를 스크립트 태그에 넣는다고 하자. *math.js*을 먼저 로딩하고 *app.js*을 로딩한다.
 
@@ -62,7 +62,7 @@ function sum(x, y) {
 - _app.js_
 
 ```js
-sum(1, 2)
+sum(1, 2);
 
 console.log(sum(1, 2)); // 3
 ```
@@ -90,12 +90,12 @@ sum(3, 4)	//Uncaught TypeError: sum is not a function
 
 <hr>
 
-**즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)**은 정의되자마자 즉시 실행되는 Javascript Function 를 말한다.
+**즉시 실행 함수 표현(IIFE, Immediately Invoked Function Expression)** 은 정의되자마자 즉시 실행되는 Javascript Function 를 말한다.
 
 ```js
-(function() {
-  statements
-})()
+(function () {
+  statements;
+})();
 ```
 
 <br>
@@ -103,11 +103,11 @@ sum(3, 4)	//Uncaught TypeError: sum is not a function
 IIFE 내부에서 정의된 변수는 외부 범위에서 접근이 불가능하다.
 
 ```js
-(function() {
-  const aName = "Mary"
-})()
+(function () {
+  const aName = "Mary";
+})();
 
-aName // Uncaught ReferenceError: aName is not defined
+aName; // Uncaught ReferenceError: aName is not defined
 ```
 
 <br>
@@ -115,12 +115,12 @@ aName // Uncaught ReferenceError: aName is not defined
 IIFE를 변수에 할당하면 IIFE 자체는 저장되지 않고, 함수가 실행된 결과만 저장된다.
 
 ```js
-const result = (function() {
-  const name = "Mary"
-  return name
-})()
+const result = (function () {
+  const name = "Mary";
+  return name;
+})();
 
-result // "Mary"
+result; // "Mary"
 ```
 
 <br>
@@ -136,7 +136,7 @@ IIFE는 스코프 문제를 해결했지만 바로 실행한다는 점에서 모
 
 #### CommonJS
 
-[CommonJS](http://www.commonjs.org/)는 자바스크립트를 브라우저에서뿐만 아니라, 서버사이드 애플리케이션이나 데스크톱 애플리케이션에서도 사용하려고 조직한 자발적 워킹 그룹이다. 대표적으로 서버 사이드 플랫폼인 **_Node.js_**에서 이를 사용한다.
+[CommonJS](http://www.commonjs.org/)는 자바스크립트를 브라우저에서뿐만 아니라, 서버사이드 애플리케이션이나 데스크톱 애플리케이션에서도 사용하려고 조직한 자발적 워킹 그룹이다. 대표적으로 서버 사이드 플랫폼인 **_Node.js_** 에서 이를 사용한다.
 
 `exports` 키워드로 모듈을 만들고 `require()` 함수로 임포트하는 방식이다.
 
@@ -150,7 +150,7 @@ IIFE는 스코프 문제를 해결했지만 바로 실행한다는 점에서 모
 
 #### AMD
 
-**AMD(Asynchronous Module Definition)**는 비동기로 로딩되는 환경에서 모듈을 사용하는 것이 목표다.
+**AMD(Asynchronous Module Definition)** 는 비동기로 로딩되는 환경에서 모듈을 사용하는 것이 목표다.
 이 방식은 `define` 함수 내에 코드를 작성함으로써 스코프 분리가 가능하다.
 
 ```
@@ -175,7 +175,7 @@ ES6에서는 **export**를 이용해 모듈로 만들고 **import**로 가져온
 
 ```js
 export function sum(x, y) {
-  return x + y
+  return x + y;
 }
 ```
 
@@ -184,7 +184,7 @@ export function sum(x, y) {
 - **_app.js_**
 
 ```js
-import * as math from "./math.js"
+import * as math from "./math.js";
 // import {sum} from "./math.js"
 // sum만 가져오고 싶다면 이렇게 사용할 수도 있다.
 
@@ -199,7 +199,7 @@ ES6에서는 클라이언트 사이드 자바스크립트에서도 동작하는 
 <script type="module" src="./src/app.js"></script>
 ```
 
-이때는 **_app.js_**에서 **_math_**를 가져오기 때문에 **_math.js_**은 따로 로드하지 않아도 된다.
+이때는 **_app.js_** 에서 **_math_** 를 가져오기 때문에 **_math.js_** 은 따로 로드하지 않아도 된다.
 
 그러나 아직까지는 모든 브라우저에서 지원하지 않기 때문에 브라우저와 무관하게 사용할 수 있는 모듈이 필요하다.
 (브라우저의 모듈 지원 상황은 [여기](https://caniuse.com/#search=module)에서 볼 수 있다.)
@@ -258,7 +258,7 @@ $ npm install --save-dev webpack-cli
 **_webpack.config.js_** 은 Webpack이 실행될 때 참조하는 설정 파일이다. 최상단에 `webpack.config.js` 파일을 만들면 이를 웹팩에서 자동으로 사용한다.
 
 ```js
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   mode: "development",
@@ -269,16 +269,16 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve("./dist"),
   },
-}
+};
 ```
 
 첫줄의 **path**는 경로를 만들어주며 **Node.js**에 기본으로깔려있는 패키지이다. 웹팩자체가 노드에서 돌아가기 때문에 이 모듈도 노드형 모듈을 사용한 것이다.
-`import path from "path"` 와 같다. (**_webpack.config.js_**는 모던자바스크립트 파일이 아니라서,
+`import path from "path"` 와 같다. (**_webpack.config.js_** 는 모던자바스크립트 파일이 아니라서,
 import를 쓸 수 없다.)
 
 ![webpack3](./content-pic/webpack3.png)
 
-이제 **_package.json_**의 **_script_** 에 build명령어로 webpack을 추가하고
+이제 **_package.json_** 의 **_script_** 에 build명령어로 webpack을 추가하고
 `npm run build`를 실행하면 결과물이 **_main.js_** 이며 **_dist_** 디렉토리가 생성되는 것을 확인할 수 있다.
 **_dist_** 디렉토리 안에는 코드들이 합쳐진 **_main.js_** 가 하위 파일로 생성된다.
 
@@ -334,7 +334,7 @@ module.exports = {
   entry: {
     main: "./path/to/my/entry/file.js",
   },
-}
+};
 ```
 
 <br>
@@ -346,14 +346,14 @@ module.exports = {
 ```js
 // webpack.config.js
 
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "./dist"),
   },
-}
+};
 ```
 
 `[name]`옵션은 entry에서 설정한 값을 포함한다. 주로 다중 엔트리 포인트를 만들때 쓴다.
@@ -376,10 +376,9 @@ module.exports = {
 - _Loader_
 
 로더는 웹팩이 웹 애플리케이션을 해석할 때 자바스크립트 파일이 아닌 것들을 변환할 수 있도록 도와준다.
-파일을 다른 언어 *(ex : TypeScript)*에서 *JavaScript*로 변환하거나
+파일을 다른 언어 _(ex : TypeScript)_ 에서 *JavaScript*로 변환하거나
 인라인 이미지를 데이터 *URL*로 로드 할 수 있다.
 또한 자바스크립트 모듈에서 직접 CSS파일을 `import`할 수 있다.
-
 
 <br>
 
@@ -440,11 +439,11 @@ module.exports = {
 };
 ```
 
-`test`에 사용된 것은 **정규표현식(regular expression)**으로, 로더를 적용할 파일 유형이다. CSS인 파일을 전부 찾아준다.
+`test`에 사용된 것은 **정규표현식(regular expression)** 으로, 로더를 적용할 파일 유형이다. CSS인 파일을 전부 찾아준다.
 `/\.(scss|sass)$/`  이렇게 `|`을 넣어서 *scss*와 *sass*파일을 찾게할수도 있다.
 `use`는 해당 파일에 적용할 로더의 이름이다.
 
-적용후 빌드하면 **_dist/main.js_**에서 *css*코드가 *js*코드로 변환된 것을 볼 수 있다.
+적용후 빌드하면 **_dist/main.js_** 에서 *css*코드가 *js*코드로 변환된 것을 볼 수 있다.
 
 <br>
 
@@ -477,7 +476,7 @@ module.exports = {
 
 > **Loader 적용 순서**<br>
 > : 여러 개의 로더를 사용하는 경우 로더가 적용되는 순서에 주의해야 한다.
-> 로더는 기본적으로 **_오른쪽에서 왼쪽 순 (또는 아래에서 위쪽)_** 으로 적용된다. 아래 예제에서 실행 순서는 *1)sass-loader*, *2)css-loader*, *3)style-loader* 이다.
+> 로더는 기본적으로 **_오른쪽에서 왼쪽 순 (또는 아래에서 위쪽)_** 으로 적용된다. 아래 예제에서 실행 순서는 _1)sass-loader_, _2)css-loader_, _3)style-loader_ 이다.
 
 ```js
 module.exports = {
@@ -498,7 +497,7 @@ module.exports = {
       },
     ],
   },
-}
+};
 ```
 
 \* 기타 다른 로더들은 Webpack의 [Docs](https://webpack.js.org/loaders/)를 참고
@@ -519,12 +518,12 @@ class HelloWorldPlugin {
   apply(compiler) {
     compiler.hooks.done.tap("Hello World Plugin", stats => {
       /* stats is passed as argument when done hook is tapped. */
-      console.log("Hello World!")
-    })
+      console.log("Hello World!");
+    });
   }
 }
 
-module.exports = HelloWorldPlugin
+module.exports = HelloWorldPlugin;
 ```
 
 <br>
@@ -600,7 +599,7 @@ plugins: [
   new webpack.BannerPlugin({
     banner: () => `빌드 날짜: ${new Date().toLocaleString()}`,
   }),
-]
+];
 ```
 
 ```js{1}
@@ -624,8 +623,8 @@ module.exports = function banner() {
 
   return (
     `commitVersion: ${commit}` + `Build Date: ${date}\n` + `Author: ${user}`
-  )
-}
+  );
+};
 ```
 
 ```js{3-4, 8}
@@ -666,5 +665,5 @@ module.exports = {
 - [MDN - IIFE](https://developer.mozilla.org/docs/Glossary/IIFE)
 - [JavaScript 표준을 위한 움직임: CommonJS와 AMD](https://d2.naver.com/helloworld/12864)
 - [Webpack - concepts](https://webpack.js.org/concepts/)
-      <!-- - [lecture-frontend-dev-env](https://github.com/jeonghwan-kim/lecture-frontend-dev-env) -->
+  <!-- - [lecture-frontend-dev-env](https://github.com/jeonghwan-kim/lecture-frontend-dev-env) -->
 - [Webpack - compiler hooks](https://webpack.js.org/api/compiler-hooks/)

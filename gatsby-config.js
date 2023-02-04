@@ -1,15 +1,27 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+ */
+
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
     title: `INGG.`,
-    author: `Inkyo`,
+    author: {
+      name: `Inkyo`,
+      summary: `Frond-End Developer`,
+    },
     description: `Inkyo's Blog`,
     siteUrl: `https://ingg.dev/`,
     social: {
-      twitter: `in_g_g`,
-      // github: `inkyojeong`,
+      github: `InKyoJeong`,
     },
   },
   plugins: [
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,8 +32,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -31,7 +43,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 630,
             },
           },
           {
@@ -40,92 +52,57 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              aliases: {
-                sh: "shell",
-                es6: "javascript",
-                env: "bash",
-                mdx: "md",
-                "package.json": "json",
-                // "코드파일형식" : "css에서사용할 이름"
-                // "webpack.config.js": "webpack",
-              },
-              // showLineNumbers: true,
-              noInlineHighlight: false,
-            },
-          },
+          `gatsby-remark-prismjs`,
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-158078349-1`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
-        {
-          site {
-            siteMetadata {
-              title
-              description
-              siteUrl
-              site_url: siteUrl
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
             }
           }
-        }
-      `,
+        `,
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                });
+              });
             },
-            query: `
-          {
-            allMarkdownRemark(
-              sort: { order: DESC, fields: [frontmatter___date] },
-            ) {
-              edges {
-                node {
+            query: `{
+              allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+                nodes {
                   excerpt
                   html
-                  fields { slug }
+                  fields {
+                    slug
+                  }
                   frontmatter {
                     title
                     date
                   }
                 }
               }
-            }
-          }
-        `,
+            }`,
             output: "/rss.xml",
-            title: "INGG",
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/",
-            // optional configuration to specify external rss feed, such as feedburner
-            link: "https://ingg.dev/rss.xml",
+            title: "Gatsby Starter Blog RSS Feed",
           },
         ],
       },
@@ -133,28 +110,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Inkyo's Blog`,
+        name: `INGG Blog`,
         short_name: `INGG`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `src/images/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
@@ -164,5 +127,15 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-RV1XS4EWQY"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
-}
+};

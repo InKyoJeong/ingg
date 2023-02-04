@@ -5,10 +5,7 @@ date: 2021-08-15 15:30:98
 description: "이벤트 버블링과 캡쳐링, 그리고 이벤트 위임은 무엇인지 구현해보며 이해해보자."
 ---
 
-
-
-![js](../@images/js.png)
-
+![js](https://user-images.githubusercontent.com/48676844/216776458-0fd5d4fc-5ce6-4ea4-a1f2-9a9bbaf98337.png)
 
 ### 📌 Contents
 
@@ -17,12 +14,11 @@ description: "이벤트 버블링과 캡쳐링, 그리고 이벤트 위임은 �
 3. [target, currentTarget](#target-currentarget)
 4. [stopPropagation()](#stop-propagation)
 5. [이벤트 캡쳐링(Event Capturing)](#event-capturing)
-5. [이벤트 위임(Event Delegation)](#event-delegation)
+6. [이벤트 위임(Event Delegation)](#event-delegation)
 
 ---
 
 <br>
-
 
 ### <a name="event-propagation"></a>이벤트 전파(Event Propagation)
 
@@ -38,14 +34,13 @@ description: "이벤트 버블링과 캡쳐링, 그리고 이벤트 위임은 �
 </body>
 ```
 
-![event1](./images/event1.svg)
+![event1](https://user-images.githubusercontent.com/48676844/216776847-c7e04f71-fab6-4155-b80d-294c2bc2b519.svg)
 
 <br>
 
 #### 1. 캡쳐링(Capturing) 단계
-   
-Link를 클릭할때, DOM 트리의 꼭대기인 Document root 에서 이벤트가 발생한다. 그리고 거기서 캡쳐링이 발생한다. 그러면 이벤트는 document root 부터 target element 까지 내려온다. 그때 이벤트는 target element의 모든 부모 요소를 지나간다.
 
+Link를 클릭할때, DOM 트리의 꼭대기인 Document root 에서 이벤트가 발생한다. 그리고 거기서 캡쳐링이 발생한다. 그러면 이벤트는 document root 부터 target element 까지 내려온다. 그때 이벤트는 target element의 모든 부모 요소를 지나간다.
 
 #### 2. target 단계
 
@@ -71,7 +66,7 @@ document.querySelector("a").addEventListener("click", () => {
 
 <!-- HTML 요소는 기본적으로 트리 구조이고, 트리 구조상으로 한 단계 위에 있는 요소를 상위 요소라고 한다. body 태그는 최상위 요소다. -->
 
-다음과 같은 nav 메뉴가 있다. **_.nav__menu_** 에 랜덤한 배경색을 넣는 이벤트를 등록해보자.
+다음과 같은 nav 메뉴가 있다. **_.nav\_\_menu_** 에 랜덤한 배경색을 넣는 이벤트를 등록해보자.
 
 ```html
 <nav>
@@ -96,7 +91,7 @@ document.querySelector("a").addEventListener("click", () => {
 
 먼저 두 값 사이의 난수를 생성하는 함수를 만든다.
 
-```js 
+```js
 const getRandom = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
@@ -108,7 +103,7 @@ const randomColor = () => {
 
 <br>
 
-그리고 첫번째 링크(menu1)인 **_.nav__menu_** 에 이벤트를 등록한다.
+그리고 첫번째 링크(menu1)인 **_.nav\_\_menu_** 에 이벤트를 등록한다.
 
 ```js
 document.querySelector(".nav__menu").addEventListener("click", function (e) {
@@ -116,11 +111,11 @@ document.querySelector(".nav__menu").addEventListener("click", function (e) {
 });
 ```
 
-이벤트핸들러 안에서 `this`는 이벤트 핸들러가 연결된 요소를 가리킨다. 여기서는 **_document.querySelector(".nav__menu")_** 이다.
+이벤트핸들러 안에서 `this`는 이벤트 핸들러가 연결된 요소를 가리킨다. 여기서는 **_document.querySelector(".nav\_\_menu")_** 이다.
 
 <br>
 
-이번에는 _**.nav__menu**_ 의 **상위요소(parent element)** 인 _**nav__menus**_ 에도 같은 이벤트를 등록해보자.
+이번에는 _**.nav\_\_menu**_ 의 **상위요소(parent element)** 인 _**nav\_\_menus**_ 에도 같은 이벤트를 등록해보자.
 
 ```js
 document.querySelector(".nav__menus").addEventListener("click", function (e) {
@@ -130,10 +125,9 @@ document.querySelector(".nav__menus").addEventListener("click", function (e) {
 
 이제 첫번째 menu1을 클릭하면, 배경이 같이 바뀌는 것을 볼 수 있다.
 
-![bubbling](./images/bubbling.gif)
+![bubbling](https://user-images.githubusercontent.com/48676844/216776890-c1b51a83-b4e6-4b3e-8ef8-82174eb4bce0.gif)
 
-
-_nav_ 전체에 적용하고 _**nav__menu**_ 부분을 클릭해도 클릭이벤트가 세곳 모두 발생하는것을 볼 수 있다.
+_nav_ 전체에 적용하고 _**nav\_\_menu**_ 부분을 클릭해도 클릭이벤트가 세곳 모두 발생하는것을 볼 수 있다.
 
 ```js
 document.querySelector(".nav").addEventListener("click", function (e) {
@@ -141,8 +135,7 @@ document.querySelector(".nav").addEventListener("click", function (e) {
 });
 ```
 
-![bubbling3](./images/bubbling3.gif)
-
+![bubbling3](https://user-images.githubusercontent.com/48676844/216776895-e1d30a26-532e-4191-abee-1d2e06da03eb.gif)
 
 <br>
 
@@ -161,7 +154,7 @@ document.querySelector(".nav__menu").addEventListener("click", function (e) {
 
 위의 예시에서 각 이벤트리스너에 **_e.target_** 을 콘솔로 찍어보면 모두 같은 결과가 나온다. `target`은 이벤트가 처음 발생한 곳. 즉 클릭이 발생한 곳이기 때문이다.
 
-![etarget](./images/etarget.png)
+![etarget](https://user-images.githubusercontent.com/48676844/216776902-2d24a6f8-f6dc-4c7a-8f36-735a9cf7436e.png)
 
 <br>
 
@@ -176,8 +169,7 @@ document.querySelector(".nav__menu").addEventListener("click", function (e) {
 
 반면 **_currentTarget_** 은 모두 다른것을 볼 수 있다. 이벤트핸들러에서 `currentTarget` 은 `this` 와 같아서 현재 실행중인 handler가 할당된 요소이다.
 
-![currenttaget](./images/currenttaget.png)
-
+![currenttaget](https://user-images.githubusercontent.com/48676844/216776926-bc07bd8b-e9e7-4613-b86e-93784b5dd18d.png)
 
 <br>
 
@@ -194,8 +186,7 @@ document.querySelector(".nav__menu").addEventListener("click", function (e) {
 });
 ```
 
-![stop](./images/stop.gif)
-
+![stop](https://user-images.githubusercontent.com/48676844/216776955-4780370e-9122-4093-9575-dee95470d676.gif)
 
 첫번째 요소에 코드를 추가하고 다시 클릭해보면 더이상 이벤트가 전파되지 않는 것을 확인할 수 있다.
 
@@ -205,8 +196,7 @@ document.querySelector(".nav__menu").addEventListener("click", function (e) {
 
 <hr>
 
-
-캡쳐링 단계에서 이벤트를 캐치하려면 **_addEventListener_** 의 세번째 파라미터를 정의할 수 있다. 기본적으로 **_default_** 는 **_false_**인데, 이때 핸들러는 버블링 단계로 설정된다. 이벤트 캡쳐링은 흔히 사용 되지는 않지만 옵션을 `true` 로 설정하면 이벤트 버블링과 반대 방향으로 탐색한다.
+캡쳐링 단계에서 이벤트를 캐치하려면 **_addEventListener_** 의 세번째 파라미터를 정의할 수 있다. 기본적으로 **_default_** 는 **_false_** 인데, 이때 핸들러는 버블링 단계로 설정된다. 이벤트 캡쳐링은 흔히 사용 되지는 않지만 옵션을 `true` 로 설정하면 이벤트 버블링과 반대 방향으로 탐색한다.
 
 ```js{7}
 document.querySelector(".nav__menu").addEventListener(
@@ -309,8 +299,7 @@ document.querySelector(".nav__menus").addEventListener("click", function (e) {
 });
 ```
 
-
-![delegation](./images/delegation.gif)
+![delegation](https://user-images.githubusercontent.com/48676844/216777000-7458530c-b710-4ad8-b5bb-8a8b15444caa.gif)
 
 현재는 **menu** 사이를 눌러도 _ul_ 부분이 선택되므로 **menu** 하나만 선택하기 위해서 조건을 추가할 수 있다.
 
@@ -329,8 +318,6 @@ document.querySelector(".nav__menus").addEventListener("click", function (e) {
 });
 ```
 
-
-![finish](./images/finish.gif)
-
+![finish](https://user-images.githubusercontent.com/48676844/216777010-cabab99d-b4bb-4544-8580-571b28a31ff1.gif)
 
 이제 요소마다 이벤트를 달지 않아도 된다.

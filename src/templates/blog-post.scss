@@ -1,10 +1,57 @@
-@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap");
-html {
-  scroll-behavior: smooth;
+@use "../styles/base";
+
+.blog-post {
+  header {
+    h1 {
+      margin: base.$spacing-0 base.$spacing-0 base.$spacing-4 base.$spacing-0;
+    }
+
+    p {
+      font-size: base.$fontSize-0;
+      font-family: base.$font-heading;
+      font-weight: base.$fontWeight-bold;
+      opacity: 0.5;
+    }
+  }
 }
 
-.inner {
-  font-family: "Nanum Gothic", sans-serif;
+.blog-post.light {
+  h1,
+  h3,
+  h4,
+  ol,
+  ul,
+  p {
+    color: black;
+  }
+  blockquote > h4 {
+    color: gray;
+  }
+}
+
+.blog-post-nav {
+  margin-bottom: base.$spacing-10;
+  ul {
+    margin: base.$spacing-0;
+  }
+
+  li {
+    background: linear-gradient(90deg, #6cb1e6 0%, #4ecdc4 100%);
+    border-radius: 5px;
+
+    a {
+      box-shadow: none;
+      font-family: base.$fontNanumGothic;
+      font-weight: base.$fontWeight-bold;
+      font-size: 14px;
+      color: black;
+      padding: 0 10px;
+    }
+  }
+}
+
+.post-article {
+  font-family: base.$fontNanumGothic;
   hr {
     background-color: hsla(0, 0%, 78%, 0.3);
   }
@@ -13,26 +60,7 @@ html {
   h3,
   h4,
   h5 {
-    font-family: "Nanum Gothic", sans-serif;
     letter-spacing: 0px;
-  }
-  h1 {
-    margin: 30px 0px;
-  }
-  h2 {
-    margin: 25px 0px;
-  }
-  h3 {
-    margin: 20px 0px 10px 0px;
-  }
-  h4 {
-    text-transform: inherit;
-    margin: 15px 0px;
-    line-height: 1.4;
-    font-size: 18px;
-  }
-  h5 {
-    margin: 10px 0px;
   }
   blockquote {
     color: rgb(119, 119, 119);
@@ -48,49 +76,13 @@ html {
   li {
     margin-bottom: 0.3rem;
   }
-  /* image margin 제거 */
-  .gatsby-resp-image-wrapper {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-    max-width: 100% !important;
-  }
-  .operator {
-    background-color: unset;
+  a {
+    color: base.$color-link;
   }
 }
 
-/* image 캡쳐 뒷배경 제거 */
-img {
-  box-shadow: unset !important;
-}
-
-.bio-hr {
+.post-bio-hr {
   background: linear-gradient(90deg, #3d4f52, #3fa19b, #565f69);
   height: 1.5px;
-  margin: 40px 15px;
-}
-.post-nav {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0;
-
-  li {
-    background: linear-gradient(90deg, #6cb1e6 0%, #4ecdc4 100%);
-    border-radius: 5px;
-
-    a {
-      box-shadow: none;
-      font-family: "Nanum Gothic", sans-serif;
-      font-weight: bold;
-      font-size: 14px;
-      color: black;
-      padding: 0 10px;
-    }
-  }
-}
-
-.post-title {
-  font-size: 2rem;
+  margin: 40px 15px 20px 15px;
 }
