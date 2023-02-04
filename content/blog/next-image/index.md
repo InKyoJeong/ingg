@@ -2,19 +2,16 @@
 title: "[React] Next.js 이미지컴포넌트와 이미지최적화"
 tags: ["react"]
 date: 2022-12-19 19:09:98
-
 ---
- 
+
 ![next](./images/next.png)
 
-
-**Next**의 이미지컴포넌트 `next/image`는 아래와 같은 다양한 성능 최적화 기능을 제공한다.
+**Next**의 이미지컴포넌트 `next/image`는 아래와 같은 다양한 성능 최적화 기능을 제공한다.
 
 - 향상된 성능: 최신 이미지 형식을 사용하여 각 디바이스에 대한 올바른 크기의 이미지 제공
-- 시각적 안정성: 자동으로 **layout shift** 방지
+- 시각적 안정성: 자동으로 **layout shift** 방지
 - 빠른 페이지 로드: 이미지가 뷰포트에 들어갈 때만 로드되며 **placeholder** 제공
 - 유연성: 원격 서버에 저장된 이미지에 대해서도 온디맨드 이미지 크기 조정
-
 
 <br>
 
@@ -154,7 +151,6 @@ module.exports = {
 ### Priority
 
 <hr />
-
 
 `priority` **property**를 추가하면 next가 로드할 이미지의 우선순위를 지정하여 [LCP](https://web.dev/lcp/#what-elements-are-considered) 를 향상시킬 수 있다.
 
