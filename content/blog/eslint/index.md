@@ -208,5 +208,3 @@ module.exports = {
 > References
 
 - [https://eslint.org/](https://eslint.org/docs/user-guide/getting-started)
-
-- [https://eslint.org/](https://eslint.org/docs/user-guide/getting-started)
