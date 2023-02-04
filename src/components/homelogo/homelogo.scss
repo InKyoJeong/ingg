@@ -1,0 +1,10 @@
+.home-logo {
+  width: 6em;
+  height: 6em;
+  margin: 20px auto 40px auto;
+
+  &:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+}

@@ -1,0 +1,39 @@
+@use "../styles/base";
+
+.about-me {
+  margin-bottom: 14px;
+
+  &__hr {
+    background: linear-gradient(90deg, #3d4f52, #3fa19b, #565f69);
+    height: 1.5px;
+  }
+}
+
+.about-me span,
+.about-activities {
+  font-size: 25px;
+}
+
+.about-link {
+  box-shadow: none;
+}
+
+.about-table {
+  tr td:nth-child(2) {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+
+  a {
+    color: base.$color-link;
+  }
+}
+
+.about-activities__period {
+  width: 20%;
+}
+
+.about.light {
+  color: black;
+}
