@@ -128,7 +128,7 @@ flexbox 속성은 container에서 사용하는 속성과 item에서 사용하는
 
 <!-- >   -->
 
-**_align-items_** 에서는 **_center, flex-start, flex-end, stretch_** 를 특히 자주 사용하는데, **_baseline_** 이라는 속성 값도 있다. 텍스트 기준선인 baseline을 기준으로 item을 정렬해 준다.
+**_align-items_** 에서는 **_center, flex-start, flex-end, stretch_** 를 특히 자주 사용하는데, **_baseline_** 이라는 속성 값도 있다. 텍스트 기준선인 baseline을 기준으로 item을 정렬해 준다.
 
 ```html
 <div class="container">

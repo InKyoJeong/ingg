@@ -202,7 +202,7 @@ export const create = createState =>
 
 **_useSyncExternalStore_** 는 **external store(외부 저장소)** 를 구독할 수 있게 해주는 **React Hook**이다. 여기서 external store는 _redux/zustand store, DOM/Date_ 객체 등을 말한다. 전역 변수(global variable)도 **external store**가 될수있다. _props, context, useState, useReducer_ 는 **internal store**이다.
 
-리액트 18부터는 **concurrent 렌더링**이 등장하면서, `startTransition` 과 같은 동시성 기능을 사용하는 경우 리액트가 렌더링을 잠시 일시 중지할 수 있게 되었다. 이를 통해 브라우저는 렌더링 중에 브라우저를 freeze하는 대신 중간에 이벤트를 처리할 수 있다. [(startTransition을 사용하여 블로킹 렌더링 문제를 해결하는 간단한 예시)](https://www.youtube.com/embed/focpJqfSu4k?start=15)
+리액트 18부터는 **concurrent 렌더링**이 등장하면서, `startTransition` 과 같은 동시성 기능을 사용하는 경우 리액트가 렌더링을 잠시 일시 중지할 수 있게 되었다. 이를 통해 브라우저는 렌더링 중에 브라우저를 freeze하는 대신 중간에 이벤트를 처리할 수 있다. [(startTransition을 사용하여 블로킹 렌더링 문제를 해결하는 간단한 예시)](https://www.youtube.com/embed/focpJqfSu4k?start=15)
 
 #### tearing이란
 
@@ -218,7 +218,7 @@ concurrent 렌더링은 훌륭하지만 external store에 의존하는 라이브
 
 세 번째 과정에서, 모든 컴포넌트가 파란색으로 렌더링되고 모두 동일하게 보인다. UI는 항상 일관된 상태로 표시된다.
 
-마지막으로 네 번째 과정은, 스토어를 업데이트할 수 있는 과정이다. React 렌더링이 끝나고 다른 작업이 일어나도록 허용되기 때문이다. React가 렌더링되지 않을 때 스토어가 업데이트되면 다음에 React가 트리를 렌더링할 때 첫 번째 과정부터 다시 시작하고 모든 컴포넌트가 동일한 값을 갖게 된다.
+마지막으로 네 번째 과정은, 스토어를 업데이트할 수 있는 과정이다. React 렌더링이 끝나고 다른 작업이 일어나도록 허용되기 때문이다. React가 렌더링되지 않을 때 스토어가 업데이트되면 다음에 React가 트리를 렌더링할 때 첫 번째 과정부터 다시 시작하고 모든 컴포넌트가 동일한 값을 갖게 된다.
 
 <br>
 
@@ -250,7 +250,7 @@ useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot?)
 
 #### useSyncExternalStore 사용 예시
 
-간단한 예시를 통해 훅을 사용해 보자. 먼저 **_state_** 와 불변성을 유지하며 상태를 변경하는 _**setState, subscribe, getSnapshot**_ 함수가 있는 **store**를 만든다. 그리고 두 함수를 통해 **_useSyncExternalStore_** 훅을 사용하면 된다.
+간단한 예시를 통해 훅을 사용해 보자. 먼저 **_state_** 와 불변성을 유지하며 상태를 변경하는 _**setState, subscribe, getSnapshot**_ 함수가 있는 **store**를 만든다. 그리고 두 함수를 통해 **_useSyncExternalStore_** 훅을 사용하면 된다.
 
 ```js
 const store = {
