@@ -576,3 +576,15 @@ const testAsync = async () => {
 };
 testAsync();
 ```
+
+```js
+const testAsync = async () => {
+  try {
+    const remain = await buySomething(1000);
+    console.log(`잔액: ${remain}원`);
+  } catch (error) {
+    console.log(error);
+  }
+};
+testAsync();
+```
