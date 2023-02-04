@@ -45,13 +45,13 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug;
 
           return (
-            <li key={post.fields.slug}>
-              <article
-                className={`post-list-item ${isDarkMode ? "dark" : "light"}`}
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <Link to={post.fields.slug} itemProp="url">
+            <Link to={post.fields.slug} key={post.fields.slug} itemProp="url">
+              <li>
+                <article
+                  className={`post-list-item ${isDarkMode ? "dark" : "light"}`}
+                  itemScope
+                  itemType="http://schema.org/Article"
+                >
                   <h2>
                     <span itemProp="headline">{title}</span>
                   </h2>
@@ -67,9 +67,9 @@ const BlogIndex = ({ data, location }) => {
                       itemProp="description"
                     />
                   </section>
-                </Link>
-              </article>
-            </li>
+                </article>
+              </li>
+            </Link>
           );
         })}
       </ol>
