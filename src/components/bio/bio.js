@@ -40,6 +40,7 @@ const Bio = () => {
         height={80}
         quality={95}
         alt="Profile picture"
+        imgStyle={{ borderRadius: `50%` }}
       />
       {author?.name && (
         <div>

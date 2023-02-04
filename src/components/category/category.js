@@ -23,15 +23,13 @@ const Category = ({ onClick }) => {
           {showCategory ? "-" : "+"}
         </button>
       </div>
-      <div className="test">
-        <div className="category-bar">
-          {showCategory &&
-            CATEGORIES.map((category, idx) => (
-              <button onClick={onClick} key={idx} id={category.toLowerCase()}>
-                {category}
-              </button>
-            ))}
-        </div>
+      <div className="category-bar">
+        {showCategory &&
+          CATEGORIES.map((category, idx) => (
+            <button onClick={onClick} key={idx} id={category.toLowerCase()}>
+              {category}
+            </button>
+          ))}
       </div>
     </div>
   );
