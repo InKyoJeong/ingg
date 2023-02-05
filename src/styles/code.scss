@@ -60,7 +60,7 @@ code[class*="language-text"] {
   left: 0.8rem;
   text-align: right;
   text-transform: uppercase;
-  top: 0px;
+  top: 0;
   color: #232129;
   font-size: 0.67rem;
   padding: 0.25rem 0.5rem;
@@ -104,7 +104,7 @@ code[class*="language-text"] {
 }
 .gatsby-highlight pre[class="language-java"]::before {
   content: "java";
-  background: #b07219;
+  background: hsl(35, 75%, 39%);
   background-color: #b07219;
 }
 

@@ -1,15 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import { CATEGORIES } from "../../constants/index";
 import { DarkModeStateContext } from "../../context/DarkModeProvider";
-import useLocalStorage from "../../hooks/useLocalStorage";
+// import useLocalStorage from "../../hooks/useLocalStorage";
 import "./category.scss";
 
 const Category = ({ onClick }) => {
-  const [showCategory, setShowCategory] = useLocalStorage(
-    "categoryOpen",
-    false
-  );
+  const [showCategory, setShowCategory] = useState(false);
   const isDarkMode = useContext(DarkModeStateContext);
 
   const handleToggleDrawer = () => {
