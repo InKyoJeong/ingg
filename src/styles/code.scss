@@ -47,7 +47,7 @@ code[class*="language-text"] {
   padding-bottom: 0px;
 }
 
-/* 코드 형식 표시  */
+/* Code Label  */
 .gatsby-highlight {
   position: relative;
 }
@@ -112,6 +112,7 @@ code[class*="language-text"] {
 .gatsby-highlight-code-line {
   background-color: rgb(43, 61, 66);
   font-size: 0.85rem;
+  line-height: 1.42;
   border-left: 5px solid rgb(5, 167, 158);
   display: block;
   margin-left: -1rem;
