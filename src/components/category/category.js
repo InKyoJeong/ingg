@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 
 import { CATEGORIES } from "../../constants/index";
 import { DarkModeStateContext } from "../../context/DarkModeProvider";
-// import useLocalStorage from "../../hooks/useLocalStorage";
 import "./category.scss";
 
 const Category = ({ onClick }) => {
