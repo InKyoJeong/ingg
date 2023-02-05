@@ -22,7 +22,6 @@ const BlogPostTemplate = ({
       <article
         className={`blog-post ${isDarkMode ? "dark" : "light"}`}
         itemScope
-        itemType="http://schema.org/Article"
       >
         <header>
           <h1 className="blog-title" itemProp="headline">
@@ -42,15 +41,7 @@ const BlogPostTemplate = ({
       </article>
 
       <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">

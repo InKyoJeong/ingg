@@ -31,13 +31,20 @@
 
 .blog-post-nav {
   margin-bottom: base.$spacing-10;
+
   ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: base.$spacing-0;
+    padding: 0;
+    list-style: none;
   }
 
   li {
     background: linear-gradient(90deg, #6cb1e6 0%, #4ecdc4 100%);
     border-radius: 5px;
+    margin-top: 10px;
 
     a {
       box-shadow: none;
