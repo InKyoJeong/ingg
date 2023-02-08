@@ -200,7 +200,7 @@ export const create = createState =>
 
 <hr>
 
-**_useSyncExternalStore_** 는 **external store(외부 저장소)** 를 구독할 수 있게 해주는 **React Hook**이다. 여기서 external store는 _redux/zustand store, DOM/Date_ 객체 등을 말한다. 전역 변수(global variable)도 **external store**가 될수있다. _props, context, useState, useReducer_ 는 **internal store**이다.
+**_useSyncExternalStore_** 는 **external store(외부 저장소)** 를 구독할 수 있게 해주는 **React Hook**이다. 여기서 external store는 _redux/zustand store, DOM/Date_ 객체 등을 말한다. 전역 변수(global variable)도 **external store**가 될수있다. _props, context, useState, useReducer_ 는 **internal store**이다.
 
 리액트 18부터는 **concurrent 렌더링**이 등장하면서, `startTransition` 과 같은 동시성 기능을 사용하는 경우 리액트가 렌더링을 잠시 일시 중지할 수 있게 되었다. 이를 통해 브라우저는 렌더링 중에 브라우저를 freeze하는 대신 중간에 이벤트를 처리할 수 있다. [(startTransition을 사용하여 블로킹 렌더링 문제를 해결하는 간단한 예시)](https://www.youtube.com/embed/focpJqfSu4k?start=15)
 
@@ -212,7 +212,7 @@ concurrent 렌더링은 훌륭하지만 external store에 의존하는 라이브
 
 ![sync](https://user-images.githubusercontent.com/48676844/212763061-0da135fb-74ff-491c-a2aa-1f3dfe4c30e6.png)
 
-첫 번째 과정에서, React 트리 렌더링이 시작된다. external store에 접근해서 색상 값을 가져오는 컴포넌트에 도달하면, external store는 색상이 파란색이라고 알려주고 컴포넌트가 파란색으로 렌더링된다.
+첫 번째 과정에서, React 트리 렌더링이 시작된다. external store에 접근해서 색상 값을 가져오는 컴포넌트에 도달하면, external store는 색상이 파란색이라고 알려주고 컴포넌트가 파란색으로 렌더링된다.
 
 두 번째 과정에서, 리액트는 멈추지 않고 모든 컴포넌트를 계속 렌더링하므로 모든 컴포넌트가 external store에 있는 동일한 값을 가진다.
 
@@ -232,7 +232,7 @@ concurrent 렌더링은 훌륭하지만 external store에 의존하는 라이브
 
 그렇다면 두 번째 과정에서 만약 사용자가 스토어를 파란색에서 빨간색으로 변경하는 버튼을 누른다면 어떻게 될까? 처음 컴포넌트는 파란색이지만, 그 이후 렌더링되는 컴포넌트는 빨간색 값을 가져올 것이다.
 
-그 결과 마지막 과정과 같이 빨간색과 파란색이 혼재된 상태가 되고 사용자는 시각적인 불일치를 보게 될 것이다. 이것이 **tearing**이다.
+그 결과 마지막 과정과 같이 빨간색과 파란색이 혼재된 상태가 되고 사용자는 시각적인 불일치를 보게 될 것이다. 이것이 **tearing**이다.
 
 <br>
 

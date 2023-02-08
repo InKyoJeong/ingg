@@ -228,7 +228,7 @@ order의 초기값은 0이다. 만약 요소 하나를 시작 부분으로 옮�
 
 ### flex-basis
 
-**_flex-basis_** 속성은 flex item의 기본 크기를 결정한다. 기본값은 auto이다. item 각각에 **_width_** 를 지정하는 대신, **_flex-basis_** 를 이용하여 너비를 설정할 수 있다.
+**_flex-basis_** 속성은 flex item의 기본 크기를 결정한다. 기본값은 auto 이다. item 각각에 **_width_** 를 지정하는 대신, **_flex-basis_** 를 이용하여 너비를 설정할 수 있다.
 
 <br>
 
