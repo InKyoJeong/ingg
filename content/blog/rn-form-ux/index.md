@@ -24,7 +24,7 @@ description: "React Native 에서 좋은 사용자 경험을 제공하는 Form�
 
 <br>
 
-### <a name="rn-form"></a>폼 만들기
+### <a name="rn-form"></a>폼 만들기
 
 <hr />
 
@@ -62,7 +62,7 @@ export default InputField;
 
 #### 폼 핸들링
 
-리액트의 **_onChange_** 와 다르게 `onChangeText`를 이용하면 **_e.target_** 을 사용하지 않고 폼을 핸들링할 수 있다. blur 함수 또한 사용 가능하다. 처음부터 에러메세지를 보여주기보다는, touched 상태에 따라 표시하도록 하였다.
+리액트의 **_onChange_** 와 다르게 `onChangeText`를 이용하면 **_e.target_** 을 사용하지 않고 폼을 핸들링할 수 있다. blur 함수 또한 사용 가능하다. 처음부터 에러메세지를 보여주기보다는, touched 상태에 따라 표시하도록 하였다.
 
 ```tsx
 function LoginScreen() {
@@ -115,7 +115,7 @@ function LoginScreen() {
 
 #### useForm 커스텀 훅으로 분리
 
-그리고 폼 핸들링 로직을 분리하고, 페이지에서는 **_getTextInputProps_** 유틸함수를 이용하여 사용할 수 있도록 커스텀 훅을 구현했다.
+그리고 폼 핸들링 로직을 분리하고, 페이지에서는 **_getTextInputProps_** 유틸함수를 이용하여 사용할 수 있도록 커스텀 훅을 구현했다.
 
 ```tsx
 function LoginScreen() {
@@ -190,7 +190,7 @@ function LoginScreen() {
 
 #### 알맞은 키보드 제공하기 & secureTextEntry
 
-`inputMode`를 이용하면 상황에 따라 알맞은 키보드를 띄워줄 수 있다. 예를들어 입력해야하는 입력값이 이메일 형태라면 `email`, 숫자라면 `numeric` 등을 활용하여 상황에 맞는 키보드를 띄우는 것이 좋다. 비밀번호는 웹에서의 _**type='password'**_ 와 같은 속성이 없지만 `secureTextEntry` 속성을 이용하면 된다.
+`inputMode`를 이용하면 상황에 따라 알맞은 키보드를 띄워줄 수 있다. 예를들어 입력해야하는 입력값이 이메일 형태라면 `email`, 숫자라면 `numeric` 등을 활용하여 상황에 맞는 키보드를 띄우는 것이 좋다. 비밀번호는 웹에서의 _**type='password'**_ 와 같은 속성이 없지만 `secureTextEntry` 속성을 이용하면 된다.
 
 ```tsx{7,14}
 <InputField
@@ -223,7 +223,7 @@ function LoginScreen() {
 
 #### 자연스럽게 커서 이동하기 & returnKeyType
 
-현재는 아이디를 입력하고 리턴키를 누르면 키보드가 닫히고, 다시 다음값을 입력하기 위해 비밀번호 인풋을 클릭해야하는 번거로움이 있다.
+현재는 아이디를 입력하고 리턴키를 누르면 키보드가 닫히고, 다시 다음값을 입력하기 위해 비밀번호 인풋을 클릭해야하는 번거로움이 있다.
 
 `returnKeyType`을 이용해서 상황에 따라 어떻게 리턴키를 보여줄지 지정할 수 있다. 하지만 키보드 리턴키를 바꾸더라도, 기본적으로 리턴키를 누르면 키보드가 닫힌다.
 
@@ -253,7 +253,7 @@ const passwordRef = useRef<TextInput | null>(null);
   placeholder="비밀번호"
   secureTextEntry
   returnKeyType="send"
-  onSubmitEditing={handleSubmit}
+  onSubmitEditing={handleSubmit}
 />
 ```
 
