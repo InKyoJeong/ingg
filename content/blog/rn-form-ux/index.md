@@ -118,6 +118,8 @@ function LoginScreen() {
 그리고 폼 핸들링 로직을 분리하고, 페이지에서는 **_getTextInputProps_** 유틸함수를 이용하여 사용할 수 있도록 커스텀 훅을 구현했다.
 
 ```tsx
+import useForm from "@/hooks/useForm";
+
 function LoginScreen() {
   const login = useForm({
     initialValue: { username: "", password: "" },
@@ -128,7 +130,6 @@ function LoginScreen() {
     <SafeAreaView>
       <View style={styles.container}>
         <InputField
-          autoFocus
           {...login.getTextInputProps("username")}
           error={login.errors.username}
           touched={login.touched.username}
@@ -147,14 +148,12 @@ function LoginScreen() {
 }
 ```
 
-<!-- ![error](https://user-images.githubusercontent.com/48676844/235294885-158a1700-c895-4a66-91e7-da556424b624.gif) -->
-
-<center>
-<img width="424" alt="error" src="https://user-images.githubusercontent.com/48676844/235294885-158a1700-c895-4a66-91e7-da556424b624.gif"></center>
-
 <br>
 
 이제 의도한 대로 유효성 메세지가 잘 출력된다.
+
+<center>
+<img width="424" alt="error" src="https://user-images.githubusercontent.com/48676844/235294885-158a1700-c895-4a66-91e7-da556424b624.gif"></center>
 
 <br>
 
@@ -210,14 +209,12 @@ function LoginScreen() {
 />
 ```
 
-<!-- ![inputtype](https://user-images.githubusercontent.com/48676844/235295957-6db660ff-95c7-4a77-8a4e-ae47cae8017a.gif) -->
-
-<center>
-<img width="424" alt="inputtype" src="https://user-images.githubusercontent.com/48676844/235295957-6db660ff-95c7-4a77-8a4e-ae47cae8017a.gif"></center>
-
 <br>
 
 이제 페이지 첫 방문시 자동 포커싱이 되고 **email** 모드인 경우 키보드 배열에 `@`가 추가되며 배열이 달라진것을 볼 수 있다.
+
+<center>
+<img width="424" alt="inputtype" src="https://user-images.githubusercontent.com/48676844/235295957-6db660ff-95c7-4a77-8a4e-ae47cae8017a.gif"></center>
 
 <br>
 
@@ -229,7 +226,7 @@ function LoginScreen() {
 
 이때 `blurOnSubmit` 속성을 이용하면 키보드가 자동으로 닫히지 않는다. 그리고 **_ref_** 와 `onSubmitEditing`을 이용한다면 리턴키 클릭시 키보드를 닫지 않고 동시에 자연스럽게 커서를 이동시켜줄 수 있다.
 
-마지막 인풋의 **_onSubmitEditing_** 에는 sumbit 함수를 넣어서 키보드 리턴키로 제출되도록 한다.
+마지막 인풋의 **_onSubmitEditing_** 에는 sumbit 함수를 넣어서 키보드 리턴키로 제출가능 하도록 한다.
 
 ```tsx{11-14, 23-24}
 const passwordRef = useRef<TextInput | null>(null);
@@ -259,14 +256,12 @@ const passwordRef = useRef<TextInput | null>(null);
 />
 ```
 
-<!-- ![onsubmitedit](https://user-images.githubusercontent.com/48676844/235296711-938cb955-46fb-45a9-9790-ee2791f9f5ea.gif) -->
-
-<center>
-<img width="424" alt="onsubmitedit" src="https://user-images.githubusercontent.com/48676844/235296711-938cb955-46fb-45a9-9790-ee2791f9f5ea.gif"></center>
-
 <br>
 
 이제 사용자가 굳이 다시 인풋창을 눌러 키보드를 띄울 필요가 없이 연속으로 입력할 수 있다.
+
+<center>
+<img width="424" alt="onsubmitedit" src="https://user-images.githubusercontent.com/48676844/235296711-938cb955-46fb-45a9-9790-ee2791f9f5ea.gif"></center>
 
 <br>
 
@@ -302,8 +297,6 @@ const passwordRef = useRef<TextInput | null>(null);
 위에서 만든 **_InputField_** 컴포넌트는 에러메세지를 보여줄때 인풋창 크기가 늘어나며 **_border_** 내부에 에러메세지가 표시된다.
 
 이를 수정하기 위해서는 아래와 같이 유효성 검사에 실패한 특정 인풋창을 터치하게 된다.
-
-<!-- ![tap-before](https://user-images.githubusercontent.com/48676844/235299174-b206247c-88e9-4df9-aae3-ce80ddad54aa.gif) -->
 
 <center>
 <img width="424" alt="onsubmitedit" src="https://user-images.githubusercontent.com/48676844/235299174-b206247c-88e9-4df9-aae3-ce80ddad54aa.gif"></center>
@@ -377,7 +370,7 @@ const InputField = forwardRef(
     { touched, error, ...props }: InputFieldProps,
     ref?: ForwardedRef<TextInput>
   ) => {
-    // ...
+    //...
 
     return (
       <Pressable onPress={handlePressInput}>
@@ -394,14 +387,12 @@ const InputField = forwardRef(
 );
 ```
 
-<!-- ![tap-after](https://user-images.githubusercontent.com/48676844/235299180-7030b4a9-2f85-4192-b1d3-dd6549c8e799.gif) -->
-
-<center>
-<img width="424" alt="onsubmitedit" src="https://user-images.githubusercontent.com/48676844/235299180-7030b4a9-2f85-4192-b1d3-dd6549c8e799.gif"></center>
-
 <br>
 
 이제 의도한 대로 인풋 내부를 클릭하면 포커싱이 잘 되는 것을 볼 수 있다.
+
+<center>
+<img width="424" alt="onsubmitedit" src="https://user-images.githubusercontent.com/48676844/235299180-7030b4a9-2f85-4192-b1d3-dd6549c8e799.gif"></center>
 
 <br>
 
@@ -410,9 +401,6 @@ const InputField = forwardRef(
 <hr />
 
 마지막으로 에러메세지를 표시할때, [LayoutAnimation](https://reactnative.dev/docs/layoutanimation)을 이용하여 간단한 **_spring_** 효과를 추가해보았다. 에러메세지의 딱딱한 느낌이 줄어든 것 같다.
-
-<!--
-![animation](https://user-images.githubusercontent.com/48676844/235300867-889c803e-070e-4235-baf2-97d47fc84c55.gif) -->
 
 <center>
 <img width="424" alt="onsubmitedit" src="https://user-images.githubusercontent.com/48676844/235300867-889c803e-070e-4235-baf2-97d47fc84c55.gif"></center>
