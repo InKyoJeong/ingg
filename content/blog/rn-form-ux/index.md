@@ -79,7 +79,7 @@ function LoginScreen() {
     });
   };
 
-  const handleBlur = (name: string) => {
+  const handleBlur = (name: string) => {
     setTouched({
       ...touched,
       [name]: true,
@@ -227,7 +227,7 @@ function LoginScreen() {
 
 `returnKeyType`을 이용해서 상황에 따라 어떻게 리턴키를 보여줄지 지정할 수 있다. 하지만 키보드 리턴키를 바꾸더라도, 기본적으로 리턴키를 누르면 키보드가 닫힌다.
 
-이때 `blurOnSubmit` 속성을 이용하면 키보드가 자동으로 닫히지 않는다. 그리고 **_ref_** 와 `onSubmitEditing`을 이용한다면 리턴키 클릭시 키보드를 닫지 않고 동시에 자연스럽게 커서를 이동시켜줄 수 있다.
+이때 `blurOnSubmit` 속성을 이용하면 키보드가 자동으로 닫히지 않는다. 그리고 **_ref_** 와 `onSubmitEditing`을 이용한다면 리턴키 클릭시 키보드를 닫지 않고 동시에 자연스럽게 커서를 이동시켜줄 수 있다. 그리고 마지막 인풋의 **_onSubmitEditing_** 에는 sumbit 함수를 넣어서 키보드 리턴키로 제출되도록 한다.
 
 ```tsx{11-14, 23-24}
 const passwordRef = useRef<TextInput | null>(null);
