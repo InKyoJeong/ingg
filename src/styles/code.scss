@@ -76,6 +76,11 @@ code[class*="language-text"] {
   background: #2f71bb;
   background-color: #2f71bb;
 }
+.gatsby-highlight pre[class="language-tsx"]::before {
+  content: "tsx";
+  background: #2f71bb;
+  background-color: #2f71bb;
+}
 .gatsby-highlight pre[class="language-html"]::before {
   content: "html";
   background: #e44c26;
@@ -203,6 +208,31 @@ code[class*="language-text"] {
   }
   .token.regex {
     color: rgb(159, 212, 218);
+  }
+}
+
+/* TSX code color*/
+.language-tsx {
+  .token.class-name {
+    color: #fcdb64;
+  }
+  .token.function-variable,
+  .token.function {
+    color: #70a0fa;
+  }
+  .token.keyword,
+  .token.attr-name,
+  .token.operator {
+    color: #b388ff;
+  }
+  .token.string {
+    color: hsl(135, 60%, 62%);
+  }
+  .token.builtin {
+    color: rgb(162, 177, 177);
+  }
+  .token.script.language-javascript {
+    color: white;
   }
 }
 
