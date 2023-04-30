@@ -7,9 +7,9 @@ description: "React Native 에서 좋은 사용자 경험을 제공하는 Form�
 
 ![rn](../rn-deploy/images/rn.png)
 
-토이프로젝트로 리액트네이티브를 이용한 앱을 만들고 있는데, 키보드를 통한 입력이 아닌 모바일 기기인 만큼 폼을 구현할때 좋은 사용자 경험을 제공하기 위해 고민하게 되었다. 인증 화면을 구현하며 다양한 시도를 해볼 수 있었다.
+리액트네이티브를 이용한 앱을 만드는 과정에서, 키보드를 통한 입력이 아닌 모바일 기기인 만큼 폼을 구현할때 좋은 사용자 경험을 제공하기 위해 고민하게 되었다. 인증 화면을 구현하며 다양한 시도를 해볼 수 있었다.
 
-리액트네이티브에서의 input은 웹에서 사용하는 input태그와는 조금 다르지만 비슷한 속성들이 존재해서 이 속성들을 잘 활용하면 좀 더 나은 사용자 경험을 제공할 수 있다.
+리액트네이티브에서의 input은 웹에서 사용하는 input 태그와는 조금 다르지만 비슷한 속성들이 존재해서 이 속성들을 잘 활용하면 좀 더 나은 사용자 경험을 제공할 수 있다.
 
 ---
 
@@ -62,7 +62,7 @@ export default InputField;
 
 #### 폼 핸들링
 
-리액트의 **_onChange_** 와 다르게 `onChangeText`를 이용하면 **_e.target_** 을 사용하지 않고 폼을 핸들링할 수 있다. blur 함수 또한 사용 가능하다. 처음부터 에러메세지를 보여주기보다는, touched 상태에 따라 표시하도록 하였다.
+리액트의 **_onChange_** 와 다르게 `onChangeText`를 이용하면 **_e.target_** 을 사용하지 않고 폼을 핸들링할 수 있다. **_blur_** 함수 또한 사용 가능하다. 처음부터 에러메세지를 보여주기보다는, **_touched_** 상태에 따라 표시하도록 하였다.
 
 ```tsx
 function LoginScreen() {
@@ -348,10 +348,10 @@ const InputField = forwardRef(
 
 <br>
 
-이때 **_ForwardedRef_** 타입에러가 발생하여 함수 타입을 분기처리하고, 이부분을 **_mergeRefs_** 함수로 만들어서 해결했다.
+이때 **_ForwardedRef_** 타입에러가 발생하여 함수 타입을 분기처리하여 해결하고, 이 부분을 **_mergeRefs_** 함수로 분리했다.
 
 ```ts
-function mergeRefs<T>(...refs: (MutableRefObject<T> | ForwardedRef<T>)[]) {
+function mergeRefs<T>(...refs: ForwardedRef<T>[]) {
   return (node: T) => {
     refs.forEach(ref => {
       if (typeof ref === "function") {
@@ -400,7 +400,7 @@ const InputField = forwardRef(
 
 <hr />
 
-마지막으로 에러메세지를 표시할때, [LayoutAnimation](https://reactnative.dev/docs/layoutanimation)을 이용하여 간단한 **_spring_** 효과를 추가해보았다. 에러메세지의 딱딱한 느낌이 줄어든 것 같다.
+마지막으로 에러메세지를 표시할때, [LayoutAnimation](https://reactnative.dev/docs/layoutanimation)을 이용하여 간단한 **_spring_** 효과를 추가해 보았다. 에러메세지의 딱딱한 느낌이 줄어든 것 같다.
 
 <center>
 <img width="424" alt="onsubmitedit" src="https://user-images.githubusercontent.com/48676844/235300867-889c803e-070e-4235-baf2-97d47fc84c55.gif"></center>
