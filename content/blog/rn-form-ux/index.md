@@ -348,7 +348,7 @@ const InputField = forwardRef(
 
 <br>
 
-이때 **_ForwardedRef_** 타입에러가 발생하여 함수 타입을 분기처리하여 해결하고, 이 부분을 **_mergeRefs_** 함수로 분리했다.
+이때 **_ForwardedRef_** 타입에러가 발생하여 함수 타입을 분기처리하여 해결하고, 이 부분을 **_mergeRefs_** 함수로 분리했다.
 
 ```ts
 function mergeRefs<T>(...refs: ForwardedRef<T>[]) {
