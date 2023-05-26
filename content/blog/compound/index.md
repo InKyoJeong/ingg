@@ -2,6 +2,7 @@
 title: "[React Native] 합성 컴포넌트로 재사용성 높이기"
 tags: ["reactnative"]
 date: 2023-05-26 22:47:11
+description: "옵션 선택을 위한 Modal을 구현하면서 합성 컴포넌트 패턴을 사용해보았다. 비슷한 새로운 컴포넌트가 필요해지더라도 컴포넌트들을 조합하여 빠르게 구현할 수 있었고 컴포넌트의 재사용성을 높일 수 있었다."
 ---
 
 ![rn](../rn-deploy/images/rn.png)
@@ -234,7 +235,6 @@ export const CompoundOption = Object.assign(OptionMain, {
   Title,
   Button,
   Divider,
-  Card,
 });
 
 // 사용
