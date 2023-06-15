@@ -1,5 +1,5 @@
 ---
-title: "[JS] 호이스팅과 TDZ에 대하여"
+title: "[JS] 호이스팅과 TDZ 이해하기"
 tags: ["javascript"]
 date: 2022-11-13 23:30:98
 ---
