@@ -29,7 +29,7 @@ description: "옵션 선택을 위한 Modal을 구현하면서 합성 컴포넌�
 
 <br>
 
-![option-modal](https://github-production-user-asset-6210df.s3.amazonaws.com/48676844/241280576-860e8f18-ac95-4aba-ad27-6b4d74695930.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240507%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240507T123925Z&X-Amz-Expires=300&X-Amz-Signature=b7d202d5f7d5c1277eb146f262a205782b4fa86a8b32beb36b8cb83983c270a5&X-Amz-SignedHeaders=host&actor_id=48676844&key_id=0&repo_id=235811828)
+![modal](./images/modal.png)
 
 <br>
 
@@ -269,14 +269,14 @@ export const CompoundOption = Object.assign(OptionMain, {
 </CompoundOption>
 ```
 
-![compound](https://github-production-user-asset-6210df.s3.amazonaws.com/48676844/241286436-a3a80d21-16db-41ab-91fd-27a56899d23f.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240507%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240507T124230Z&X-Amz-Expires=300&X-Amz-Signature=36d68e40dbc817ad3f0637417ae7a82209e703ff7e3817d745493ea6a8f030d6&X-Amz-SignedHeaders=host&actor_id=48676844&key_id=0&repo_id=235811828)
+![compound](./images/compound.png)
 
 <br>
 
 또한 합성 컴포넌트로 만들어두었더니 아래와 같이 디자인은 비슷하지만 조금 더 복잡한 컴포넌트를 구현할때도 유용했다. **_CheckBox, Filter_** 서브 컴포넌트만 추가하여 새로운 디자인 변경사항을 바로 반영할 수 있다.
 
-<center>
-<img  alt="filter" src="https://github-production-user-asset-6210df.s3.amazonaws.com/48676844/241288317-4c9d9b09-ba63-4ce5-bd88-2b1633a2d487.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240507%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240507T124255Z&X-Amz-Expires=300&X-Amz-Signature=7e4728c0d31326dc36fba0844c9ec2f2a6504240d2c26957f7229052345bea20&X-Amz-SignedHeaders=host&actor_id=48676844&key_id=0&repo_id=235811828"></center>
+
+![filter](./images/filter.png)
 
 <br>
 
